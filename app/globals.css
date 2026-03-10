@@ -1,26 +1,323 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  ═══════════════════════════════════════════════════════
+  BUY PALLET JACKS — Design System
+  UI UX Pro Max: B2B Service / Industrial Equipment Sales
+  ═══════════════════════════════════════════════════════
+
+  STYLE: Trust & Authority + Minimalism (B2B Service rule #43)
+  PATTERN: Hero-Centric + Conversion-Focused
+  PALETTE: Industrial Blue + Steel Gray + Graphite Charcoal
+    Primary:    #1D4ED8  (Industrial Blue)
+    Secondary:  #1E3A8A  (Deep Navy)
+    CTA:        #F97316  (Conversion Orange — high-contrast action)
+    Background: #F8FAFC  (Cool Off-White)
+    Surface:    #FFFFFF  (Card White)
+    Text:       #0F172A  (Graphite Charcoal)
+    Muted:      #64748B  (Steel Gray)
+    Border:     #E2E8F0  (Light Steel)
+    Accent:     #DBEAFE  (Pale Blue tint)
+
+  TYPOGRAPHY: Outfit (headings) + Inter (body)
+    — Geometric modern, bold headings
+    — Humanist readable body
+    — Industrial confidence, not corporate stiffness
+
+  EFFECTS: Subtle hover transitions (200ms), card lift, focus rings
+  ANTI-PATTERNS: No AI purple/pink gradients, no cluttered layouts,
+                 no playful design, no hidden credentials
+*/
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-brand-blue:         #1D4ED8;
+  --color-brand-navy:         #1E3A8A;
+  --color-brand-orange:       #F97316;
+  --color-brand-orange-hover: #EA6F0E;
+  --color-bg:                 #F8FAFC;
+  --color-surface:            #FFFFFF;
+  --color-text:               #0F172A;
+  --color-muted:              #64748B;
+  --color-border:             #E2E8F0;
+  --color-accent:             #DBEAFE;
+  --color-graphite:           #1E293B;
+  --color-steel:              #94A3B8;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Spacing scale */
+  --spacing-section:    5rem;
+  --spacing-section-sm: 3rem;
+
+  /* Border radius */
+  --radius-card: 0.375rem;
+  --radius-btn:  0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Reset & Base ─────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0F172A;
+}
+
+/* ── Design Tokens as Utilities ───────────────────────── */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-padding-sm {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container-site {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ── Card styles ──────────────────────────────────────── */
+.card-base {
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 0.375rem;
+  transition: box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.card-base:hover {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.1);
+  border-color: #94A3B8;
+}
+
+/* ── Button styles ────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #F97316;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 200ms ease, transform 150ms ease, box-shadow 200ms ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: #EA6F0E;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.35);
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid #F97316;
+  outline-offset: 3px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 200ms ease, border-color 200ms ease;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-secondary:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #1D4ED8;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #1D4ED8;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 200ms ease, color 200ms ease;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background-color: #1D4ED8;
+  color: #ffffff;
+}
+
+.btn-outline:focus-visible {
+  outline: 3px solid #1D4ED8;
+  outline-offset: 3px;
+}
+
+/* ── Section heading ──────────────────────────────────── */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1D4ED8;
+  margin-bottom: 0.875rem;
+}
+
+.section-eyebrow::before {
+  content: '';
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  background-color: #F97316;
+  flex-shrink: 0;
+}
+
+/* ── Focus ring ───────────────────────────────────────── */
+:focus-visible {
+  outline: 3px solid #1D4ED8;
+  outline-offset: 3px;
+}
+
+/* ── Reduced motion ───────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── USA Map ──────────────────────────────────────────── */
+.usa-map path,
+.usa-map g > path {
+  fill: #CBD5E1;
+  stroke: #FFFFFF;
+  stroke-width: 1;
+  cursor: default;
+  transition: fill 200ms ease;
+}
+
+.usa-map path.has-locations {
+  fill: #1D4ED8;
+  cursor: pointer;
+}
+
+.usa-map path.has-locations:hover {
+  fill: #60A5FA;
+}
+
+.usa-map path.selected {
+  fill: #1D4ED8 !important;
+}
+
+.usa-map path.has-locations:focus-visible,
+.usa-map path.selected:focus-visible {
+  outline: 3px solid #F97316;
+  outline-offset: 2px;
+  fill: #3B82F6;
+}
+
+/* ── USA Map — light theme ────────────────────────────── */
+[data-map-theme="light"] .usa-map path,
+[data-map-theme="light"] .usa-map g > path {
+  fill: #E2E8F0;
+  stroke: #94A3B8;
+  stroke-width: 0.8;
+}
+
+[data-map-theme="light"] .usa-map path.has-locations {
+  fill: #1D4ED8;
+  cursor: pointer;
+}
+
+[data-map-theme="light"] .usa-map path.has-locations:hover {
+  fill: #3B82F6;
+}
+
+[data-map-theme="light"] .usa-map path.selected {
+  fill: #1D4ED8 !important;
+}
+
+[data-map-theme="light"] .usa-map path.has-locations:focus-visible,
+[data-map-theme="light"] .usa-map path.selected:focus-visible {
+  outline: 3px solid #F97316;
+  outline-offset: 2px;
+  fill: #3B82F6;
+}
+
+/* ── Font weight utilities (Tailwind v4 compat shim) ──── */
+/* Tailwind v4 uses named weights. These numeric aliases    */
+/* match what Tailwind v3 generated: font-{100..900}       */
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
+.font-900 { font-weight: 900; }
+
+/* ── Hide scrollbar (cross-browser) ─────────────────────  */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Mobile sticky CTA spacing ──────────────────────────  */
+/* Prevents page content from hiding behind the sticky bar */
+@media (max-width: 767px) {
+  main { padding-bottom: 4rem; }
+}
+

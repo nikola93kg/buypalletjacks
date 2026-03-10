@@ -1,0 +1,184 @@
+[
+  {
+    "cityState": "ATLANTA, GA",
+    "state": "GA",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "B33",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@33.6324878,-84.35879,17z/data=!4m15!1m8!3m7!1s0x88f4fdd7a530f34d:0xee7128f49408e4f4!2s4474+Jonesboro+Rd,+Forest+Park,+GA+30297!3b1!8m2!3d33.6325054!4d-84.3560123!16s%2Fg%2F11bw4dj2_9!3m5!1s0x88f4fdd6406c0d23:0x3fd65d15c8f04cf9!8m2!3d33.6325628!4d-84.3567007!16s%2Fg%2F113hvsfw1?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "AUSTIN, TX",
+    "state": "TX",
+    "facility": "STORAGEMART",
+    "unitNumber": "9002",
+    "gmaps": "https://www.google.com/maps/place/StorageMart/@30.4644297,-97.6942269,18z/data=!4m15!1m8!3m7!1s0x8644ce0b7d06ed6b:0x813c9bcfc8010f15!2s15601+Farm+to+Market+Rd+1325,+Austin,+TX+78728!3b1!8m2!3d30.4644874!4d-97.692629!16s%2Fg%2F11b8v56bfz!3m5!1s0x8644cf67b9a13c1d:0x9b09e76d1b6e46c4!8m2!3d30.4655886!4d-97.6935615!16s%2Fg%2F11qbrm19ys?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "BERLIN, CT",
+    "state": "CT",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "D042",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@41.6463428,-72.7344899,17z/data=!3m1!4b1!4m6!3m5!1s0x89e7b33f9c7dc0dd:0xac28f5135a95d772!8m2!3d41.6463428!4d-72.731915!16s%2Fg%2F1tzlz_ff?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "CANTON, MA",
+    "state": "MA",
+    "facility": "STORAGE SHEDD",
+    "unitNumber": "577",
+    "gmaps": "https://www.google.com/maps/place/Storage+Shedd/@42.1430628,-71.1379131,17z/data=!3m1!4b1!4m6!3m5!1s0x89e4812e5ac0a1ff:0xe6b0bcbae32a17f8!8m2!3d42.1430628!4d-71.1353382!16s%2Fg%2F1tdqvkbs?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "CHARLOTTE, NC",
+    "state": "NC",
+    "facility": "STORAGE SHEDD",
+    "unitNumber": "F14",
+    "gmaps": "https://www.google.com/maps/place/Prime+Storage/@35.3495256,-80.8250812,17z/data=!3m1!4b1!4m6!3m5!1s0x8856a72a1d83154d:0xc82157b7979fede0!8m2!3d35.3495256!4d-80.8225063!16s%2Fg%2F11nxcxdcxk?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "CHICAGO, IL",
+    "state": "IL",
+    "facility": "BUY PALLET JACKS",
+    "unitNumber": "-",
+    "gmaps": "https://www.google.com/maps/place/Buy+Pallet+Jacks/@42.0105096,-87.9517549,17z/data=!4m15!1m8!3m7!1s0x880fb1234b3e1a9f:0x2e99b8b79d0bb9ff!2s2210+Landmeier+Rd,+Elk+Grove+Village,+IL+60007!3b1!8m2!3d42.0105096!4d-87.94918!16s%2Fg%2F11cp8yk7wg!3m5!1s0x880fb1f49cf32085:0x57f934b1cb3e4e09!8m2!3d42.0105096!4d-87.94918!16s%2Fg%2F11xt1fp15j?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "CLEVELAND, OH",
+    "state": "OH",
+    "facility": "PARMA SELF STORAGE",
+    "unitNumber": "109",
+    "gmaps": "https://www.google.com/maps/place/Parma+Self+Storage/@41.4182582,-81.7524178,17z/data=!3m1!4b1!4m6!3m5!1s0x8830eef1130cfa71:0x9d820918fd2e2a35!8m2!3d41.4182582!4d-81.7498429!16s%2Fg%2F1tffvl4k?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "COLUMBUS, OH",
+    "state": "OH",
+    "facility": "TRILINNK STORAGE",
+    "unitNumber": "451",
+    "gmaps": "https://www.google.com/maps/place/Trilink+Storage+-+Georgesville/@39.9427202,-83.1163692,17z/data=!3m1!4b1!4m6!3m5!1s0x88389165a2cfd121:0x33b530ede7094d3b!8m2!3d39.9427202!4d-83.1137943!16s%2Fg%2F11jgnwm2t0?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "DALLAS, TX",
+    "state": "TX",
+    "facility": "LUPUS CROSS DOCK",
+    "unitNumber": "-",
+    "gmaps": "https://www.google.com/maps/place/Lupus+Cross+Dock,+Storage+%26+Final+Mile/@32.7597894,-96.9715947,17z/data=!4m15!1m8!3m7!1s0x864e8457344e0edb:0xc02ee229310201a!2s2407+I-30+%23200,+Grand+Prairie,+TX+75050!3b1!8m2!3d32.7597894!4d-96.9690198!16s%2Fg%2F11yqxl59b5!3m5!1s0x864e859b4410aebf:0x14fc1db80aadbbf3!8m2!3d32.7595588!4d-96.9693019!16s%2Fg%2F11jfs4t51c?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "DETROIT, MI",
+    "state": "MI",
+    "facility": "STORAGE RENTALS OF AMERICA",
+    "unitNumber": "-",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@40.7036939,-74.2464095,17z/data=!3m1!4b1!4m6!3m5!1s0x89c3ad19cc046f35:0xcc1a5349ccd87d1!8m2!3d40.7036939!4d-74.2438346!16s%2Fg%2F1tdv_twq?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "HILLSIDE, NJ",
+    "state": "NJ",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "K001",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@40.7036939,-74.2464095,17z/data=!3m1!4b1!4m6!3m5!1s0x89c3ad19cc046f35:0xcc1a5349ccd87d1!8m2!3d40.7036939!4d-74.2438346!16s%2Fg%2F1tdv_twq?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "HOUSTON, TX",
+    "state": "TX",
+    "facility": "ISTORAGE",
+    "unitNumber": "A10",
+    "gmaps": "https://www.google.com/maps/place/iStorage/@29.7874749,-95.2056585,17z/data=!3m1!4b1!4m6!3m5!1s0x8640a4991d648729:0x8a60c3cdcc1e66b2!8m2!3d29.7874749!4d-95.2030836!16s%2Fg%2F11btn18bk4?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "INDIANAPOLIS, IN",
+    "state": "IN",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "D443",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@39.6603823,-86.1286028,17z/data=!3m1!4b1!4m6!3m5!1s0x886b5c859203d1db:0x2c2cb8375eb32978!8m2!3d39.6603823!4d-86.1260279!16s%2Fg%2F1tjy27h3?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "KANSAS CITY, MO",
+    "state": "MO",
+    "facility": "STORAGEMART",
+    "unitNumber": "403",
+    "gmaps": "https://www.google.com/maps/place/StorageMart/@39.26148,-94.5817389,17z/data=!3m1!4b1!4m6!3m5!1s0x87c059505bd761fd:0x4f8d8a5c40ca1b60!8m2!3d39.26148!4d-94.579164!16s%2Fg%2F11qbrgft65?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "LAUREL, MD",
+    "state": "MD",
+    "facility": "FREESTATE SELF STORAGE",
+    "unitNumber": "410",
+    "gmaps": "https://www.google.com/maps/place/Freestate+Self+Storage/@39.1228745,-76.8298235,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7dd898e09311d:0x7072a5e74f9e04a8!8m2!3d39.1228745!4d-76.8272486!16s%2Fg%2F1tn06ppv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "LOUISVILLE, KY",
+    "state": "KY",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "G303",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@38.3096327,-85.7578803,17z/data=!3m1!4b1!4m6!3m5!1s0x8869739f1677eda1:0x9b4bc9daece2ec43!8m2!3d38.3096327!4d-85.7553054!16s%2Fg%2F11f6nczr4c?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "MILWAUKEE, WI",
+    "state": "WI",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "C060",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@42.959523,-87.9259175,17z/data=!3m1!4b1!4m6!3m5!1s0x880516d822380f59:0x2b71884481cc85b1!8m2!3d42.959523!4d-87.9233426!16s%2Fg%2F1tflslfy?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "MINNEAPOLIS, MN",
+    "state": "MN",
+    "facility": "ISTORAGE",
+    "unitNumber": "552",
+    "gmaps": "https://www.google.com/maps/place/iStorage/@45.1374333,-93.2709207,17z/data=!3m1!4b1!4m6!3m5!1s0x52b3252636cf9cd9:0x96553e5220a757df!8m2!3d45.1374333!4d-93.2683458!16s%2Fg%2F1tdr2z30?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "MORRISVILLE, NC",
+    "state": "NC",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "3021",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@35.8767818,-78.8553139,17z/data=!3m1!4b1!4m6!3m5!1s0x89acefccff5a590f:0xaac7614730d44699!8m2!3d35.8767818!4d-78.852739!16s%2Fg%2F11gf2dp4g0?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "NASHVILLE, TN",
+    "state": "TN",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "B207",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@36.1490968,-86.7029945,17z/data=!3m1!4b1!4m6!3m5!1s0x8864692060eddf69:0x74d528049630c6f2!8m2!3d36.1490968!4d-86.7004196!16s%2Fg%2F1thz2d60?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "OMAHA, NE",
+    "state": "NE",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "331",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@41.1482546,-96.1794415,17z/data=!3m1!4b1!4m6!3m5!1s0x8793f7ad1d5a0fc9:0x60fdb91c928e125c!8m2!3d41.1482546!4d-96.1768666!16s%2Fg%2F11jngjrfbc?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "PITTSBURGH, PA",
+    "state": "PA",
+    "facility": "LOCALSTORAGE",
+    "unitNumber": "109",
+    "gmaps": "https://www.google.com/maps/place/LocalStorage/@40.5137683,-80.2658289,17z/data=!3m1!4b1!4m6!3m5!1s0x88345d7186dcb2cb:0x3fd01fc9af2479b4!8m2!3d40.5137683!4d-80.263254!16s%2Fg%2F11qg9x84ll?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "SALT LAKE CITY, UT",
+    "state": "UT",
+    "facility": "CROSS DOCK TO DOCK",
+    "unitNumber": "-",
+    "gmaps": "https://www.google.com/maps/place/CROSS+DOCK+TO+DOCK/@40.7509687,-112.0013675,17z/data=!3m1!4b1!4m6!3m5!1s0x8752f3c07b1c57b3:0x6d03ffd1d7bbe643!8m2!3d40.7509687!4d-111.9987926!16s%2Fg%2F11txpdq2jc?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "SHARONVILLE, OH",
+    "state": "OH",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "E057",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@39.243987,-84.58139,14z/data=!4m9!1m2!2m1!1sat+the+Public+Storage+facility+at+3677+E+Kemper+Rd,+Sharonville,+OH+45241!3m5!1s0x88404b683bcde5ed:0xfb56dc1b3a506655!8m2!3d39.2439867!4d-84.5484306!16s%2Fg%2F11vt82td0h?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "ST LOUIS, MO",
+    "state": "MO",
+    "facility": "TRILINNK STORAGE",
+    "unitNumber": "806",
+    "gmaps": "https://www.google.com/maps/place/TriLink+Storage+-+Hazelwood/@38.7727883,-90.3400211,17z/data=!4m6!3m5!1s0x87df37bc7763b80b:0xdee7e7b711260340!8m2!3d38.7739134!4d-90.338916!16s%2Fg%2F11kjds2_3j?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "TRENTON, NJ",
+    "state": "NJ",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "C067",
+    "gmaps": "https://www.google.com/maps/place/Public+Storage/@40.1702816,-74.6887392,17z/data=!3m1!4b1!4m6!3m5!1s0x89c15c0687afac59:0xd7c2632c5b86e975!8m2!3d40.1702775!4d-74.6861643!16s%2Fg%2F1tp1zqlv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  }
+]
