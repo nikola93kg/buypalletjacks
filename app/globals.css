@@ -277,29 +277,29 @@ h1, h2, h3, h4, h5, h6 {
 /* ── USA Map — light theme ────────────────────────────── */
 [data-map-theme="light"] .usa-map path,
 [data-map-theme="light"] .usa-map g > path {
-  fill: #E2E8F0;
-  stroke: #94A3B8;
+  fill: #EFF6FF;          /* blue-50 — airy base for non-location states */
+  stroke: #BFDBFE;        /* blue-200 — soft, clean state borders */
   stroke-width: 0.8;
 }
 
 [data-map-theme="light"] .usa-map path.has-locations {
-  fill: #1D4ED8;
+  fill: #1D4ED8;          /* blue-700 — strong highlight for active states */
   cursor: pointer;
 }
 
 [data-map-theme="light"] .usa-map path.has-locations:hover {
-  fill: #3B82F6;
+  fill: #1E40AF;          /* blue-800 — darker on hover for clear feedback */
 }
 
 [data-map-theme="light"] .usa-map path.selected {
-  fill: #1D4ED8 !important;
+  fill: #1E40AF !important; /* blue-800 — distinct selected state */
 }
 
 [data-map-theme="light"] .usa-map path.has-locations:focus-visible,
 [data-map-theme="light"] .usa-map path.selected:focus-visible {
   outline: 3px solid #F97316;
   outline-offset: 2px;
-  fill: #3B82F6;
+  fill: #2563EB;
 }
 
 /* ── Font weight utilities (Tailwind v4 compat shim) ──── */

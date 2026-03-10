@@ -101,7 +101,7 @@ export default function UsaMap({
   if (!svgContent) {
     return (
       <div
-        className={`w-full ${compact ? "aspect-[5/3]" : "aspect-[5/3] max-w-3xl mx-auto"} bg-[#1E293B] rounded-xl animate-pulse`}
+        className={`w-full ${compact ? "aspect-[5/3]" : "aspect-[5/3] max-w-3xl mx-auto"} bg-[#EFF6FF] rounded-xl animate-pulse`}
         aria-label="Loading USA map"
       />
     );

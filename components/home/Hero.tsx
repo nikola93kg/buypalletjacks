@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { Phone, MessageSquare, MapPin, ChevronRight, Sun, Moon } from "lucide-react";
+import { Phone, MessageSquare, MapPin, ChevronRight } from "lucide-react";
 import { locations, getAllStatesWithLocations } from "@/lib/locations";
 import { useState, useEffect, useRef, type ComponentProps } from "react";
 import heroImg from "@/public/heroImg.jpg";
@@ -34,7 +34,6 @@ export default function Hero() {
   const statesWithLocations = getAllStatesWithLocations();
   const locationCount = locations.length;
   const [selectedState, setSelectedState] = useState<string | null>(null);
-  const [mapTheme, setMapTheme] = useState<'dark' | 'light'>('dark');
   const parallaxRef = useRef<HTMLDivElement>(null);
 
   // Parallax — mutates DOM directly so there's no React re-render on every scroll frame
@@ -150,7 +149,7 @@ export default function Hero() {
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#fff]">
+          {/* <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#fff]">
             {[
               "2-Month Warranty",
               "Cash · Card · Zelle · CashApp",
@@ -162,29 +161,21 @@ export default function Hero() {
                 {badge}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Map + panel area */}
         <div className="pb-12 md:pb-16">
           {/* Instruction / selected-state indicator */}
-          <div className="relative flex items-center justify-center gap-3 mb-5 min-h-[1.5rem]">
-            <button
-              onClick={() => setMapTheme(t => t === 'dark' ? 'light' : 'dark')}
-              className="absolute left-0 flex items-center gap-2 text-sm font-semibold text-white bg-[#1E3A8A] hover:bg-[#1D4ED8] border border-[#3B82F6]/50 hover:border-[#3B82F6] px-4 py-1.5 rounded-lg shadow-md transition-all"
-              aria-label={mapTheme === 'dark' ? 'Switch to light map' : 'Switch to dark map'}
-            >
-              {mapTheme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-              {mapTheme === 'dark' ? '' : ''}
-            </button>
+          <div className="flex items-center justify-center gap-3 mb-5">
             {selectedState ? (
               <>
-                <span className="text-[#60A5FA] text-sm font-medium" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                  Showing locations in <strong className="text-white">{selectedState}</strong>
+                <span className="text-[#1D4ED8] text-sm font-medium" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                  Showing locations in <strong className="text-[#0F172A]">{selectedState}</strong>
                 </span>
                 <button
                   onClick={() => setSelectedState(null)}
-                  className="text-xs text-[#64748B] hover:text-[#12748B] bg-white border border-[#334155] hover:border-[#475569] px-2.5 py-1 rounded-md transition-colors"
+                  className="text-xs text-[#64748B] hover:text-[#1D4ED8] bg-white border border-[#CBD5E1] hover:border-[#93C5FD] px-2.5 py-1 rounded-md transition-colors"
                   aria-label="Clear state selection"
                 >
                   Clear
@@ -192,16 +183,16 @@ export default function Hero() {
               </>
             ) : (
               <p
-                className="text-center text-[#fff] text-sm"
-                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="text-center text-[#475569] text-md"
+                style={{ fontFamily: "'Outfit', sans-serif", color: "#fff" }}
               >
-                <MapPin size={14} className="inline mr-1 text-[#fff]" aria-hidden="true" />
+                <MapPin size={18} className="inline mr-1 text-[#fff]" aria-hidden="true" />
                 Click your state on the map to find pickup locations near you
               </p>
             )}
           </div>
 
-          <div className={`${mapTheme === 'dark' ? 'bg-[#0A1628] border-[#1E3A8A]/40' : 'bg-white border-[#E2E8F0]'} border rounded-2xl overflow-hidden shadow-2xl`}>
+          <div className="bg-[#fff9] border-[#BFDBFE] rounded-2xl overflow-hidden shadow-xl">
             <div className="flex flex-col lg:flex-row">
               {/* Map panel */}
               <div className="lg:flex-1 p-4 md:p-6">
@@ -210,22 +201,21 @@ export default function Hero() {
                   selectedState={selectedState}
                   onStateSelect={setSelectedState}
                   compact
-                  theme={mapTheme}
+                  theme="light"
                 />
               </div>
 
               {/* Locations panel */}
               <div
                 id="hero-locations-panel"
-                className={`lg:w-80 xl:w-86 border-t lg:border-t-0 lg:border-l ${mapTheme === 'dark' ? 'border-[#1E3A8A]/30' : 'border-[#E2E8F0]'}`}
+                className="lg:w-80 xl:w-86 border-t lg:border-t-0 lg:border-l border-[#BFDBFE]"
                 aria-live="polite"
                 aria-label="Pickup locations for selected state"
               >
                 <LocationsPanel
                   selectedState={selectedState}
                   onClear={() => setSelectedState(null)}
-                  // compact
-                  theme={mapTheme}
+                  theme="light"
                 />
               </div>
             </div>

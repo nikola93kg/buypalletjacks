@@ -24,15 +24,15 @@ export default function FinalCTA() {
 
           <h2
             id="final-cta-heading"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
+            style={{ fontFamily: "'Outfit', sans-serif", color: "#fff" }}
             className="text-4xl sm:text-5xl md:text-6xl font-900 text-white leading-[1.05] tracking-tight mb-6"
           >
             Your next pallet jack
-            <br className="hidden sm:block" /> is warehouse-ready.
+            <br className="hidden sm:block" /> is warehouse-ready
           </h2>
 
           <p className="text-[#64748B] text-lg mb-10 max-w-lg mx-auto leading-relaxed">
-            26+ pickup locations nationwide. Professionally refurbished. 2-month warranty.
+            26+ pickup locations nationwide. Professionally refurbished. 2-month warranty
           </p>
 
           {/* CTAs */}

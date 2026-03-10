@@ -1,1 +1,11 @@
 One thing worth noting: Detroit, MI and Hillside, NJ currently share the same Google Maps link in the Excel file — you may want to double-check that the Detroit URL is correct, as it points to a Public Storage location that looks like it could be the Hillside one.
+
+
+- Vercel monthly payments for cfg
+
+- Vercel free plan for BPJ, cancel the subscription from squarespace
+
+- QR code for BPJ
+
+
+altra and crown

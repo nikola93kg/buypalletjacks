@@ -1,3 +1,4 @@
+import React from "react";
 import { Shield, CheckCircle, Plus } from "lucide-react";
 
 const WARRANTY_FEATURES = [
@@ -23,8 +24,8 @@ export default function Warranty() {
             <span className="section-eyebrow text-[#60A5FA]">Quality Promise</span>
             <h2
               id="warranty-heading"
-              style={{ fontFamily: "'Outfit', sans-serif" }}
-              className="text-3xl md:text-4xl font-800 text-white mb-5"
+              style={{ fontFamily: "'Outfit', sans-serif", color: "#fff" }}
+              className="text-3xl md:text-4xl font-800 text-white mb-5 "
             >
               Every unit backed by a{" "}
               <span className="text-[#60A5FA]">full 2-month warranty</span>

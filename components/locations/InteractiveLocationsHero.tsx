@@ -72,15 +72,15 @@ export default function InteractiveLocationsHero() {
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Map */}
           <div className="lg:flex-1">
-            <div className="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm p-4 md:p-6">
+            <div className="bg-[#0A1628] rounded-2xl border border-[#1E3A8A]/40 shadow-2xl p-4 md:p-6">
               {/* Legend */}
-              <div className="flex flex-wrap items-center gap-4 mb-4 text-xs text-[#64748B]">
+              <div className="flex flex-wrap items-center gap-4 mb-4 text-xs text-[#94A3B8]">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-4 h-3 rounded-sm bg-[#BFDBFE] inline-block border border-[#93C5FD]" aria-hidden="true" />
+                  <span className="w-4 h-3 rounded-sm bg-[#1D4ED8] inline-block" aria-hidden="true" />
                   Has Locations
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-4 h-3 rounded-sm bg-[#1D4ED8] inline-block" aria-hidden="true" />
+                  <span className="w-4 h-3 rounded-sm bg-[#60A5FA] inline-block" aria-hidden="true" />
                   Selected
                 </span>
                 <span className="flex items-center gap-1.5">
@@ -94,15 +94,15 @@ export default function InteractiveLocationsHero() {
                 onStateSelect={setSelectedState}
               />
               {selectedState && (
-                <p className="text-center text-sm text-[#64748B] mt-3">
+                <p className="text-center text-sm text-[#94A3B8] mt-3">
                   Showing locations in{" "}
-                  <strong className="text-[#1D4ED8]">
+                  <strong className="text-[#60A5FA]">
                     {STATE_NAMES[selectedState] || selectedState}
                   </strong>{" "}
                   —{" "}
                   <button
                     onClick={() => setSelectedState(null)}
-                    className="text-[#1D4ED8] hover:underline font-medium"
+                    className="text-[#60A5FA] hover:text-white transition-colors font-medium"
                   >
                     Clear selection
                   </button>
@@ -118,11 +118,12 @@ export default function InteractiveLocationsHero() {
             aria-live="polite"
             aria-label="Location results"
           >
-            <div className="bg-[#0F172A] rounded-2xl border border-[#1E3A8A]/30 overflow-hidden h-full">
+            <div className="bg-[#0A1628] rounded-2xl border border-[#1E3A8A]/40 overflow-hidden h-full shadow-2xl">
               <LocationsPanel
                 selectedState={selectedState}
                 onClear={() => setSelectedState(null)}
                 compact={false}
+                theme="dark"
               />
             </div>
           </div>
