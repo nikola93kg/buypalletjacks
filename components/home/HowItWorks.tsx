@@ -79,7 +79,7 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-10 text-center">
-          <a href="tel:+18005555555" className="btn-primary text-base px-8 py-3.5">
+          <a href="tel:+12622541835" className="btn-primary text-base px-8 py-3.5">
             <Phone size={17} />
             Start with a Call
           </a>

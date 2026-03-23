@@ -55,7 +55,7 @@ export default function Faq() {
           </h2>
           <p className="text-[#64748B] text-base">
             Can&apos;t find what you&apos;re looking for?{" "}
-            <a href="tel:+18005555555" className="text-[#1D4ED8] hover:underline font-medium">
+            <a href="tel:+12622541835" className="text-[#1D4ED8] hover:underline font-medium">
               Call us directly
             </a>
             .

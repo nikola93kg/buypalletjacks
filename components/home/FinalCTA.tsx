@@ -38,7 +38,7 @@ export default function FinalCTA() {
           {/* CTAs */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
             <a
-              href="tel:+18005555555"
+              href="tel:+12622541835"
               style={{ fontFamily: "'Outfit', sans-serif" }}
               className="inline-flex items-center gap-2.5 bg-[#F97316] hover:bg-[#EA6F0E] text-white font-700 text-base px-8 py-4 transition-colors"
             >
@@ -46,7 +46,7 @@ export default function FinalCTA() {
               Call Now
             </a>
             <a
-              href="sms:+18005555555"
+              href="sms:+12622541835"
               style={{ fontFamily: "'Outfit', sans-serif" }}
               className="inline-flex items-center gap-2.5 text-white font-600 text-base px-8 py-4 border border-white/25 hover:border-white/60 hover:bg-white/5 transition-all"
             >

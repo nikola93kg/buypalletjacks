@@ -51,7 +51,7 @@ export default function Warranty() {
             </ul>
 
             <div className="flex flex-wrap gap-3">
-              <a href="tel:+18005555555" className="btn-primary">
+              <a href="tel:+12622541835" className="btn-primary">
                 Ask About Warranty
               </a>
               <a href="/about" className="btn-secondary">

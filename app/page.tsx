@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import Hero from "@/components/home/Hero";
+import PalletJackModels from "@/components/home/PalletJackModels";
 import Benefits from "@/components/home/Benefits";
 import WhyRefurbished from "@/components/home/WhyRefurbished";
 import HowItWorks from "@/components/home/HowItWorks";
@@ -21,6 +22,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <PalletJackModels />
       <Benefits />
       <WhyRefurbished />
       <HowItWorks />

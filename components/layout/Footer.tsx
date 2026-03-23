@@ -6,7 +6,6 @@ const FOOTER_LINKS = [
     heading: "Company",
     links: [
       { href: "/about", label: "About Us" },
-      { href: "/gallery", label: "Gallery" },
       { href: "/contact", label: "Contact" },
     ],
   },
@@ -22,8 +21,8 @@ const FOOTER_LINKS = [
   {
     heading: "Get Help",
     links: [
-      { href: "tel:+18005555555", label: "Call Us" },
-      { href: "sms:+18005555555", label: "Text Us" },
+      { href: "tel:+12622541835", label: "Call Us" },
+      { href: "sms:+12622541835", label: "Text Us" },
       { href: "/#faq", label: "FAQ" },
       { href: "/contact", label: "Contact Page" },
     ],
@@ -47,14 +46,14 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href="tel:+18005555555"
+              href="tel:+12622541835"
               className="btn-primary"
             >
               <Phone size={16} />
               Call Now
             </a>
             <a
-              href="sms:+18005555555"
+              href="sms:+12622541835"
               className="btn-secondary"
             >
               <MessageSquare size={16} />
@@ -85,7 +84,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-2 text-sm text-slate-400">
               <Phone size={14} className="text-blue-400 flex-shrink-0" />
-              <a href="tel:+18005555555" className="hover:text-white transition-colors">
+              <a href="tel:+12622541835" className="hover:text-white transition-colors">
                 (800) 555-5555
               </a>
             </div>

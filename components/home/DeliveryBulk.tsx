@@ -42,7 +42,7 @@ export default function DeliveryBulk() {
                 directly to you. Call to discuss availability and pricing.
               </p>
             </div>
-            <a href="tel:+18005555555" className="btn-outline text-sm mt-auto">
+            <a href="tel:+12622541835" className="btn-outline text-sm mt-auto">
               Ask About Delivery
             </a>
           </div>
@@ -65,7 +65,7 @@ export default function DeliveryBulk() {
               </p>
             </div>
             <a
-              href="sms:+18005555555"
+              href="sms:+12622541835"
               className="inline-flex items-center justify-center gap-2 bg-[#F97316] text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-[#EA6F0E] transition-colors mt-auto"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >

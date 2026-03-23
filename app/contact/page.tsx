@@ -56,7 +56,7 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {/* Call CTA */}
             <a
-              href="tel:+18005555555"
+              href="tel:+12622541835"
               className="group flex flex-col items-center text-center p-10 rounded-2xl bg-brand-blue text-white shadow-lg hover:bg-brand-navy transition-colors"
             >
               <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
@@ -76,7 +76,7 @@ export default function ContactPage() {
 
             {/* Text CTA */}
             <a
-              href="sms:+18005555555"
+              href="sms:+12622541835"
               className="group flex flex-col items-center text-center p-10 rounded-2xl bg-cta-orange text-white shadow-lg hover:bg-orange-600 transition-colors"
             >
               <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">

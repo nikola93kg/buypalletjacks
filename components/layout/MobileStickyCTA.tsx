@@ -11,7 +11,7 @@ export default function MobileStickyCTA() {
     >
       <div className="grid grid-cols-2 gap-0">
         <a
-          href="tel:+18005555555"
+          href="tel:+12622541835"
           className="flex items-center justify-center gap-2 py-4 bg-[#1D4ED8] text-white font-semibold text-base active:bg-[#1E3A8A] transition-colors"
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >
@@ -19,7 +19,7 @@ export default function MobileStickyCTA() {
           Call Now
         </a>
         <a
-          href="sms:+18005555555"
+          href="sms:+12622541835"
           className="flex items-center justify-center gap-2 py-4 bg-[#F97316] text-white font-semibold text-base active:bg-[#EA6F0E] transition-colors"
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >

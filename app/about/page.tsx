@@ -203,7 +203,7 @@ export default function AboutPage() {
                 <MapPin className="w-5 h-5" />
                 Find a Location
               </Link>
-              <a href="tel:+18005555555" className="btn-secondary">
+              <a href="tel:+12622541835" className="btn-secondary">
                 <Phone className="w-5 h-5" />
                 Call Us Now
               </a>

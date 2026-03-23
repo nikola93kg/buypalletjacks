@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import LocationsFooterSection from "@/components/layout/LocationsFooterSection";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
 import { SITE_NAME, SITE_DESCRIPTION, localBusinessJsonLd, organizationJsonLd } from "@/lib/seo";
 
@@ -68,6 +69,7 @@ export default function RootLayout({
         />
         <Header />
         <main id="main-content">{children}</main>
+        <LocationsFooterSection />
         <Footer />
         <MobileStickyCTA />
       </body>
