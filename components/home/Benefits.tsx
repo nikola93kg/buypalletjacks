@@ -51,7 +51,8 @@ export default function Benefits() {
                 >
                   {stat}
                 </p>
-                <p className="text-[#475569] text-[0.7rem] sm:text-xs uppercase tracking-widest leading-snug px-2">
+                <p style={{ color: "#fff" }} 
+                className="text-[#475569] text-[0.7rem] sm:text-xs uppercase tracking-widest leading-snug px-2">
                   {label}
                 </p>
               </div>

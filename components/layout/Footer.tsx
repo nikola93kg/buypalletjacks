@@ -32,36 +32,7 @@ const FOOTER_LINKS = [
 export default function Footer() {
   return (
     <footer className="bg-[#0F172A] text-white">
-      {/* CTA band */}
-      <div className="bg-[#1D4ED8] py-12">
-        <div className="container-site text-center">
-          <p
-            style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-2xl md:text-3xl font-bold text-white mb-3"
-          >
-            Ready to pick up your pallet jack?
-          </p>
-          <p className="text-blue-200 mb-6 text-base max-w-xl mx-auto">
-            26+ pickup locations nationwide. Call or text to confirm availability and schedule your pickup today.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <a
-              href="tel:+12622541835"
-              className="btn-primary"
-            >
-              <Phone size={16} />
-              Call Now
-            </a>
-            <a
-              href="sms:+12622541835"
-              className="btn-secondary"
-            >
-              <MessageSquare size={16} />
-              Text Us
-            </a>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Main footer */}
       <div className="container-site py-14">

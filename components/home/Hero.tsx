@@ -107,7 +107,7 @@ export default function Hero() {
       />
 
       <div className="container-site relative">
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 xl:gap-16 items-center py-14 md:py-18 lg:py-22">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 xl:gap-16 items-start py-14 md:py-18 lg:py-22">
 
           {/* ── LEFT COLUMN — Hero copy ── */}
           <div>
@@ -249,7 +249,7 @@ export default function Hero() {
           </div>
 
           {/* ── RIGHT COLUMN — Interactive map card ── */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 lg:self-stretch lg:min-h-0">
             {/* Card header */}
             <div
               className="flex items-center justify-between px-3 py-2.5 rounded-xl backdrop-blur-sm"
@@ -295,14 +295,14 @@ export default function Hero() {
 
             {/* Map card */}
             <div
-              className="rounded-2xl overflow-hidden backdrop-blur-sm"
+              className="rounded-2xl overflow-hidden backdrop-blur-sm lg:flex-1 lg:min-h-0"
               style={{
                 background: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)",
                 border: "1px solid rgba(255,255,255,0.11)",
                 boxShadow: "inset 0 1px 0 rgba(255,255,255,0.09), 0 8px 32px rgba(0,0,0,0.35)",
               }}
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col lg:h-full">
                 <div className="p-4 md:p-5">
                   <UsaMap
                     statesWithLocations={statesWithLocations}
@@ -314,7 +314,7 @@ export default function Hero() {
                 </div>
                 <div
                   id="hero-locations-panel"
-                  className="border-t border-white/10"
+                  className="border-t border-white/10 lg:flex-1 lg:min-h-0 lg:overflow-hidden"
                   style={{ background: "rgba(10, 18, 35, 0.92)" }}
                   aria-live="polite"
                   aria-label="Pickup locations for selected state"

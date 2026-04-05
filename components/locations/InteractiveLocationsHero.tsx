@@ -54,12 +54,51 @@ export default function InteractiveLocationsHero() {
             <span className="text-[#1D4ED8]">Near You</span>
           </h1>
           <p className="text-[#64748B] text-base max-w-xl mx-auto">
-            {statesWithLocations.length} states, 26+ locations nationwide. Click your state
-            on the map to see all available pickup points.
+            Click your state on the map — or use the search below to find the
+            nearest pickup point.
           </p>
 
+          {/* Stats strip */}
+          <div className="flex items-center justify-center gap-8 flex-wrap mt-8 mb-8">
+            <div className="flex flex-col items-center gap-0.5">
+              <span
+                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="text-4xl font-extrabold text-[#0F172A] leading-none"
+              >
+                26
+              </span>
+              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+                Locations
+              </span>
+            </div>
+            <div className="w-px h-12 bg-[#E2E8F0] flex-shrink-0" />
+            <div className="flex flex-col items-center gap-0.5">
+              <span
+                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="text-4xl font-extrabold text-[#0F172A] leading-none"
+              >
+                19
+              </span>
+              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+                States
+              </span>
+            </div>
+            <div className="w-px h-12 bg-[#E2E8F0] flex-shrink-0" />
+            <div className="flex flex-col items-center gap-0.5">
+              <span
+                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="text-4xl font-extrabold text-[#F97316] leading-none"
+              >
+                Free
+              </span>
+              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+                Pickup
+              </span>
+            </div>
+          </div>
+
           {/* Accessible fallback for screen readers / keyboard-only users */}
-          <div className="mt-6 max-w-sm mx-auto">
+          <div className="max-w-sm mx-auto">
             <StateSelectFallback
               statesWithLocations={statesWithLocations}
               selectedState={selectedState}

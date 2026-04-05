@@ -8,6 +8,9 @@ import {
   Clock,
   CreditCard,
   ChevronRight,
+  CheckCircle,
+  Zap,
+  ShieldCheck,
 } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
@@ -18,9 +21,9 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const HOURS = [
-  { day: "Monday – Friday", hours: "7:00 AM – 6:00 PM" },
-  { day: "Saturday", hours: "8:00 AM – 4:00 PM" },
-  { day: "Sunday", hours: "Closed" },
+  { day: "Monday – Friday", hours: "7:00 AM – 6:00 PM", open: true },
+  { day: "Saturday", hours: "8:00 AM – 4:00 PM", open: true },
+  { day: "Sunday", hours: "Closed", open: false },
 ];
 
 const PAYMENT_METHODS = [
@@ -33,166 +36,234 @@ const PAYMENT_METHODS = [
   "ACH / Wire Transfer",
 ];
 
+const TRUST_ITEMS = [
+  {
+    icon: Zap,
+    label: "Responds within minutes",
+    sub: "During business hours",
+  },
+  {
+    icon: ShieldCheck,
+    label: "No deposit to reserve",
+    sub: "Pay at pickup only",
+  },
+  {
+    icon: MapPin,
+    label: "26 pickup locations",
+    sub: "Across 19 states",
+  },
+];
+
 export default function ContactPage() {
   return (
     <>
-      {/* Header */}
-      <section className="bg-graphite text-white section-padding-sm">
-        <div className="container-site text-center">
-          <p className="section-eyebrow mb-3">Get In Touch</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-            We&apos;re here to help
-          </h1>
-          <p className="text-slate-300 text-lg max-w-xl mx-auto">
-            Call or text us to check availability at your nearest location. We
-            typically respond within minutes during business hours.
-          </p>
-        </div>
-      </section>
-
-      {/* Main CTAs */}
-      <section className="section-padding bg-white">
+      {/* ── Main content ─────────────────────────────────────── */}
+      <section className="section-padding bg-[#F8FAFC]">
         <div className="container-site">
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {/* Call CTA */}
-            <a
-              href="tel:+12622541835"
-              className="group flex flex-col items-center text-center p-10 rounded-2xl bg-brand-blue text-white shadow-lg hover:bg-brand-navy transition-colors"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                <Phone className="w-8 h-8" />
-              </div>
-              <h2 className="text-2xl font-extrabold mb-2">Call Us</h2>
-              <p className="text-blue-100 mb-4 text-sm">
-                Speak with someone immediately — fastest way to check inventory
-              </p>
-              <span className="text-2xl font-black tracking-wide">
-                +1 (800) 555-5555
-              </span>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold bg-white/20 px-4 py-2 rounded-xl">
-                Tap to Call <ChevronRight className="w-4 h-4" />
-              </span>
-            </a>
 
-            {/* Text CTA */}
-            <a
-              href="sms:+12622541835"
-              className="group flex flex-col items-center text-center p-10 rounded-2xl bg-cta-orange text-white shadow-lg hover:bg-orange-600 transition-colors"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                <MessageSquare className="w-8 h-8" />
-              </div>
-              <h2 className="text-2xl font-extrabold mb-2">Text Us</h2>
-              <p className="text-orange-100 mb-4 text-sm">
-                Prefer texting? Send us your state and we&apos;ll reply with
-                nearest location + photos
-              </p>
-              <span className="text-2xl font-black tracking-wide">
-                +1 (800) 555-5555
-              </span>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold bg-white/20 px-4 py-2 rounded-xl">
-                Tap to Text <ChevronRight className="w-4 h-4" />
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Info grid */}
-      <section className="section-padding bg-slate-50">
-        <div className="container-site">
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Hours */}
-            <div className="card-base p-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-brand-blue/10 flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-brand-blue" />
-                </div>
-                <h3 className="font-bold text-graphite">Business Hours</h3>
-              </div>
-              <div className="space-y-3">
-                {HOURS.map((row) => (
-                  <div
-                    key={row.day}
-                    className="flex justify-between text-sm"
-                  >
-                    <span className="text-steel">{row.day}</span>
-                    <span
-                      className={`font-semibold ${
-                        row.hours === "Closed"
-                          ? "text-red-500"
-                          : "text-graphite"
-                      }`}
-                    >
-                      {row.hours}
-                    </span>
+          {/* Page header */}
+          <div className="mb-10">
+            <p className="section-eyebrow mb-3">Contact Us</p>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-graphite mb-4 leading-tight">
+              We&apos;re a call or text away
+            </h1>
+            <p className="text-steel text-lg leading-relaxed max-w-2xl mb-6">
+              Skip the form — call or text us directly to check inventory, get
+              photos, or schedule a same-day pickup at the location nearest you.
+            </p>
+            <div className="flex flex-wrap gap-5">
+              {TRUST_ITEMS.map((item) => (
+                <div key={item.label} className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-white border border-border flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-4 h-4 text-brand-blue" />
                   </div>
-                ))}
-              </div>
-              <p className="text-xs text-steel mt-4 pt-4 border-t border-border">
-                All times are local to each pickup location.
-              </p>
-            </div>
-
-            {/* Find a location */}
-            <div className="card-base p-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-brand-blue/10 flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-brand-blue" />
+                  <div>
+                    <p className="text-sm font-semibold text-graphite leading-tight">
+                      {item.label}
+                    </p>
+                    <p className="text-xs text-steel">{item.sub}</p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-graphite">Find a Location</h3>
-              </div>
-              <p className="text-sm text-steel mb-5 leading-relaxed">
-                We have 26 pickup locations across the USA. Use our interactive
-                map to find the nearest one and get directions.
-              </p>
-              <Link
-                href="/locations"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-brand-blue px-4 py-2.5 rounded-xl hover:bg-brand-navy transition-colors"
+              ))}
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-[1fr_400px] gap-8 items-start">
+
+            {/* Left — contact action cards */}
+            <div className="flex flex-col gap-5">
+              {/* Call card */}
+              <a
+                href="tel:+12622541835"
+                className="group relative bg-brand-blue rounded-2xl p-8 flex items-center gap-6 overflow-hidden hover:bg-brand-navy transition-colors duration-200 cursor-pointer"
+                aria-label="Call Buy Pallet Jacks"
               >
-                <MapPin className="w-4 h-4" />
-                View All Locations
-              </Link>
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-200 pointer-events-none"
+                  style={{ background: "radial-gradient(circle at 80% 50%, #ffffff, transparent 60%)" }}
+                  aria-hidden="true"
+                />
+                <div className="w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-7 h-7 text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-blue-200 text-xs font-bold uppercase tracking-widest mb-1">
+                    Call Us — Fastest Response
+                  </p>
+                  <p className="text-white text-3xl font-extrabold tracking-tight leading-none">
+                    (262) 254-1835
+                  </p>
+                  <p className="text-blue-200 text-sm mt-2">
+                    Speak with someone immediately. Check inventory, get
+                    directions, ask anything.
+                  </p>
+                </div>
+                <ChevronRight className="w-6 h-6 text-white/40 group-hover:text-white/80 transition-colors flex-shrink-0 hidden sm:block" />
+              </a>
+
+              {/* Text card */}
+              <a
+                href="sms:+12622541835"
+                className="group relative bg-brand-orange rounded-2xl p-8 flex items-center gap-6 overflow-hidden hover:bg-brand-orange-hover transition-colors duration-200 cursor-pointer"
+                aria-label="Text Buy Pallet Jacks"
+              >
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-200 pointer-events-none"
+                  style={{ background: "radial-gradient(circle at 80% 50%, #ffffff, transparent 60%)" }}
+                  aria-hidden="true"
+                />
+                <div className="w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center flex-shrink-0">
+                  <MessageSquare className="w-7 h-7 text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-orange-100 text-xs font-bold uppercase tracking-widest mb-1">
+                    Text Us — Get Photos &amp; Details
+                  </p>
+                  <p className="text-white text-3xl font-extrabold tracking-tight leading-none">
+                    (262) 254-1835
+                  </p>
+                  <p className="text-orange-100 text-sm mt-2">
+                    Send your state — we&apos;ll reply with the nearest
+                    location, stock photos, and pricing.
+                  </p>
+                </div>
+                <ChevronRight className="w-6 h-6 text-white/40 group-hover:text-white/80 transition-colors flex-shrink-0 hidden sm:block" />
+              </a>
+
+              {/* What to say helper */}
+              <div className="bg-white border border-border rounded-2xl p-6">
+                <p className="text-xs font-bold uppercase tracking-widest text-brand-blue mb-4">
+                  What to include in your message
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "Your state or ZIP code",
+                    "How many units you need",
+                    "Your preferred pickup timeframe",
+                  ].map((tip) => (
+                    <li key={tip} className="flex items-center gap-3">
+                      <CheckCircle className="w-4 h-4 text-[#16A34A] flex-shrink-0" />
+                      <span className="text-sm text-[#475569] font-medium">{tip}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            {/* Payment methods */}
-            <div className="card-base p-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-brand-blue/10 flex items-center justify-center">
-                  <CreditCard className="w-5 h-5 text-brand-blue" />
+            {/* Right — info panel */}
+            <div className="flex flex-col gap-5">
+              {/* Business hours */}
+              <div className="bg-white border border-border rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-brand-blue" />
+                  </div>
+                  <h2 className="font-bold text-graphite">Business Hours</h2>
                 </div>
-                <h3 className="font-bold text-graphite">Payment Methods</h3>
+                <div className="space-y-3">
+                  {HOURS.map((row) => (
+                    <div
+                      key={row.day}
+                      className="flex items-center justify-between text-sm py-2 border-b border-border last:border-0 last:pb-0"
+                    >
+                      <span className="text-[#475569]">{row.day}</span>
+                      <span
+                        className={`font-semibold tabular-nums ${
+                          row.open ? "text-graphite" : "text-red-500"
+                        }`}
+                      >
+                        {row.hours}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-steel mt-4 pt-4 border-t border-border">
+                  All times are local to each pickup location.
+                </p>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {PAYMENT_METHODS.map((method) => (
-                  <span
-                    key={method}
-                    className="text-xs bg-slate-100 text-graphite font-medium px-3 py-1.5 rounded-lg border border-border"
-                  >
-                    {method}
-                  </span>
-                ))}
+
+              {/* Find a location */}
+              <div className="bg-brand-navy text-white rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-brand-orange" />
+                  </div>
+                  <h2 className="font-bold text-white">Find a Location</h2>
+                </div>
+                <p className="text-sm text-blue-200 mb-5 leading-relaxed">
+                  26 pickup locations across 19 states. Use the interactive
+                  map to find the one nearest you and get directions.
+                </p>
+                <Link
+                  href="/locations"
+                  className="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orange-hover text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors duration-200 cursor-pointer"
+                >
+                  <MapPin className="w-4 h-4" />
+                  View All Locations
+                </Link>
               </div>
-              <p className="text-xs text-steel mt-4">
-                Payment collected at pickup. No deposits required to reserve.
-              </p>
+
+              {/* Payment methods */}
+              <div className="bg-white border border-border rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
+                    <CreditCard className="w-5 h-5 text-brand-blue" />
+                  </div>
+                  <h2 className="font-bold text-graphite">Payment Methods</h2>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {PAYMENT_METHODS.map((method) => (
+                    <span
+                      key={method}
+                      className="text-xs bg-[#F1F5F9] text-graphite font-medium px-3 py-1.5 rounded-lg border border-border"
+                    >
+                      {method}
+                    </span>
+                  ))}
+                </div>
+                <p className="text-xs text-steel mt-4 pt-4 border-t border-border">
+                  Payment collected at pickup. No deposits required.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* FAQ teaser */}
-          <div className="mt-10 rounded-2xl bg-white border border-border p-8 text-center">
-            <h2 className="text-xl font-extrabold text-graphite mb-2">
-              Have a question not listed here?
-            </h2>
-            <p className="text-steel text-sm mb-5">
-              Check our FAQ for answers to common questions about warranty,
-              delivery, bulk pricing, and more.
-            </p>
+          <div className="mt-8 bg-white border border-border rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-bold text-graphite text-lg">
+                Have a question not answered here?
+              </p>
+              <p className="text-[#475569] text-sm mt-1">
+                Check our FAQ — warranty, bulk pricing, delivery, and more.
+              </p>
+            </div>
             <Link
               href="/#faq"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-brand-blue hover:bg-brand-navy px-5 py-2.5 rounded-xl transition-colors duration-200 cursor-pointer whitespace-nowrap"
             >
-              View FAQ <ChevronRight className="w-4 h-4" />
+              View FAQ
+              <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
