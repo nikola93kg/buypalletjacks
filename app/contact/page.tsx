@@ -8,10 +8,10 @@ import {
   Clock,
   CreditCard,
   ChevronRight,
-  CheckCircle,
   Zap,
   ShieldCheck,
 } from "lucide-react";
+import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Buy Pallet Jacks – Call or Text for Availability",
@@ -88,10 +88,10 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-[1fr_400px] gap-8 items-start">
+          <div className="grid lg:grid-cols-[1fr_400px] gap-8 items-stretch">
 
             {/* Left — contact action cards */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 h-full">
               {/* Call card */}
               <a
                 href="tel:+12622541835"
@@ -150,23 +150,9 @@ export default function ContactPage() {
                 <ChevronRight className="w-6 h-6 text-white/40 group-hover:text-white/80 transition-colors flex-shrink-0 hidden sm:block" />
               </a>
 
-              {/* What to say helper */}
-              <div className="bg-white border border-border rounded-2xl p-6">
-                <p className="text-xs font-bold uppercase tracking-widest text-brand-blue mb-4">
-                  What to include in your message
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    "Your state or ZIP code",
-                    "How many units you need",
-                    "Your preferred pickup timeframe",
-                  ].map((tip) => (
-                    <li key={tip} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-[#16A34A] flex-shrink-0" />
-                      <span className="text-sm text-[#475569] font-medium">{tip}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Contact form */}
+              <div className="flex-1 flex flex-col min-h-0">
+                <ContactForm className="h-full" />
               </div>
             </div>
 
