@@ -12,7 +12,7 @@ export default function PageHeader() {
   return (
     <section className={styles.pageHeader} aria-labelledby="about-page-heading">
       <div className="container-site">
-        <p className="section-eyebrow">About Us</p>
+        <p className={styles.pageEyebrow}>About Us</p>
         <h1 id="about-page-heading" className={styles.pageHeadline}>
           Give every business access to{" "}
           <span className={styles.headlineAccent}>equipment that works</span>

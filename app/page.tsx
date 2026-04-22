@@ -8,6 +8,7 @@ import HowItWorks from "@/components/home/HowItWorks";
 import Warranty from "@/components/home/Warranty";
 import DeliveryBulk from "@/components/home/DeliveryBulk";
 import GalleryPreview from "@/components/home/GalleryPreview";
+import GoogleReviews from "@/components/home/GoogleReviews";
 import Faq from "@/components/home/Faq";
 import FinalCTA from "@/components/home/FinalCTA";
 
@@ -29,6 +30,7 @@ export default function HomePage() {
       <Warranty />
       <DeliveryBulk />
       <GalleryPreview />
+      <GoogleReviews />
       <Faq />
       <FinalCTA />
     </>

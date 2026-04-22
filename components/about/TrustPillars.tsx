@@ -39,8 +39,8 @@ const PILLARS: Pillar[] = [
     title: "In-Stock & Ready",
     description:
       "Live inventory across all 26 locations. What you see is what's physically on the floor — ready to go today.",
-    accentBg: "#F3E8FF",
-    accentColor: "#7C3AED",
+    accentBg: "#E0E7FF",
+    accentColor: "#1E3A8A",
   },
 ];
 
