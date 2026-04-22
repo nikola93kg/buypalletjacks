@@ -74,56 +74,50 @@ export default function PalletJackModels() {
         </div>
 
         {/* Model cards */}
-        <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {MODELS.map((model) => (
-          <div
+            <article
               key={model.brand}
-              className="relative bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+              className="group overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_10px_30px_-18px_rgba(15,23,42,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(15,23,42,0.28)]"
             >
-              {/* Background image */}
-              <div className="absolute inset-0 pointer-events-none">
-                <Image
-                  src={model.img}
-                  alt={`${model.brand} pallet jack`}
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                {/* Gradient overlay — heavy bottom so content is readable */}
+              <div className="relative border-b border-slate-200 bg-[linear-gradient(180deg,#f8fbff_0%,#eef4fb_100%)]">
                 <div
-                  className="absolute inset-0"
-                  style={{
-                    background: `linear-gradient(to bottom, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.92) 40%, rgba(255,255,255,0.98) 100%)`,
-                  }}
+                  className="absolute inset-x-0 top-0 h-1.5"
+                  style={{ backgroundColor: model.accentColor }}
                 />
-              </div>
 
-              {/* Top accent bar */}
-              <div
-                className="relative h-1.5"
-                style={{ backgroundColor: model.accentColor }}
-              />
-
-              <div className="relative p-8">
-                {/* Brand badge */}
-                <div
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-600 mb-5"
-                  style={{
-                    backgroundColor: model.accentBg,
-                    border: `1px solid ${model.accentBorder}`,
-                    color: model.accentColor,
-                    fontFamily: "'Outfit', sans-serif",
-                  }}
-                >
-                  <Image
-                    src={model.logo}
-                    alt={`${model.brand} logo`}
-                    height={16}
-                    className="h-4 w-auto object-contain"
-                  />
-                  
+                <div className="absolute left-4 top-4 z-10">
+                  <div
+                    className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-600 shadow-sm"
+                    style={{
+                      backgroundColor: model.accentBg,
+                      border: `1px solid ${model.accentBorder}`,
+                      color: model.accentColor,
+                      fontFamily: "'Outfit', sans-serif",
+                    }}
+                  >
+                    <Image
+                      src={model.logo}
+                      alt={`${model.brand} logo`}
+                      height={16}
+                      className="h-4 w-auto object-contain"
+                    />
+                    <span>{model.brand}</span>
+                  </div>
                 </div>
 
+                <div className="relative h-80 sm:h-[27rem] overflow-hidden">
+                  <Image
+                    src={model.img}
+                    alt={`${model.brand} pallet jack`}
+                    fill
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-[1.04]"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+
+              <div className="p-6 md:p-7">
                 <h3
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                   className="text-2xl font-800 text-[#0F172A] mb-1"
@@ -162,7 +156,7 @@ export default function PalletJackModels() {
                   Check {model.brand} Availability
                 </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 

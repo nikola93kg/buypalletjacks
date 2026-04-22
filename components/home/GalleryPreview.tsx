@@ -80,7 +80,7 @@ export default function GalleryPreview() {
         </div>
 
         {/* Z-mosaic grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 md:auto-rows-[300px] max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 md:auto-rows-[320px] max-w-6xl mx-auto">
           {GALLERY.map(({ src, alt, col }, i) => (
             <button
               key={i}

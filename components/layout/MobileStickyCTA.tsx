@@ -12,16 +12,28 @@ export default function MobileStickyCTA() {
       <div className="grid grid-cols-2 gap-0">
         <a
           href="tel:+12622541835"
-          className="flex items-center justify-center gap-2 py-4 bg-[#1D4ED8] text-white font-semibold text-base active:bg-[#1E3A8A] transition-colors"
-          style={{ fontFamily: "'Outfit', sans-serif" }}
+          className="flex items-center justify-center gap-2 py-4 text-white font-semibold text-base active:opacity-90 transition-colors"
+          style={{
+            backgroundColor: 'var(--color-brand-blue)',
+            fontFamily: "'Outfit', sans-serif"
+          }}
+          onMouseDown={(e) => e.currentTarget.style.backgroundColor = 'var(--color-brand-navy)'}
+          onMouseUp={(e) => e.currentTarget.style.backgroundColor = 'var(--color-brand-blue)'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-brand-blue)'}
         >
           <Phone size={18} />
           Call Now
         </a>
         <a
           href="sms:+12622541835"
-          className="flex items-center justify-center gap-2 py-4 bg-[#F97316] text-white font-semibold text-base active:bg-[#EA6F0E] transition-colors"
-          style={{ fontFamily: "'Outfit', sans-serif" }}
+          className="flex items-center justify-center gap-2 py-4 text-white font-semibold text-base active:opacity-90 transition-colors"
+          style={{
+            backgroundColor: 'var(--color-brand-orange)',
+            fontFamily: "'Outfit', sans-serif"
+          }}
+          onMouseDown={(e) => e.currentTarget.style.backgroundColor = 'var(--color-brand-orange-hover)'}
+          onMouseUp={(e) => e.currentTarget.style.backgroundColor = 'var(--color-brand-orange)'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-brand-orange)'}
         >
           <MessageSquare size={18} />
           Text Us

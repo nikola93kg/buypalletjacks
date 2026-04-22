@@ -1,0 +1,272 @@
+.valueCard {
+  --accent: #1d4ed8;
+  --accent-bg: #eff6ff;
+  --accent-border: #bfdbfe;
+
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px -20px rgba(15, 23, 42, 0.18);
+}
+
+.valueBar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: var(--accent);
+}
+
+.valueCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.valueLabel {
+  margin: 0;
+  color: var(--accent);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.statPill {
+  display: inline-flex;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--accent-border);
+  border-radius: 1rem;
+  background: var(--accent-bg);
+}
+
+.statValue {
+  color: var(--accent);
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--accent-border);
+  border-radius: 1rem;
+  background: var(--accent-bg);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.valueTitle {
+  margin: 0 0 0.5rem;
+  color: #0f172a;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.valueDescription {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.blue {
+  --accent: #1d4ed8;
+  --accent-bg: #eff6ff;
+  --accent-border: #bfdbfe;
+}
+
+.orange {
+  --accent: #f97316;
+  --accent-bg: #fff7ed;
+  --accent-border: #fed7aa;
+}
+
+.green {
+  --accent: #059669;
+  --accent-bg: #ecfdf5;
+  --accent-border: #a7f3d0;
+}
+
+/* ─── Redesigned Comparison Section ─── */
+
+.comparisonSection {
+  margin-top: 3rem;
+}
+
+.comparisonHeader {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto 2.5rem;
+}
+
+.comparisonRows {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.comparisonColLabels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.colLabelBlank {
+  padding: 0.75rem 1rem;
+  background: #0f172a;
+}
+
+.colLabelUs {
+  padding: 0.75rem 1rem;
+  background: #1d4ed8;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.colLabelThem {
+  padding: 0.75rem 1rem;
+  background: #f1f5f9;
+  color: #94a3b8;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.comparisonRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.comparisonRow:last-child {
+  border-bottom: 0;
+}
+
+.rowFeature {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #fafafa;
+  border-right: 1px solid #e2e8f0;
+}
+
+.rowUs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-right: 1px solid #e2e8f0;
+}
+
+.rowThem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.comparisonEyebrow {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.comparisonTitle {
+  margin: 1rem 0 0;
+  color: #0f172a;
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.comparisonDescription {
+  margin: 0.75rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
+
+.iconSuccess {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.iconMuted {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.quote {
+  max-width: 40rem;
+  margin: 2rem auto 0;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .valueCard {
+    padding: 1.25rem;
+  }
+
+  .comparisonColLabels,
+  .comparisonRow {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .colLabelBlank,
+  .colLabelUs,
+  .colLabelThem,
+  .rowFeature,
+  .rowUs,
+  .rowThem {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}

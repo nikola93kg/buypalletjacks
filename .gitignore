@@ -42,6 +42,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# ui-ux-pro-max prompt artifacts
+.github/prompts/ui-ux-pro-max/data/
+.github/prompts/ui-ux-pro-max/scripts/
+.github/prompts/ui-ux-pro-max/scripts/__pycache__/
+*.pyc
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

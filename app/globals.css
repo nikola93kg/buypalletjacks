@@ -27,14 +27,39 @@
   EFFECTS: Subtle hover transitions (200ms), card lift, focus rings
   ANTI-PATTERNS: No AI purple/pink gradients, no cluttered layouts,
                  no playful design, no hidden credentials
+
+  ═══════════════════════════════════════════════════════
+  COLOR SCHEME CONFIGURATION
+  ═══════════════════════════════════════════════════════
+  To change the color palette, modify the values below.
+  All colors throughout the site will update automatically.
+
+  Main Brand Colors:
+  - Brand Blue: Primary brand color used for links, accents
+  - Brand Navy: Darker variant for hover states, secondary elements
+  - Brand Orange: CTA buttons, highlights, conversion elements
+
+  Hero Section Colors:
+  - Hero BG: Background color of the hero section
+  - Hero Text: Main text color in hero
+  - Hero Accent: Accent color for highlights (e.g., "Go straight to")
+  - Hero Link: Link colors in hero
+  - Hero Steel: Muted text in hero
+  - Hero Muted: Subtle text in hero
+
+  Trust Card Accents:
+  - Trust Blue: Blue accent for trust indicators
+  - Trust Green: Green accent for trust indicators
 */
 
 @theme inline {
-  /* Colors */
+  /* Main Brand Colors */
   --color-brand-blue:         #1D4ED8;
   --color-brand-navy:         #1E3A8A;
   --color-brand-orange:       #F97316;
   --color-brand-orange-hover: #EA6F0E;
+
+  /* Page Colors */
   --color-bg:                 #F8FAFC;
   --color-surface:            #FFFFFF;
   --color-text:               #0F172A;
@@ -43,6 +68,27 @@
   --color-accent:             #DBEAFE;
   --color-graphite:           #1E293B;
   --color-steel:              #94A3B8;
+
+  /* Hero Section Colors */
+  --color-hero-bg:            #F8FAFC;
+  --color-hero-text:          #0F172A;
+  --color-hero-text-muted:    #475569;
+  --color-hero-accent:        #1D4ED8;
+  --color-hero-link:          #2563EB;
+  --color-hero-steel:         #64748B;
+  --color-hero-muted:         #94A3B8;
+
+  /* Hero overlay colors (for text readability over background image) */
+  --color-hero-overlay-start: rgba(255, 255, 255, 0.92);
+  --color-hero-overlay-mid:   rgba(255, 255, 255, 0.88);
+  --color-hero-overlay-light: rgba(255, 255, 255, 0.60);
+  --color-hero-overlay-end:   rgba(255, 255, 255, 0.05);
+  --color-hero-mobile-start:  rgba(255, 255, 255, 0.40);
+  --color-hero-mobile-end:    rgba(255, 255, 255, 0.95);
+
+  /* Trust Card Accents */
+  --color-trust-blue:         #3B82F6;
+  --color-trust-green:        #10B981;
 
   /* Typography */
   --font-heading: 'Outfit', sans-serif;
@@ -120,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #F97316;
+  background-color: var(--color-brand-orange);
   color: #ffffff;
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
@@ -135,13 +181,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-  background-color: #EA6F0E;
+  background-color: var(--color-brand-orange-hover);
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(249, 115, 22, 0.35);
 }
 
 .btn-primary:focus-visible {
-  outline: 3px solid #F97316;
+  outline: 3px solid var(--color-brand-orange);
   outline-offset: 3px;
 }
 
@@ -171,6 +217,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary:focus-visible {
   outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+.btn-secondary-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: #0F172A;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  border: 2px solid #CBD5E1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 200ms ease, border-color 200ms ease, transform 150ms ease;
+  white-space: nowrap;
+}
+
+.btn-secondary-hero:hover {
+  background-color: #F8FAFC;
+  border-color: #94A3B8;
+  transform: translateY(-1px);
+}
+
+.btn-secondary-hero:focus-visible {
+  outline: 3px solid #2563EB;
   outline-offset: 3px;
 }
 
@@ -321,38 +395,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
-  ═══════════════════════════════════════════════════════
-  ALTERNATE COLOR SCHEMES
-  Apply by adding data-theme="<name>" to <html> element.
-  Default (no attribute) = Industrial Blue (original).
-  ═══════════════════════════════════════════════════════
-
-  All three schemes are on-brand for an industrial / warehouse
-  equipment sales site (buypalletjacks.com).
-
-  SCHEME 1: industrial-steel
-    Concept: Steel-gray primary · safety-orange CTA
-             Unpainted steel, warehouse floors, no-nonsense.
-    Source: UI Pro Max — Construction/Architecture palette.
-
-  SCHEME 2: heavy-freight
-    Concept: Amber/construction-yellow primary · near-black bg
-             Caterpillar / DeWalt / heavy-machinery energy.
-    Source: Industrial equipment tradition (high-vis yellow).
-
-  SCHEME 3: cargo-blue
-    Concept: Freight logistics sky-blue · deep navy dark sections
-             FedEx/UPS freight trust · reliable delivery brand.
-    Source: UI Pro Max — Service Landing Page palette.
-
-  (midnight-authority is also defined below for the dark theme option)
-  ═══════════════════════════════════════════════════════
-*/
-
-/*
   ── Runtime CSS variables ──────────────────────────────
   One set of short tokens maps to every hardcoded hex used
-  in components. Override per [data-theme] to retheme site.
+  in components. All colors are fixed to the default Industrial Blue theme.
 
   --tp      = theme primary        (default #1D4ED8)
   --tp-dark = theme primary-dark   (default #1E3A8A)
@@ -374,272 +419,25 @@ h1, h2, h3, h4, h5, h6 {
   --tg:       #0F172A;
   --tg2:      #1E293B;
   --tg3:      #0A1628;
-}
 
-/* ══════════════════════════════════════════════════════
-   SCHEME 1 — Industrial Steel
-   Slate-gray primary · safety-orange CTA · dark steel bg
-   ══════════════════════════════════════════════════════ */
-[data-theme="industrial-steel"] {
-  --color-brand-blue:         #64748B;
-  --color-brand-navy:         #334155;
-  --color-brand-orange:       #F97316;
-  --color-brand-orange-hover: #EA6F0E;
-  --color-bg:                 #F8FAFC;
-  --color-surface:            #FFFFFF;
-  --color-text:               #1E293B;
-  --color-muted:              #64748B;
-  --color-border:             #CBD5E1;
-  --color-accent:             #F1F5F9;
-  --color-graphite:           #334155;
-  --color-steel:              #94A3B8;
-  /* runtime tokens */
-  --tp:      #64748B;
-  --tp-dark: #334155;
-  --ta:      #F1F5F9;
-  --ta2:     #F8FAFC;
-  --tg:      #334155;
-  --tg2:     #475569;
-  --tg3:     #1E293B;
-}
+  /* Hero colors */
+  --color-hero-bg:            #F8FAFC;
+  --color-hero-text:          #0F172A;
+  --color-hero-text-muted:    #475569;
+  --color-hero-accent:        #1D4ED8;
+  --color-hero-link:          #2563EB;
+  --color-hero-steel:         #64748B;
+  --color-hero-muted:         #94A3B8;
+  --color-trust-blue:         #3B82F6;
+  --color-trust-green:        #10B981;
 
-[data-theme="industrial-steel"] body {
-  background-color: #F8FAFC;
-  color: #1E293B;
-}
-
-[data-theme="industrial-steel"] .btn-outline {
-  color: #64748B;
-  border-color: #64748B;
-}
-
-[data-theme="industrial-steel"] .btn-outline:hover {
-  background-color: #64748B;
-  color: #ffffff;
-}
-
-[data-theme="industrial-steel"] .btn-outline:focus-visible {
-  outline-color: #64748B;
-}
-
-[data-theme="industrial-steel"] .section-eyebrow {
-  color: #334155;
-}
-
-[data-theme="industrial-steel"] :focus-visible {
-  outline-color: #64748B;
-}
-
-/* ══════════════════════════════════════════════════════
-   SCHEME 2 — Heavy Freight
-   Amber/yellow primary · charcoal-black bg · high-vis CTA
-   ══════════════════════════════════════════════════════ */
-[data-theme="heavy-freight"] {
-  --color-brand-blue:         #B45309;
-  --color-brand-navy:         #92400E;
-  --color-brand-orange:       #F59E0B;
-  --color-brand-orange-hover: #D97706;
-  --color-bg:                 #FFFBEB;
-  --color-surface:            #FFFFFF;
-  --color-text:               #1C1917;
-  --color-muted:              #78716C;
-  --color-border:             #FDE68A;
-  --color-accent:             #FEF3C7;
-  --color-graphite:           #1C1917;
-  --color-steel:              #A8A29E;
-  /* runtime tokens */
-  --tp:       #B45309;
-  --tp-dark:  #92400E;
-  --tc:       #F59E0B;
-  --tc-hover: #D97706;
-  --ta:       #FEF3C7;
-  --ta2:      #FFFBEB;
-  --tg:       #1C1917;
-  --tg2:      #292524;
-  --tg3:      #0C0A09;
-}
-
-[data-theme="heavy-freight"] body {
-  background-color: #FFFBEB;
-  color: #1C1917;
-}
-
-[data-theme="heavy-freight"] .card-base {
-  border-color: #FDE68A;
-}
-
-[data-theme="heavy-freight"] .btn-primary {
-  background-color: #F59E0B;
-}
-
-[data-theme="heavy-freight"] .btn-primary:hover {
-  background-color: #D97706;
-  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
-}
-
-[data-theme="heavy-freight"] .btn-primary:focus-visible {
-  outline-color: #F59E0B;
-}
-
-[data-theme="heavy-freight"] .btn-outline {
-  color: #B45309;
-  border-color: #B45309;
-}
-
-[data-theme="heavy-freight"] .btn-outline:hover {
-  background-color: #B45309;
-  color: #ffffff;
-}
-
-[data-theme="heavy-freight"] .btn-outline:focus-visible {
-  outline-color: #B45309;
-}
-
-[data-theme="heavy-freight"] .section-eyebrow {
-  color: #B45309;
-}
-
-[data-theme="heavy-freight"] .section-eyebrow::before {
-  background-color: #F59E0B;
-}
-
-[data-theme="heavy-freight"] :focus-visible {
-  outline-color: #B45309;
-}
-
-/* ══════════════════════════════════════════════════════
-   SCHEME 3 — Cargo Blue
-   Freight-logistics sky-blue · deep navy dark sections
-   ══════════════════════════════════════════════════════ */
-[data-theme="cargo-blue"] {
-  --color-brand-blue:         #0369A1;
-  --color-brand-navy:         #0C4A6E;
-  --color-brand-orange:       #F97316;
-  --color-brand-orange-hover: #EA6F0E;
-  --color-bg:                 #F0F9FF;
-  --color-surface:            #FFFFFF;
-  --color-text:               #0C4A6E;
-  --color-muted:              #0369A1;
-  --color-border:             #BAE6FD;
-  --color-accent:             #E0F2FE;
-  --color-graphite:           #0C4A6E;
-  --color-steel:              #7DD3FC;
-  /* runtime tokens */
-  --tp:      #0369A1;
-  --tp-dark: #0C4A6E;
-  --ta:      #E0F2FE;
-  --ta2:     #F0F9FF;
-  --tg:      #0C4A6E;
-  --tg2:     #075985;
-  --tg3:     #082f49;
-}
-
-[data-theme="cargo-blue"] body {
-  background-color: #F0F9FF;
-  color: #0C4A6E;
-}
-
-[data-theme="cargo-blue"] .card-base {
-  border-color: #BAE6FD;
-}
-
-[data-theme="cargo-blue"] .btn-outline {
-  color: #0369A1;
-  border-color: #0369A1;
-}
-
-[data-theme="cargo-blue"] .btn-outline:hover {
-  background-color: #0369A1;
-  color: #ffffff;
-}
-
-[data-theme="cargo-blue"] .btn-outline:focus-visible {
-  outline-color: #0369A1;
-}
-
-[data-theme="cargo-blue"] .section-eyebrow {
-  color: #0369A1;
-}
-
-[data-theme="cargo-blue"] :focus-visible {
-  outline-color: #0369A1;
-}
-
-/* ══════════════════════════════════════════════════════
-   BONUS — Midnight Authority (dark theme)
-   Near-black bg · sky-blue primary · premium authority
-   ══════════════════════════════════════════════════════ */
-[data-theme="midnight-authority"] {
-  --color-brand-blue:         #38BDF8;
-  --color-brand-navy:         #0EA5E9;
-  --color-brand-orange:       #F97316;
-  --color-brand-orange-hover: #EA6F0E;
-  --color-bg:                 #0F172A;
-  --color-surface:            #1E293B;
-  --color-text:               #F1F5F9;
-  --color-muted:              #94A3B8;
-  --color-border:             #334155;
-  --color-accent:             #1E3A5F;
-  --color-graphite:           #020617;
-  --color-steel:              #475569;
-  /* runtime tokens */
-  --tp:      #38BDF8;
-  --tp-dark: #0EA5E9;
-  --ta:      #1E3A5F;
-  --ta2:     #172554;
-  --tg:      #020617;
-  --tg2:     #0F172A;
-  --tg3:     #000000;
-}
-
-[data-theme="midnight-authority"] body {
-  background-color: #0F172A;
-  color: #F1F5F9;
-}
-
-/* Dark header so the white bar doesn't clash with near-black page */
-[data-theme="midnight-authority"] header {
-  background-color: #0F172A;
-  border-bottom: 1px solid #1E293B;
-  box-shadow: none;
-}
-
-[data-theme="midnight-authority"] header a,
-[data-theme="midnight-authority"] header span,
-[data-theme="midnight-authority"] header button:not(.btn-primary) {
-  color: #F1F5F9;
-}
-
-[data-theme="midnight-authority"] .card-base {
-  background: #1E293B;
-  border-color: #334155;
-}
-
-[data-theme="midnight-authority"] .card-base:hover {
-  border-color: #475569;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
-}
-
-[data-theme="midnight-authority"] .btn-outline {
-  color: #38BDF8;
-  border-color: #38BDF8;
-}
-
-[data-theme="midnight-authority"] .btn-outline:hover {
-  background-color: #38BDF8;
-  color: #0F172A;
-}
-
-[data-theme="midnight-authority"] .btn-outline:focus-visible {
-  outline-color: #38BDF8;
-}
-
-[data-theme="midnight-authority"] .section-eyebrow {
-  color: #38BDF8;
-}
-
-[data-theme="midnight-authority"] :focus-visible {
-  outline-color: #38BDF8;
+  /* Hero overlay colors */
+  --color-hero-overlay-start: rgba(255, 255, 255, 0.92);
+  --color-hero-overlay-mid:   rgba(255, 255, 255, 0.88);
+  --color-hero-overlay-light: rgba(255, 255, 255, 0.60);
+  --color-hero-overlay-end:   rgba(255, 255, 255, 0.05);
+  --color-hero-mobile-start:  rgba(255, 255, 255, 0.40);
+  --color-hero-mobile-end:    rgba(255, 255, 255, 0.95);
 }
 
 /*
@@ -700,3 +498,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ── GRAPHITE DEEP: #0A1628 → --tg3 ────────────────── */
 .bg-\[\#0A1628\]                   { background-color: var(--tg3); }
 
+
+.hero-left-column {
+  width: min(100%, 700px);
+  max-width: 700px;
+  justify-self: start;
+}

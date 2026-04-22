@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import LocationsFooterSection from "@/components/layout/LocationsFooterSection";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
+import BackToTopButton from "@/components/layout/BackToTopButton";
 import { SITE_NAME, SITE_DESCRIPTION, localBusinessJsonLd, organizationJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -51,12 +52,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Restore saved theme before first paint to avoid flash */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('bpj-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
-          }}
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -77,6 +72,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <LocationsFooterSection />
         <Footer />
+        <BackToTopButton />
         <MobileStickyCTA />
       </body>
     </html>

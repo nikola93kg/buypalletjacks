@@ -7,7 +7,6 @@ import { useState } from "react";
 import { Phone, Menu, X, MapPin, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logoImg from "@/public/logo.webp";
-import ThemeSwitcher from "@/components/layout/ThemeSwitcher";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -82,7 +81,6 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <ThemeSwitcher />
             <Link
               href="/locations"
               className="flex items-center gap-1.5 text-sm font-medium text-[#64748B] hover:text-[#1D4ED8] transition-colors"
@@ -144,10 +142,6 @@ export default function Header() {
               <a href="sms:+12622541835" className="btn-outline justify-center">
                 Text Us
               </a>
-              <div className="flex items-center justify-between pt-2">
-                <span className="text-xs text-[#64748B] font-medium">Theme</span>
-                <ThemeSwitcher />
-              </div>
             </div>
           </nav>
         </div>
