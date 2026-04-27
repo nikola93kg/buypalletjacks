@@ -171,7 +171,7 @@ export default function Hero() {
             </div>
 
             {/* Trust cards */}
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-[10px] mb-8 items-start">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-[10px] mb-8 items-center sm:items-start">
               {[
                 { icon: Shield, title: "2-Month Warranty", accent: 'var(--color-trust-blue)' },
                 { icon: Tag, title: "Multi-Unit Discounts", accent: 'var(--color-brand-orange)' },
@@ -179,12 +179,11 @@ export default function Hero() {
               ].map(({ icon: Icon, title, accent }) => (
                 <div
                   key={title}
-                  className="relative flex items-center gap-3 rounded-2xl px-4 py-3 overflow-hidden backdrop-blur-sm max-w-[21rem]"
+                  className="relative flex items-center gap-3 rounded-2xl px-4 py-3 overflow-hidden backdrop-blur-sm w-full sm:w-[200px]"
                   style={{
                     background: "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(248,250,252,0.92) 100%)",
                     border: "1px solid rgba(148,163,184,0.28)",
                     boxShadow: "inset 0 1px 0 rgba(255,255,255,0.65), 0 10px 28px rgba(15,23,42,0.10)",
-                    width: "200px",
                   }}
                 >
                   <span
