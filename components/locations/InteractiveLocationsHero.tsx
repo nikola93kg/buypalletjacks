@@ -1,11 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MapPin } from "lucide-react";
+import { MapPin, Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import { getAllStatesWithLocations, STATE_NAMES } from "@/lib/locations";
 import StateSelectFallback from "./StateSelectFallback";
-import styles from "./locations.module.css";
 import type { ComponentProps } from "react";
 
 type UsaMapProps = ComponentProps<typeof import("./UsaMap")["default"]>;
@@ -14,8 +13,8 @@ type LocationsPanelProps = ComponentProps<typeof import("./LocationsPanel")["def
 const UsaMap = dynamic<UsaMapProps>(() => import("./UsaMap"), {
   ssr: false,
   loading: () => (
-    <div className={styles.mapLoadingPlaceholder}>
-      <span>Loading map…</span>
+    <div className="w-full aspect-[5/3] rounded-2xl bg-[#E2E8F0] animate-pulse flex items-center justify-center">
+      <span className="text-[#64748B] text-sm">Loading map…</span>
     </div>
   ),
 });
@@ -29,6 +28,7 @@ export default function InteractiveLocationsHero() {
   const statesWithLocations = getAllStatesWithLocations();
   const [selectedState, setSelectedState] = useState<string | null>(null);
 
+  // Auto-scroll panel into view on mobile when state is selected
   useEffect(() => {
     if (selectedState && window.innerWidth < 1024) {
       const panel = document.getElementById("locations-panel");
@@ -37,112 +37,127 @@ export default function InteractiveLocationsHero() {
   }, [selectedState]);
 
   return (
-    <>
-      {/* ── Dark navy gradient header ─────────────────────── */}
-      <section className={styles.pageHeader} aria-labelledby="locations-hero-heading">
-        <div className="container-site">
-          <div className={styles.headerInner}>
-            {/* Eyebrow */}
-            <div>
-              <span className={styles.pageEyebrow}>
-                <MapPin aria-hidden="true" width={12} height={12} />
-                Pickup Locations
+    <section
+      className="section-padding bg-[#F8FAFC]"
+      aria-labelledby="locations-hero-heading"
+    >
+      <div className="container-site">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <span className="section-eyebrow">Locations</span>
+          <h1
+            id="locations-hero-heading"
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+            className="text-3xl md:text-5xl font-800 text-[#0F172A] mb-4"
+          >
+            Find a Pickup Location{" "}
+            <span className="text-[#1D4ED8]">Near You</span>
+          </h1>
+          <p className="text-[#64748B] text-base max-w-xl mx-auto">
+            Click your state on the map — or use the search below to find the
+            nearest pickup point.
+          </p>
+
+          {/* Stats strip */}
+          <div className="flex items-center justify-center gap-8 flex-wrap mt-8 mb-8">
+            <div className="flex flex-col items-center gap-0.5">
+              <span
+                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="text-4xl font-extrabold text-[#0F172A] leading-none"
+              >
+                26
+              </span>
+              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+                Locations
               </span>
             </div>
-
-            {/* Headline */}
-            <h1 id="locations-hero-heading" className={styles.pageHeadline}>
-              Find a Pickup Location{" "}
-              <span className={styles.headlineAccent}>Near You</span>
-            </h1>
-
-            {/* Subline */}
-            <p className={styles.pageSubline}>
-              Click your state on the map — or use the dropdown to jump straight
-              to your nearest location.
-            </p>
-
-            {/* Stats strip */}
-            <div className={styles.statsStrip}>
-              <div className={styles.statCell}>
-                <span className={styles.statNumber}>26</span>
-                <span className={styles.statLabel}>Locations</span>
-              </div>
-              <div className={styles.statDivider} aria-hidden="true" />
-              <div className={styles.statCell}>
-                <span className={styles.statNumber}>19</span>
-                <span className={styles.statLabel}>States</span>
-              </div>
-              <div className={styles.statDivider} aria-hidden="true" />
-              <div className={styles.statCell}>
-                <span className={styles.statNumberOrange}>Free</span>
-                <span className={styles.statLabel}>Pickup</span>
-              </div>
+            <div className="w-px h-12 bg-[#E2E8F0] flex-shrink-0" />
+            <div className="flex flex-col items-center gap-0.5">
+              <span
+                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="text-4xl font-extrabold text-[#0F172A] leading-none"
+              >
+                19
+              </span>
+              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+                States
+              </span>
             </div>
-
-            {/* Accessible state select fallback */}
-            <div className={styles.selectWrap}>
-              <StateSelectFallback
-                statesWithLocations={statesWithLocations}
-                selectedState={selectedState}
-                onStateSelect={setSelectedState}
-              />
+            <div className="w-px h-12 bg-[#E2E8F0] flex-shrink-0" />
+            <div className="flex flex-col items-center gap-0.5">
+              <span
+                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="text-4xl font-extrabold text-[#F97316] leading-none"
+              >
+                Free
+              </span>
+              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+                Pickup
+              </span>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* ── Dark map section ──────────────────────────────── */}
-      <section className={styles.mapSection} aria-label="Interactive location map">
-        <div className="container-site">
-          <div className={styles.mapGrid}>
-            {/* Map */}
-            <div className={`${styles.mapBox} lg:flex-1`}>
-              <div className={styles.mapLegend} aria-hidden="true">
-                <span className={styles.legendDot}>
-                  <span className={`${styles.legendSwatch} ${styles.legendSwatchBlue}`} />
+          {/* Accessible fallback for screen readers / keyboard-only users */}
+          <div className="max-w-sm mx-auto">
+            <StateSelectFallback
+              statesWithLocations={statesWithLocations}
+              selectedState={selectedState}
+              onStateSelect={setSelectedState}
+            />
+          </div>
+        </div>
+
+        {/* Map + panel grid */}
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Map */}
+          <div className="lg:flex-1">
+            <div className="bg-[#0A1628] rounded-2xl border border-[#1E3A8A]/40 shadow-2xl p-4 md:p-6">
+              {/* Legend */}
+              <div className="flex flex-wrap items-center gap-4 mb-4 text-xs text-[#94A3B8]">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-4 h-3 rounded-sm bg-[#1D4ED8] inline-block" aria-hidden="true" />
                   Has Locations
                 </span>
-                <span className={styles.legendDot}>
-                  <span className={`${styles.legendSwatch} ${styles.legendSwatchSelected}`} />
+                <span className="flex items-center gap-1.5">
+                  <span className="w-4 h-3 rounded-sm bg-[#60A5FA] inline-block" aria-hidden="true" />
                   Selected
                 </span>
-                <span className={styles.legendDot}>
-                  <span className={`${styles.legendSwatch} ${styles.legendSwatchGrey}`} />
+                <span className="flex items-center gap-1.5">
+                  <span className="w-4 h-3 rounded-sm bg-[#CBD5E1] inline-block" aria-hidden="true" />
                   No Locations
                 </span>
               </div>
-
               <UsaMap
                 statesWithLocations={statesWithLocations}
                 selectedState={selectedState}
                 onStateSelect={setSelectedState}
               />
-
               {selectedState && (
-                <p className={styles.mapFootnote}>
+                <p className="text-center text-sm text-[#94A3B8] mt-3">
                   Showing locations in{" "}
-                  <strong className={styles.mapFootnoteHighlight}>
+                  <strong className="text-[#60A5FA]">
                     {STATE_NAMES[selectedState] || selectedState}
                   </strong>{" "}
                   —{" "}
                   <button
                     onClick={() => setSelectedState(null)}
-                    className={styles.mapClearBtn}
+                    className="text-[#60A5FA] hover:text-white transition-colors font-medium"
                   >
                     Clear selection
                   </button>
                 </p>
               )}
             </div>
+          </div>
 
-            {/* Locations panel */}
-            <div
-              id="locations-panel"
-              className={styles.panelBox}
-              aria-live="polite"
-              aria-label="Location results"
-            >
+          {/* Locations panel */}
+          <div
+            id="locations-panel"
+            className="lg:w-80 xl:w-96"
+            aria-live="polite"
+            aria-label="Location results"
+          >
+            <div className="bg-[#0A1628] rounded-2xl border border-[#1E3A8A]/40 overflow-hidden h-full shadow-2xl">
               <LocationsPanel
                 selectedState={selectedState}
                 onClear={() => setSelectedState(null)}
@@ -152,7 +167,7 @@ export default function InteractiveLocationsHero() {
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -8,7 +8,6 @@ import {
   STATE_NAMES,
   type Location,
 } from "@/lib/locations";
-import styles from "./locations.module.css";
 
 export default function LocationsDirectory() {
   const [query, setQuery] = useState("");
@@ -40,23 +39,29 @@ export default function LocationsDirectory() {
   );
 
   return (
-    <section className={styles.directory} aria-labelledby="directory-heading">
+    <section className="section-padding bg-white" aria-labelledby="directory-heading">
       <div className="container-site">
         {/* Section header */}
-        <div className={styles.dirHeader}>
-          <p className={styles.dirEyebrow}>Directory</p>
-          <h2 id="directory-heading" className={styles.dirHeadline}>
+        <div className="text-center mb-12">
+          <p className="section-eyebrow">Directory</p>
+          <h2
+            id="directory-heading"
+            className="text-3xl md:text-4xl font-extrabold text-graphite mb-4"
+          >
             All Pickup Locations
           </h2>
-          <p className={styles.dirSubline}>
+          <p className="text-steel text-lg max-w-2xl mx-auto">
             26 locations across 19 states. Search by city, state, or facility — or
             filter by state to jump straight to your area.
           </p>
         </div>
 
         {/* Search bar */}
-        <div className={styles.searchWrap}>
-          <Search className={styles.searchIcon} aria-hidden="true" />
+        <div className="relative max-w-2xl mx-auto mb-8">
+          <Search
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-steel pointer-events-none"
+            aria-hidden="true"
+          />
           <input
             type="search"
             value={query}
@@ -65,16 +70,16 @@ export default function LocationsDirectory() {
               setActiveState(null);
             }}
             placeholder="Search city, state, or facility…"
-            className={styles.searchInput}
+            className="w-full border-2 border-border rounded-xl pl-12 pr-10 py-3.5 text-graphite placeholder:text-steel bg-white focus:outline-none focus:border-brand-blue transition-colors text-base shadow-sm"
             aria-label="Search pickup locations"
           />
           {query && (
             <button
               onClick={() => setQuery("")}
-              className={styles.searchClear}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-steel hover:text-graphite transition-colors p-1 cursor-pointer"
               aria-label="Clear search"
             >
-              <X width={16} height={16} />
+              <X className="w-4 h-4" />
             </button>
           )}
         </div>
@@ -82,21 +87,31 @@ export default function LocationsDirectory() {
         {/* State quick-jump pills */}
         {!query && (
           <div
-            className={styles.pillsRow}
+            className="flex flex-wrap gap-2 justify-center mb-12"
             role="group"
             aria-label="Filter by state"
           >
             <button
               onClick={() => setActiveState(null)}
-              className={`${styles.pill} ${!activeState ? styles.pillActive : ""}`}
+              className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+                !activeState
+                  ? "bg-brand-blue text-white shadow-sm"
+                  : "bg-white border border-border text-steel hover:border-brand-blue hover:text-brand-blue"
+              }`}
             >
               All States
             </button>
             {states.map((code) => (
               <button
                 key={code}
-                onClick={() => setActiveState(activeState === code ? null : code)}
-                className={`${styles.pill} ${activeState === code ? styles.pillActive : ""}`}
+                onClick={() =>
+                  setActiveState(activeState === code ? null : code)
+                }
+                className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+                  activeState === code
+                    ? "bg-brand-blue text-white shadow-sm"
+                    : "bg-white border border-border text-steel hover:border-brand-blue hover:text-brand-blue"
+                }`}
               >
                 {STATE_NAMES[code] || code}
               </button>
@@ -106,12 +121,12 @@ export default function LocationsDirectory() {
 
         {/* Search result count */}
         {query && (
-          <p className={styles.resultCount}>
+          <p className="text-sm text-steel text-center mb-8">
             {totalResults === 0 ? (
               "No locations found"
             ) : (
               <>
-                <span className={styles.resultCountBold}>{totalResults}</span>{" "}
+                <span className="font-semibold text-graphite">{totalResults}</span>{" "}
                 location{totalResults !== 1 ? "s" : ""} found for &ldquo;{query}&rdquo;
               </>
             )}
@@ -120,14 +135,19 @@ export default function LocationsDirectory() {
 
         {/* Empty state */}
         {totalResults === 0 && (
-          <div className={styles.emptyState}>
-            <div className={styles.emptyIconWrap}>
-              <MapPin aria-hidden="true" />
+          <div className="text-center py-16">
+            <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-4">
+              <MapPin className="w-8 h-8 text-brand-blue" />
             </div>
-            <p className={styles.emptyTitle}>No locations found</p>
-            <p className={styles.emptyBody}>
+            <p className="text-graphite font-semibold text-lg mb-2">
+              No locations found
+            </p>
+            <p className="text-steel text-sm">
               Try a different search or{" "}
-              <a href="tel:+12622541835" className={styles.emptyLink}>
+              <a
+                href="tel:+12622541835"
+                className="text-brand-blue hover:underline"
+              >
                 call us
               </a>{" "}
               — we may have upcoming stock near you.
@@ -135,9 +155,9 @@ export default function LocationsDirectory() {
           </div>
         )}
 
-        {/* Cards grid */}
+        {/* State groups */}
         {totalResults > 0 && (
-          <div className={styles.cardsGrid}>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {displayedStates.flatMap((stateCode) =>
               displayedGrouped[stateCode].map((loc, idx) => (
                 <LocationCard key={`${stateCode}-${idx}`} loc={loc} />
@@ -151,20 +171,20 @@ export default function LocationsDirectory() {
 }
 
 function LocationCard({ loc }: { loc: Location }) {
-  const stateName =
-    STATE_NAMES[loc.state.toUpperCase() as keyof typeof STATE_NAMES] ?? loc.state;
-
+  const stateName = STATE_NAMES[loc.state.toUpperCase() as keyof typeof STATE_NAMES] ?? loc.state;
   return (
-    <div className={styles.card}>
-      <div className={styles.cardTop}>
-        <div className={styles.cardIconWrap}>
-          <MapPin aria-hidden="true" />
+    <div className="bg-white border border-border rounded-xl p-5 flex flex-col gap-4 hover:border-brand-blue hover:shadow-md transition-all duration-200 group cursor-default">
+      <div className="flex items-start gap-3">
+        <div className="w-9 h-9 rounded-lg bg-accent flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-brand-blue transition-colors duration-200">
+          <MapPin className="w-4 h-4 text-brand-blue group-hover:text-white transition-colors duration-200" />
         </div>
-        <div>
-          <p className={styles.cardCity}>{loc.cityState}</p>
-          <p className={styles.cardState}>{stateName}</p>
+        <div className="min-w-0 flex-1">
+          <p className="font-bold text-graphite text-base leading-tight">
+            {loc.cityState}
+          </p>
+          <p className="text-xs font-semibold text-brand-blue mt-0.5">{stateName}</p>
           {loc.facility && (
-            <p className={styles.cardFacility}>
+            <p className="text-xs text-steel mt-1 leading-snug">
               {loc.facility}
               {loc.unitNumber &&
                 loc.unitNumber !== "-" &&
@@ -180,12 +200,12 @@ function LocationCard({ loc }: { loc: Location }) {
           href={loc.gmaps}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.cardDirections}
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:text-brand-navy transition-colors mt-auto cursor-pointer group/link"
           aria-label={`Get directions to ${loc.cityState}`}
         >
-          <Navigation aria-hidden="true" />
+          <Navigation className="w-3.5 h-3.5" />
           Get Directions
-          <ExternalLink className={styles.cardDirectionsExt} aria-hidden="true" />
+          <ExternalLink className="w-3 h-3 opacity-50 group-hover/link:opacity-100 transition-opacity" />
         </a>
       )}
     </div>

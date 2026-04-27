@@ -125,14 +125,14 @@ export default function Hero() {
             </div>
 
             {/* Sub-offer row */}
-            <div className="flex items-center justify-center sm:justify-start gap-4 mb-8">
+            <div className="flex items-center justify-center sm:justify-start gap-4 mb-8 mt-4">
               <div className="flex-shrink-0 leading-none">
                 <span
                   style={{
                     color: 'var(--color-hero-text)',
                     fontFamily: "'Outfit', sans-serif",
                     fontSize: "1.5rem",
-                    fontWeight: "black",
+                    fontWeight: "800",
                     lineHeight: "none"
                   }}
                 >

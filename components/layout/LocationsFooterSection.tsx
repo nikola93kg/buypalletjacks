@@ -21,7 +21,7 @@ export default function LocationsFooterSection() {
 
         {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-          <div>
+          <div className="text-center sm:text-left">
             <p
               className="text-xs font-700 uppercase tracking-[0.18em] text-[#3B82F6] mb-2"
               style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -39,7 +39,7 @@ export default function LocationsFooterSection() {
               pickup. Call or text to confirm stock before you show up.
             </p>
           </div>
-          <div className="flex flex-wrap gap-2 flex-shrink-0">
+          <div className="flex flex-wrap gap-2 flex-shrink-0 justify-center sm:justify-start">
             <a
               href="tel:+12622541835"
               className="inline-flex items-center gap-1.5 text-xs font-600 text-[#0F172A] px-3.5 py-2 rounded-lg border border-[#CBD5E1] hover:border-[#94A3B8] hover:bg-[#E2E8F0] transition-all"
@@ -100,7 +100,7 @@ export default function LocationsFooterSection() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="mt-12 pt-6 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center sm:items-center justify-between gap-4">
           <Link
             href="/locations"
             className="inline-flex items-center gap-1.5 text-sm text-[#1D4ED8] hover:text-[#1E3A8A] font-600 transition-colors"

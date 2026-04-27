@@ -50,7 +50,9 @@ export default function ContactPage() {
       {/* ── Page header ─────────────────────────────────────── */}
       <section className={styles.pageHeader} aria-labelledby="contact-heading">
         <div className="container-site">
-          <p className={styles.pageEyebrow}>Contact Us</p>
+          <div className="flex flex-col items-center sm:items-start">
+            <p className={styles.pageEyebrow}>Contact Us</p>
+          </div>
           <h1 id="contact-heading" className={styles.pageHeadline}>
             We&apos;re a{" "}
             <span className={styles.headlineAccent}>call or text away</span>

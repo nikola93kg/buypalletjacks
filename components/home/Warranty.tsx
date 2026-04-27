@@ -23,7 +23,7 @@ export default function Warranty() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16 items-center">
 
           {/* ── LEFT — Text ── */}
-          <div>
+          <div className="text-center lg:text-left">
             <span className="section-eyebrow text-[#60A5FA]">Quality Promise</span>
             <h2
               id="warranty-heading"
@@ -53,7 +53,7 @@ export default function Warranty() {
               ))}
             </ul>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               <a href="tel:+12622541835" className="btn-primary">
                 Ask About Warranty
               </a>
