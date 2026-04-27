@@ -6,7 +6,7 @@ import { Phone, MessageSquare, MapPin, ChevronRight, Shield, Truck, Tag, Info } 
 import { locations } from "@/lib/locations";
 import { useState, useEffect, useRef } from "react";
 import heroImg from "@/public/heroImg.jpg";
-import heroImgPng from "@/public/heroImg.png";
+import heroImgPng from "@/public/hero2.jpg";
 
 export default function Hero() {
   const locationCount = locations.length;
