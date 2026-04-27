@@ -72,15 +72,3 @@ export default function MissionSplit() {
     </section>
   );
 }
-                <li key={item} className={styles.diffItem}>
-                  <CheckCircle2 aria-hidden="true" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
