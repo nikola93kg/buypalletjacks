@@ -85,7 +85,7 @@ export default function Hero() {
             {/* MAIN PUNCH HEADLINE */}
             <h1
               id="hero-heading"
-              className="font-900 leading-[0.92] mt-2 tracking-tight mb-5"
+              className="font-900 leading-[0.92] mt-2 tracking-tight mb-5 text-center sm:text-left"
               style={{
                 fontFamily: "'Outfit', sans-serif",
                 fontSize: "clamp(2.6rem, 5.5vw, 4rem)",
@@ -100,7 +100,7 @@ export default function Hero() {
             </h1>
 
             {/* Save up to 40% OFF accent */}
-            <div className="">
+            <div className="flex flex-col items-center sm:items-start">
               <p
                 className="text-slate-600 text-lg font-semibold leading-tight mb-0"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -125,14 +125,14 @@ export default function Hero() {
             </div>
 
             {/* Sub-offer row */}
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center justify-center sm:justify-start gap-4 mb-8 mt-4">
               <div className="flex-shrink-0 leading-none">
                 <span
                   style={{
                     color: 'var(--color-hero-text)',
                     fontFamily: "'Outfit', sans-serif",
                     fontSize: "1.5rem",
-                    fontWeight: "black",
+                    fontWeight: "800",
                     lineHeight: "none"
                   }}
                 >
@@ -171,7 +171,7 @@ export default function Hero() {
             </div>
 
             {/* Trust cards */}
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-[10px] mb-8 items-start">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-[10px] mb-8 items-center sm:items-start">
               {[
                 { icon: Shield, title: "2-Month Warranty", accent: 'var(--color-trust-blue)' },
                 { icon: Tag, title: "Multi-Unit Discounts", accent: 'var(--color-brand-orange)' },
@@ -179,12 +179,11 @@ export default function Hero() {
               ].map(({ icon: Icon, title, accent }) => (
                 <div
                   key={title}
-                  className="relative flex items-center gap-3 rounded-2xl px-4 py-3 overflow-hidden backdrop-blur-sm max-w-[21rem]"
+                  className="relative flex items-center gap-3 rounded-2xl px-4 py-3 overflow-hidden backdrop-blur-sm w-full sm:w-[200px]"
                   style={{
                     background: "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(248,250,252,0.92) 100%)",
                     border: "1px solid rgba(148,163,184,0.28)",
                     boxShadow: "inset 0 1px 0 rgba(255,255,255,0.65), 0 10px 28px rgba(15,23,42,0.10)",
-                    width: "200px",
                   }}
                 >
                   <span
@@ -207,7 +206,7 @@ export default function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mb-4">
+            <div className="flex flex-wrap justify-center sm:justify-start gap-3 mb-4">
               <a href="tel:+12622541835" className="btn-primary text-base px-7 py-3.5">
                 <Phone size={17} />
                 Call to Order
@@ -219,7 +218,7 @@ export default function Hero() {
             </div>
 
             {/* Payment + view all */}
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1">
               <p style={{ color: 'var(--color-hero-muted)', fontSize: "0.75rem" }}>
                 Cash · Card · Zelle · CashApp · Venmo
               </p>

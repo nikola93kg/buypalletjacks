@@ -77,12 +77,12 @@ The `components/about/` folder is the reference implementation:
 
 
 
-new todo:
+## new todo:
 
-obrati paznju na responsive part, hero sekcija da se sredi
-navinks da bude fullscreen kad se klikne na burger menu
-stavi zagrade za broj telefona u navigaciji
-dodaj u gitignore folder za ui-ux-pro-max koji je otisao na github repo
-imas branch development pa tamo odradi sve ove stvari, ocisti ceo repo
-na istom branchu odradi code refactoring, ocisti sve nepotrebne fajlove
-reorganizuj kod i iskoristi ove skilove koje si ubacio
+- obrati paznju na responsive part, hero sekcija da se sredi (trust cards da se centrira lepo)
+- navinks da bude fullscreen kad se klikne na burger menu
+- stavi zagrade za broj telefona u navigaciji
+- dodaj u gitignore folder za ui-ux-pro-max koji je otisao na github repo
+- imas branch development pa tamo odradi sve ove stvari, ocisti ceo repo
+- na istom branchu odradi code refactoring, ocisti sve nepotrebne fajlove
+- reorganizuj kod i iskoristi ove skilove koje si ubacio

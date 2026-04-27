@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Phone, Menu, X, MapPin, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoImg from "@/public/logo.webp";
+import logoImg from "@/public/logo2.webp";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -93,7 +93,7 @@ export default function Header() {
               className="btn-primary text-sm py-2.5 px-5"
             >
               <Phone size={15} />
-              262 254 1835
+              (262) 254-1835
             </a>
           </div>
 
@@ -112,20 +112,45 @@ export default function Header() {
 
       
 
-      {/* Mobile menu */}
+      {/* Mobile menu — fullscreen overlay */}
       {open && (
         <div
           id="mobile-menu"
-          className="md:hidden border-t border-[#E2E8F0] bg-white"
+          className="md:hidden fixed inset-0 z-40 bg-white flex flex-col"
         >
-          <nav className="container-site py-4 flex flex-col gap-1" aria-label="Mobile navigation">
+          {/* Header row inside overlay */}
+          <div className="flex items-center justify-between px-4 h-[4.5rem] border-b border-[#E2E8F0] flex-shrink-0">
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2"
+              aria-label="Buy Pallet Jacks — Home"
+            >
+              <Image
+                src={logoImg}
+                alt="Buy Pallet Jacks logo"
+                className="h-14 w-auto"
+                style={{ mixBlendMode: "multiply" }}
+              />
+            </Link>
+            <button
+              onClick={() => setOpen(false)}
+              className="p-2 rounded-md text-[#374151] hover:bg-[#F1F5F9] transition-colors"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+          </div>
+
+          {/* Nav links */}
+          <nav className="flex-1 flex flex-col justify-center px-6 gap-2" aria-label="Mobile navigation">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "px-4 py-3 rounded-md text-base font-medium transition-colors",
+                  "px-5 py-4 rounded-xl text-xl font-semibold transition-colors",
                   pathname === link.href
                     ? "text-[#1D4ED8] bg-[#DBEAFE]"
                     : "text-[#374151] hover:text-[#1D4ED8] hover:bg-[#F1F5F9]"
@@ -134,16 +159,18 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="pt-3 mt-2 border-t border-[#E2E8F0] flex flex-col gap-2">
-              <a href="tel:+12622541835" className="btn-primary justify-center">
-                <Phone size={16} />
-                Call Now
-              </a>
-              <a href="sms:+12622541835" className="btn-outline justify-center">
-                Text Us
-              </a>
-            </div>
           </nav>
+
+          {/* Bottom CTA */}
+          <div className="px-6 pb-8 flex flex-col gap-3 flex-shrink-0">
+            <a href="tel:+12622541835" className="btn-primary justify-center py-4 text-lg">
+              <Phone size={18} />
+              (262) 254-1835
+            </a>
+            <a href="sms:+12622541835" className="btn-outline justify-center py-4 text-lg">
+              Text Us
+            </a>
+          </div>
         </div>
       )}
     </header>

@@ -12,6 +12,7 @@ export default function PageHeader() {
   return (
     <section className={styles.pageHeader} aria-labelledby="about-page-heading">
       <div className="container-site">
+        <div className="flex flex-col items-center sm:items-start">
         <p className={styles.pageEyebrow}>About Us</p>
         <h1 id="about-page-heading" className={styles.pageHeadline}>
           Give every business access to{" "}
@@ -21,7 +22,8 @@ export default function PageHeader() {
           We source commercial-grade units, rebuild them from scratch, back
           them with a real warranty, and put them within driving distance of you.
         </p>
-        <div className={styles.statsRow} role="list" aria-label="Key statistics">
+        </div>
+        <div className={styles.statsStrip} role="list" aria-label="Key statistics">
           {STATS.map(({ value, label }, i) => (
             <Fragment key={label}>
               {i > 0 && (

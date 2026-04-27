@@ -1,0 +1,605 @@
+/*
+  ══════════════════════════════════════════════════════════════
+  Contact Page — CSS Module
+  Design: Dark navy header, clean split layout, B2B trust signals
+  ══════════════════════════════════════════════════════════════
+*/
+
+/* ══ Page header ══════════════════════════════════════════════ */
+.pageHeader {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1d4ed8 100%);
+  padding: 3rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .pageHeader {
+    padding: 4rem 0 4.5rem;
+  }
+}
+
+.pageHeader::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  right: -5rem;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pageHeader::after {
+  content: "";
+  position: absolute;
+  bottom: 2rem;
+  left: -3rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pageEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  border-radius: 999px;
+  padding: 0.3rem 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.pageHeadline {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(1.875rem, 5vw, 3.25rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+  max-width: 44rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .pageHeadline {
+    text-align: left;
+  }
+}
+
+.headlineAccent {
+  color: #f97316;
+}
+
+.pageSubline {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 38rem;
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .pageSubline {
+    font-size: 1.0625rem;
+    margin: 0 0 2.5rem;
+    text-align: left;
+  }
+}
+
+/* Trust pills row */
+.trustRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 540px) {
+  .trustRow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+  }
+}
+
+.trustPill {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 0.45rem 1rem 0.45rem 0.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.trustPillIcon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(249, 115, 22, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trustPillIcon svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #f97316;
+}
+
+.trustPillText {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  line-height: 1.2;
+}
+
+.trustPillSub {
+  font-size: 0.6875rem;
+  color: #94a3b8;
+  display: block;
+}
+
+/* ══ Body section ═════════════════════════════════════════════ */
+.bodySection {
+  padding: 4rem 0 5rem;
+  background: #f8fafc;
+}
+
+/* ══ Main grid ════════════════════════════════════════════════ */
+.mainGrid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr 360px;
+    gap: 2.5rem;
+  }
+}
+
+/* ══ Left column ══════════════════════════════════════════════ */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* CTA cards row */
+.ctaCards {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 540px) {
+  .ctaCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Call card */
+.callCard {
+  position: relative;
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.callCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(29, 78, 216, 0.35);
+}
+
+.textCard {
+  position: relative;
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.textCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(249, 115, 22, 0.35);
+}
+
+.cardGlow {
+  position: absolute;
+  top: -4rem;
+  right: -4rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cardIconWrap {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.875rem;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cardIconWrap svg {
+  width: 1.375rem;
+  height: 1.375rem;
+  color: #ffffff;
+}
+
+.cardEyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 0.25rem;
+}
+
+.cardTitle {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.375rem;
+}
+
+.cardPhone {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+.cardDesc {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.cardCta {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: auto;
+  transition: color 180ms ease;
+}
+
+.callCard:hover .cardCta,
+.textCard:hover .cardCta {
+  color: #ffffff;
+}
+
+.cardCta svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Divider */
+.orDivider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.orDividerLine {
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.orDividerLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+/* ══ Sidebar ══════════════════════════════════════════════════ */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+/* Sidebar cards */
+.sideCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.sideCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sideCardIconWrap {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sideCardIconWrap svg {
+  width: 1rem;
+  height: 1rem;
+  color: #1d4ed8;
+}
+
+.sideCardTitle {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.sideCardBody {
+  padding: 1.25rem 1.5rem;
+}
+
+/* Hours */
+.hoursRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+}
+
+.hoursRow + .hoursRow {
+  border-top: 1px solid #f1f5f9;
+}
+
+.hoursDay {
+  color: #475569;
+}
+
+.hoursTime {
+  font-weight: 700;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+
+.hoursClosed {
+  font-weight: 700;
+  color: #ef4444;
+}
+
+.hoursNote {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  padding-top: 0.875rem;
+  margin-top: 0.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* Location card — dark */
+.locationCard {
+  position: relative;
+  background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  overflow: hidden;
+}
+
+.locationCardGlow {
+  position: absolute;
+  bottom: -3rem;
+  right: -3rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.locationCardInner {
+  position: relative;
+  z-index: 1;
+}
+
+.locationCardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.locationIconWrap {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.locationIconWrap svg {
+  width: 1rem;
+  height: 1rem;
+  color: #f97316;
+}
+
+.locationCardTitle {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.locationCardDesc {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin: 0 0 1.25rem;
+}
+
+.locationCardBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f97316;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1.375rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.locationCardBtn:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+}
+
+.locationCardBtn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Payment tags */
+.paymentTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.paymentTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.75rem;
+}
+
+.paymentNote {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 1rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* ══ FAQ teaser ═══════════════════════════════════════════════ */
+.faqTeaser {
+  margin-top: 3rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 640px) {
+  .faqTeaser {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.faqTeaserTitle {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.375rem;
+}
+
+.faqTeaserSub {
+  font-size: 0.9375rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.faqTeaserBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.875rem;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.faqTeaserBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.faqTeaserBtn svg {
+  width: 1rem;
+  height: 1rem;
+}

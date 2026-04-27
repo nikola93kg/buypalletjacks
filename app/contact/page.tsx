@@ -13,6 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ContactForm from "@/components/contact/ContactForm";
+import styles from "@/components/contact/contact.module.css";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Buy Pallet Jacks – Call or Text for Availability",
@@ -46,237 +47,164 @@ const TRUST_ITEMS = [
 export default function ContactPage() {
   return (
     <>
-      {/* ── Dark hero header ───────────────────────────────── */}
-      <section className="bg-text pt-16 pb-14 md:pt-20 md:pb-16">
+      {/* ── Page header ─────────────────────────────────────── */}
+      <section className={styles.pageHeader} aria-labelledby="contact-heading">
         <div className="container-site">
-          <p className="text-brand-orange text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
-            Contact Us
-          </p>
-          <h1
-            className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.06] tracking-tight mb-5"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
-          >
+          <div className="flex flex-col items-center sm:items-start">
+            <p className={styles.pageEyebrow}>Contact Us</p>
+          </div>
+          <h1 id="contact-heading" className={styles.pageHeadline}>
             We&apos;re a{" "}
-            <span className="text-brand-blue">call or text</span>
-            <br className="hidden sm:block" /> away
+            <span className={styles.headlineAccent}>call or text away</span>
           </h1>
-          <p className="text-steel text-lg leading-relaxed max-w-xl mb-10">
-            Call or text to check stock, get photos, and schedule a same-day
-            pickup at the location nearest you.
+          <p className={styles.pageSubline}>
+            Call or text us directly to check stock, get photos, and schedule
+            a same-day pickup at the location nearest you.
           </p>
-
-          {/* Trust indicators */}
-          <div className="flex flex-wrap gap-x-8 gap-y-5 pt-8 border-t border-white/[0.07]">
+          <div className={styles.trustRow} role="list">
             {TRUST_ITEMS.map((item) => (
-              <div key={item.label} className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-white/[0.06] border border-white/[0.09] flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-4 h-4 text-brand-orange" aria-hidden="true" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-white leading-tight">
-                    {item.label}
-                  </p>
-                  <p className="text-xs text-muted">{item.sub}</p>
-                </div>
+              <div key={item.label} className={styles.trustPill} role="listitem">
+                <span className={styles.trustPillIcon} aria-hidden="true">
+                  <item.icon />
+                </span>
+                <span className={styles.trustPillText}>
+                  {item.label}
+                  <span className={styles.trustPillSub}>{item.sub}</span>
+                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Main content ──────────────────────────────────────── */}
-      <section className="section-padding bg-bg">
+      {/* ── Body ────────────────────────────────────────────── */}
+      <section className={styles.bodySection}>
         <div className="container-site">
-          <div className="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+          <div className={styles.mainGrid}>
 
-            {/* Left — contact channels + form */}
-            <div className="flex flex-col gap-6">
+            {/* Left column */}
+            <div className={styles.leftCol}>
 
               {/* Call + Text cards */}
-              <div className="grid sm:grid-cols-2 gap-4">
-
-                {/* Call card */}
+              <div className={styles.ctaCards}>
                 <a
                   href="tel:+12622541835"
-                  className="group relative bg-text rounded-2xl p-6 flex flex-col gap-4 overflow-hidden transition-all duration-300 hover:shadow-[0_16px_48px_rgba(15,23,42,0.28)] hover:-translate-y-0.5"
+                  className={styles.callCard}
                   aria-label="Call Buy Pallet Jacks at (262) 254-1835"
                 >
-                  {/* Blue glow orb */}
-                  <div
-                    className="absolute top-0 right-0 w-52 h-52 -translate-y-1/2 translate-x-1/2 rounded-full pointer-events-none"
-                    style={{ background: "radial-gradient(circle, rgba(29,78,216,0.22) 0%, transparent 65%)" }}
-                    aria-hidden="true"
-                  />
-                  <div className="relative z-10 flex flex-col gap-4 h-full">
-                    <div className="w-12 h-12 rounded-xl bg-brand-blue/20 border border-brand-blue/25 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-[#60A5FA]" />
-                    </div>
-                    <div>
-                      <p className="text-brand-blue text-[10px] font-bold uppercase tracking-[0.18em] mb-1.5">
-                        Fastest Response
-                      </p>
-                      <p className="text-white text-2xl font-extrabold tracking-tight leading-none mb-3">
-                        Call Us
-                      </p>
-                      <p className="text-[#CBD5E1] font-bold text-lg tabular-nums tracking-tight">
-                        (262) 254-1835
-                      </p>
-                      <p className="text-muted text-xs mt-2.5 leading-relaxed">
-                        Speak with someone now. Check inventory, get directions,
-                        or ask anything.
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-xs text-hero-text-muted font-semibold group-hover:text-trust-blue transition-colors duration-200 mt-auto">
-                      Tap to call
-                      <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </div>
+                  <span className={styles.cardGlow} aria-hidden="true" />
+                  <span className={styles.cardIconWrap} aria-hidden="true">
+                    <Phone />
+                  </span>
+                  <div>
+                    <p className={styles.cardEyebrow}>Fastest Response</p>
+                    <p className={styles.cardTitle}>Call Us</p>
+                    <p className={styles.cardPhone}>(262) 254-1835</p>
+                    <p className={styles.cardDesc}>
+                      Speak with someone now. Check inventory, get directions, or ask anything.
+                    </p>
                   </div>
+                  <span className={styles.cardCta}>
+                    Tap to call <ArrowRight />
+                  </span>
                 </a>
 
-                {/* Text card */}
                 <a
                   href="sms:+12622541835"
-                  className="group relative bg-brand-orange rounded-2xl p-6 flex flex-col gap-4 overflow-hidden transition-all duration-300 hover:bg-brand-orange-hover hover:shadow-[0_16px_48px_rgba(249,115,22,0.35)] hover:-translate-y-0.5"
+                  className={styles.textCard}
                   aria-label="Text Buy Pallet Jacks at (262) 254-1835"
                 >
-                  <div
-                    className="absolute top-0 right-0 w-52 h-52 -translate-y-1/2 translate-x-1/2 rounded-full pointer-events-none"
-                    style={{ background: "radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 65%)" }}
-                    aria-hidden="true"
-                  />
-                  <div className="relative z-10 flex flex-col gap-4 h-full">
-                    <div className="w-12 h-12 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center flex-shrink-0">
-                      <MessageSquare className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-orange-100 text-[10px] font-bold uppercase tracking-[0.18em] mb-1.5">
-                        Get Photos &amp; Details
-                      </p>
-                      <p className="text-white text-2xl font-extrabold tracking-tight leading-none mb-3">
-                        Text Us
-                      </p>
-                      <p className="text-white/90 font-bold text-lg tabular-nums tracking-tight">
-                        (262) 254-1835
-                      </p>
-                      <p className="text-orange-100/75 text-xs mt-2.5 leading-relaxed">
-                        Send your state — we&apos;ll reply with the nearest
-                        location, stock photos &amp; pricing.
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-xs text-orange-100/75 font-semibold group-hover:text-white transition-colors duration-200 mt-auto">
-                      Tap to text
-                      <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </div>
+                  <span className={styles.cardGlow} aria-hidden="true" />
+                  <span className={styles.cardIconWrap} aria-hidden="true">
+                    <MessageSquare />
+                  </span>
+                  <div>
+                    <p className={styles.cardEyebrow}>Get Photos &amp; Details</p>
+                    <p className={styles.cardTitle}>Text Us</p>
+                    <p className={styles.cardPhone}>(262) 254-1835</p>
+                    <p className={styles.cardDesc}>
+                      Send your state — we&apos;ll reply with the nearest location, stock photos &amp; pricing.
+                    </p>
                   </div>
+                  <span className={styles.cardCta}>
+                    Tap to text <ArrowRight />
+                  </span>
                 </a>
               </div>
 
               {/* Divider */}
-              <div className="flex items-center gap-4">
-                <div className="flex-1 h-px bg-border" />
-                <span className="text-[10px] font-bold text-steel uppercase tracking-[0.18em]">
-                  or send a message
-                </span>
-                <div className="flex-1 h-px bg-border" />
+              <div className={styles.orDivider} aria-hidden="true">
+                <span className={styles.orDividerLine} />
+                <span className={styles.orDividerLabel}>or send a message</span>
+                <span className={styles.orDividerLine} />
               </div>
 
               {/* Contact form */}
               <ContactForm />
             </div>
 
-            {/* Right — info sidebar */}
-            <div className="flex flex-col gap-5 lg:sticky lg:top-24">
+            {/* Right sidebar */}
+            <div className={styles.sidebar}>
 
               {/* Business hours */}
-              <div className="bg-white border border-border rounded-2xl overflow-hidden">
-                <div className="px-6 pt-5 pb-4 border-b border-border flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-4 h-4 text-brand-blue" aria-hidden="true" />
-                  </div>
-                  <h2 className="font-bold text-graphite text-sm">Business Hours</h2>
+              <div className={styles.sideCard}>
+                <div className={styles.sideCardHeader}>
+                  <span className={styles.sideCardIconWrap} aria-hidden="true">
+                    <Clock />
+                  </span>
+                  <h2 className={styles.sideCardTitle}>Business Hours</h2>
                 </div>
-                <div className="px-6 py-4">
-                  {HOURS.map((row, i) => (
-                    <div
-                      key={row.day}
-                      className={`flex items-center justify-between text-sm py-3 ${
-                        i < HOURS.length - 1 ? "border-b border-border" : ""
-                      }`}
-                    >
-                      <span className="text-hero-text-muted">{row.day}</span>
-                      <span
-                        className={`font-semibold tabular-nums ${
-                          row.open ? "text-graphite" : "text-red-500"
-                        }`}
-                      >
+                <div className={styles.sideCardBody}>
+                  {HOURS.map((row) => (
+                    <div key={row.day} className={styles.hoursRow}>
+                      <span className={styles.hoursDay}>{row.day}</span>
+                      <span className={row.open ? styles.hoursTime : styles.hoursClosed}>
                         {row.hours}
                       </span>
                     </div>
                   ))}
-                </div>
-                <div className="px-6 pb-5">
-                  <p className="text-xs text-steel pt-3 border-t border-border">
+                  <p className={styles.hoursNote}>
                     All times are local to each pickup location.
                   </p>
                 </div>
               </div>
 
               {/* Find a location */}
-              <div className="relative bg-text text-white rounded-2xl p-6 overflow-hidden">
-                {/* Orange glow — bottom right */}
-                <div
-                  className="absolute -bottom-10 -right-10 w-48 h-48 rounded-full pointer-events-none"
-                  style={{ background: "radial-gradient(circle, rgba(249,115,22,0.22) 0%, transparent 65%)" }}
-                  aria-hidden="true"
-                />
-                {/* Blue glow — top left */}
-                <div
-                  className="absolute -top-8 -left-8 w-36 h-36 rounded-full pointer-events-none"
-                  style={{ background: "radial-gradient(circle, rgba(29,78,216,0.18) 0%, transparent 65%)" }}
-                  aria-hidden="true"
-                />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-9 h-9 rounded-xl bg-white/[0.07] border border-white/[0.1] flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-4 h-4 text-brand-orange" aria-hidden="true" />
-                    </div>
-                    <h2 className="font-bold text-white text-sm">Find a Location</h2>
+              <div className={styles.locationCard}>
+                <span className={styles.locationCardGlow} aria-hidden="true" />
+                <div className={styles.locationCardInner}>
+                  <div className={styles.locationCardHead}>
+                    <span className={styles.locationIconWrap} aria-hidden="true">
+                      <MapPin />
+                    </span>
+                    <h2 className={styles.locationCardTitle}>Find a Location</h2>
                   </div>
-                  <p className="text-sm text-steel mb-5 leading-relaxed">
-                    26 pickup locations across 19 states. Use the interactive
-                    map to find the one nearest you and get directions.
+                  <p className={styles.locationCardDesc}>
+                    26 pickup locations across 19 states. Use the interactive map to find
+                    the one nearest you and get directions.
                   </p>
-                  <Link
-                    href="/locations"
-                    className="group inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orange-hover text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 hover:shadow-[0_6px_20px_rgba(249,115,22,0.4)]"
-                  >
-                    <MapPin className="w-4 h-4" aria-hidden="true" />
+                  <Link href="/locations" className={styles.locationCardBtn}>
+                    <MapPin aria-hidden="true" />
                     View All Locations
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </Link>
                 </div>
               </div>
 
               {/* Payment methods */}
-              <div className="bg-white border border-border rounded-2xl overflow-hidden">
-                <div className="px-6 pt-5 pb-4 border-b border-border flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
-                    <CreditCard className="w-4 h-4 text-brand-blue" aria-hidden="true" />
-                  </div>
-                  <h2 className="font-bold text-graphite text-sm">Payment Methods</h2>
+              <div className={styles.sideCard}>
+                <div className={styles.sideCardHeader}>
+                  <span className={styles.sideCardIconWrap} aria-hidden="true">
+                    <CreditCard />
+                  </span>
+                  <h2 className={styles.sideCardTitle}>Payment Methods</h2>
                 </div>
-                <div className="px-6 py-5">
-                  <div className="flex flex-wrap gap-2">
+                <div className={styles.sideCardBody}>
+                  <div className={styles.paymentTags}>
                     {PAYMENT_METHODS.map((method) => (
-                      <span
-                        key={method}
-                        className="text-xs bg-[#F1F5F9] text-graphite font-medium px-3 py-1.5 rounded-lg border border-border"
-                      >
-                        {method}
-                      </span>
+                      <span key={method} className={styles.paymentTag}>{method}</span>
                     ))}
                   </div>
-                  <p className="text-xs text-steel mt-4 pt-4 border-t border-border">
+                  <p className={styles.paymentNote}>
                     Payment collected at pickup. No deposits required.
                   </p>
                 </div>
@@ -284,22 +212,17 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* ── FAQ teaser ────────────────────────────────────── */}
-          <div className="mt-10 bg-white border border-border rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-5">
+          {/* FAQ teaser */}
+          <div className={styles.faqTeaser}>
             <div>
-              <p className="font-bold text-graphite text-lg leading-tight">
-                Have a question not answered here?
-              </p>
-              <p className="text-steel text-sm mt-1">
+              <p className={styles.faqTeaserTitle}>Have a question not answered here?</p>
+              <p className={styles.faqTeaserSub}>
                 Warranty, bulk pricing, delivery options, and more — all in our FAQ.
               </p>
             </div>
-            <Link
-              href="/#faq"
-              className="group inline-flex items-center gap-2 text-sm font-semibold text-white bg-brand-blue hover:bg-brand-navy px-6 py-3 rounded-xl transition-colors duration-200 whitespace-nowrap flex-shrink-0"
-            >
+            <Link href="/#faq" className={styles.faqTeaserBtn}>
               View FAQ
-              <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              <ChevronRight />
             </Link>
           </div>
         </div>

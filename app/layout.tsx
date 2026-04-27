@@ -73,7 +73,7 @@ export default function RootLayout({
         <LocationsFooterSection />
         <Footer />
         <BackToTopButton />
-        <MobileStickyCTA />
+        {/* <MobileStickyCTA /> */}
       </body>
     </html>
   );
