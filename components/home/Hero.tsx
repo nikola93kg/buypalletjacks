@@ -42,28 +42,23 @@ export default function Hero() {
           fill
           priority
           quality={85}
-          className="object-cover object-right"
+          className="object-cover object-center sm:object-right"
           sizes="100vw"
         />
       </div>
 
-      {/* Two-layer overlay:
-           Layer 1 — horizontal: white-left (text legible) → subtle transparent right (image shows)
-           Layer 2 — subtle bottom fade for mobile single-column readability */}
+      {/* Mobile overlay — light semi-transparent so background image shows through */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none sm:hidden"
+        style={{ background: "rgba(255,255,255,0.72)" }}
+        aria-hidden="true"
+      />
+      {/* Desktop overlay — horizontal fade, text side opaque, image side visible */}
+      <div
+        className="absolute inset-0 pointer-events-none hidden sm:block"
         style={{
           background:
             "linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 32%, rgba(255,255,255,0.60) 60%, rgba(255,255,255,0.05) 100%)",
-        }}
-        aria-hidden="true"
-      />
-      {/* Mobile bottom-fade so text stays readable in single column */}
-      <div
-        className="absolute inset-0 pointer-events-none lg:hidden"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.96) 100%)",
         }}
         aria-hidden="true"
       />
