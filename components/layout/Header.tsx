@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Phone, Menu, X, MapPin, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoImg from "@/public/logo.webp";
+import logoImg from "@/public/logo2.webp";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },

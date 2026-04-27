@@ -47,10 +47,7 @@ const PILLARS: Pillar[] = [
 function PillarCard({ pillar }: { pillar: Pillar }) {
   const Icon = pillar.icon;
   return (
-    <article
-      className={styles.pillarCard}
-      style={{ borderTopColor: pillar.accentColor }}
-    >
+    <article className={styles.pillarCard}>
       <div
         className={styles.pillarIconWrap}
         style={{ backgroundColor: pillar.accentBg }}

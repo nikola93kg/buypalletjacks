@@ -18,6 +18,7 @@ export default function MissionSplit() {
 
           {/* Left — narrative */}
           <div>
+            <p className={styles.missionEyebrow}>Our Mission</p>
             <h2 id="mission-heading" className={styles.storyHeading}>
               Refurbished doesn&rsquo;t mean compromised
             </h2>
@@ -58,6 +59,19 @@ export default function MissionSplit() {
             <p className={styles.diffLabel}>What sets us apart</p>
             <ul className={styles.diffList}>
               {DIFFERENTIATORS.map((item) => (
+                <li key={item} className={styles.diffItem}>
+                  <CheckCircle2 aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
                 <li key={item} className={styles.diffItem}>
                   <CheckCircle2 aria-hidden="true" />
                   <span>{item}</span>
