@@ -10,11 +10,11 @@ const FAQS = [
   },
   {
     q: "What brands do you carry?",
-    a: "Brand availability varies by location and inventory. Call or text us and we'll tell you exactly what's in stock near you — including brand, model, and condition.",
+    a: "We carry two proven brands — Crown and Altra. Both are trusted names in material handling, fully rebuilt to perform like new.",
   },
   {
     q: "How does the warranty work?",
-    a: "Every unit comes with a full 2-month warranty covering mechanical components. If you experience an issue within that period, reach out and we'll resolve it. Extended warranty is available for additional cost.",
+    a: "Every unit comes with a full 2-month warranty covering mechanical components. If you experience an issue within that period, reach out and we'll resolve it.",
   },
   {
     q: "Can I get delivery instead of pickup?",
@@ -30,11 +30,11 @@ const FAQS = [
   },
   {
     q: "How do I find my nearest location?",
-    a: "Use the interactive map on our home page or locations page. Click your state to see all nearby pickup points with addresses and Google Maps links.",
+    a: "The quickest way is to call or text us — we'll point you to the closest available inventory right away. You can also use the interactive map on our locations page: select your state to browse all nearby pickup points with addresses and Google Maps directions.",
   },
   {
     q: "What is the weight capacity of your pallet jacks?",
-    a: "Capacity varies by model. Standard units typically handle 5,500 lbs. Ask us when you call — we'll match you with the right unit for your needs.",
+    a: "All of our standard units are rated at 5,500 lbs — more than enough for typical warehouse and loading dock use. That capacity is maintained after the full rebuild, so you're getting the same performance as the original spec.",
   },
 ];
 

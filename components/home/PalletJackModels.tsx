@@ -149,7 +149,7 @@ export default function PalletJackModels() {
                 {/* CTA */}
                 <a
                   href="tel:+12622541835"
-                  className={`w-full flex items-center justify-center gap-2 font-600 text-sm px-5 py-2.5 rounded-lg border-2 transition-colors duration-200 cursor-pointer ${model.buttonClass}`}
+                  className={`w-full check-availability flex items-center justify-center gap-2 font-600 text-sm px-5 py-2.5 rounded-lg border-2 transition-colors duration-200 cursor-pointer ${model.buttonClass}`}
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   <Phone size={14} aria-hidden="true" />

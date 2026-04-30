@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Phone, Menu, X, MapPin, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoImg from "@/public/logo2.webp";
+import logoImg from "@/public/logo.webp";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -86,7 +86,7 @@ export default function Header() {
               className="flex items-center gap-1.5 text-sm font-medium text-[#64748B] hover:text-[#1D4ED8] transition-colors"
             >
               <MapPin size={15} />
-              26 Locations
+              28 Locations
             </Link>
             <a
               href="tel:+12622541835"

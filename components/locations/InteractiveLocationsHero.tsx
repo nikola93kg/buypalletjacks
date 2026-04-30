@@ -65,7 +65,7 @@ export default function InteractiveLocationsHero() {
                 style={{ fontFamily: "'Outfit', sans-serif" }}
                 className="text-4xl font-extrabold text-[#0F172A] leading-none"
               >
-                26
+                28
               </span>
               <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
                 Locations

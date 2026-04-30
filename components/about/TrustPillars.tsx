@@ -28,9 +28,9 @@ const PILLARS: Pillar[] = [
   },
   {
     icon: Truck,
-    title: "Same-Day Pickup",
+    title: "Same-Day Pickup — Weekends Too",
     description:
-      "Pick up the same day from one of 26 locations nationwide. No freight delays, no surprise shipping costs.",
+      "Pick up the same day from one of 26 locations nationwide — including weekends. No freight delays, no surprise shipping costs.",
     accentBg: "#DCFCE7",
     accentColor: "#16A34A",
   },
