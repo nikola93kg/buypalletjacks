@@ -37,7 +37,7 @@ export default function MissionSplit() {
               <p>
                 No middlemen. No freight quotes. No waiting. You call, confirm
                 your nearest location, and drive away with a rebuilt pallet
-                jack the same day.
+                jack the same day — weekends included.
               </p>
             </div>
 

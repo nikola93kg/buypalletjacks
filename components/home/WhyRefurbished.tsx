@@ -36,9 +36,9 @@ const REASONS: Reason[] = [
   },
   {
     stat: "Same Day",
-    label: "Fast pickup",
+    label: "Fast pickup · Weekends too",
     title: "Pick Up — No Backorders",
-    desc: "New equipment can take weeks to arrive. Our inventory is on-hand at 26 locations across the USA. Call, confirm, and pick up the same day.",
+    desc: "New equipment can take weeks to arrive. Our inventory is on-hand at 26 locations across the USA. Call, confirm, and pick up the same day — weekends included.",
     theme: "orange",
     icon: Clock3,
   },
@@ -54,7 +54,7 @@ const REASONS: Reason[] = [
 
 const COMPARISON: ComparisonRow[] = [
   { feature: "Price vs new", us: "40–60% less", them: "Full retail price" },
-  { feature: "Availability", us: "Same day pickup", them: "Weeks of lead time" },
+  { feature: "Availability", us: "Same day · weekends too", them: "Weeks of lead time" },
   { feature: "Delivery", us: "Available for extra fee", them: "Usually freight-based" },
   { feature: "Condition", us: "Rebuilt & sealed", them: "Factory new" },
   { feature: "Warranty", us: "2-month included", them: "Manufacturer warranty" },

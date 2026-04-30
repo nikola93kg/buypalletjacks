@@ -51,7 +51,7 @@ export default function LocationsDirectory() {
             All Pickup Locations
           </h2>
           <p className="text-steel text-lg max-w-2xl mx-auto">
-            26 locations across 19 states. Search by city, state, or facility — or
+            28 locations across 19 states. Search by city, state, or facility — or
             filter by state to jump straight to your area.
           </p>
         </div>

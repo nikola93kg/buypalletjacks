@@ -56,9 +56,9 @@
     "gmaps": "https://www.google.com/maps/place/Trilink+Storage+-+Georgesville/@39.9427202,-83.1163692,17z/data=!3m1!4b1!4m6!3m5!1s0x88389165a2cfd121:0x33b530ede7094d3b!8m2!3d39.9427202!4d-83.1137943!16s%2Fg%2F11jgnwm2t0?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
-    "cityState": "DALLAS, TX",
+    "cityState": "GRAND PRAIRIE, TX",
     "state": "TX",
-    "facility": "LUPUS CROSS DOCK",
+    "facility": "LUPUS SUPERIOR WAREHOUSE",
     "unitNumber": "-",
     "gmaps": "https://www.google.com/maps/place/Lupus+Cross+Dock,+Storage+%26+Final+Mile/@32.7597894,-96.9715947,17z/data=!4m15!1m8!3m7!1s0x864e8457344e0edb:0xc02ee229310201a!2s2407+I-30+%23200,+Grand+Prairie,+TX+75050!3b1!8m2!3d32.7597894!4d-96.9690198!16s%2Fg%2F11yqxl59b5!3m5!1s0x864e859b4410aebf:0x14fc1db80aadbbf3!8m2!3d32.7595588!4d-96.9693019!16s%2Fg%2F11jfs4t51c?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -91,6 +91,13 @@
     "gmaps": "https://www.google.com/maps/place/Public+Storage/@39.6603823,-86.1286028,17z/data=!3m1!4b1!4m6!3m5!1s0x886b5c859203d1db:0x2c2cb8375eb32978!8m2!3d39.6603823!4d-86.1260279!16s%2Fg%2F1tjy27h3?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
+    "cityState": "IRVING, TX",
+    "state": "TX",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "Q05",
+    "gmaps": "https://www.google.com/maps/search/Public+Storage+3417+N+Belt+Line+Rd+Irving+TX+75062"
+  },
+  {
     "cityState": "KANSAS CITY, MO",
     "state": "MO",
     "facility": "STORAGEMART",
@@ -110,6 +117,13 @@
     "facility": "PUBLIC STORAGE",
     "unitNumber": "G303",
     "gmaps": "https://www.google.com/maps/place/Public+Storage/@38.3096327,-85.7578803,17z/data=!3m1!4b1!4m6!3m5!1s0x8869739f1677eda1:0x9b4bc9daece2ec43!8m2!3d38.3096327!4d-85.7553054!16s%2Fg%2F11f6nczr4c?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "MESQUITE, TX",
+    "state": "TX",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "554",
+    "gmaps": "https://www.google.com/maps/search/Public+Storage+2023+N+Galloway+Ave+Mesquite+TX+75149"
   },
   {
     "cityState": "MILWAUKEE, WI",
