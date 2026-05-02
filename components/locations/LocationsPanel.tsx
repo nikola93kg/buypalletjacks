@@ -132,7 +132,7 @@ export default function LocationsPanel({
             href="/locations"
             className={`flex items-center justify-center gap-2 ${dk ? 'text-white hover:text-[#60A5FA]' : 'text-[#1D4ED8] hover:text-[#1E3A8A]'} text-xs font-medium transition-colors`}
           >
-            View all 26+ locations
+            View all 28 locations
             <ExternalLink size={11} />
           </Link>
         </div>
@@ -145,7 +145,7 @@ export default function LocationsPanel({
             href="/locations"
             className={`flex items-center justify-center gap-2 ${dk ? 'text-white hover:text-[#60A5FA]' : 'text-[#1D4ED8] hover:text-[#1E3A8A]'} text-xs font-medium transition-colors`}
           >
-            View all 26+ locations
+            View all 28 locations
             <ExternalLink size={11} />
           </Link>
         </div>

@@ -41,7 +41,7 @@ const PAYMENT_METHODS = [
 const TRUST_ITEMS = [
   { icon: Zap, label: "Responds within minutes", sub: "During business hours" },
   { icon: ShieldCheck, label: "No deposit to reserve", sub: "Pay at pickup only" },
-  { icon: MapPin, label: "26 locations · 19 states", sub: "Same-day pickup available" },
+  { icon: MapPin, label: "28 locations · 19 states", sub: "Same-day pickup available" },
 ];
 
 export default function ContactPage() {
@@ -180,7 +180,7 @@ export default function ContactPage() {
                     <h2 className={styles.locationCardTitle}>Find a Location</h2>
                   </div>
                   <p className={styles.locationCardDesc}>
-                    26 pickup locations across 19 states. Use the interactive map to find
+                    28 pickup locations across 19 states. Use the interactive map to find
                     the one nearest you and get directions.
                   </p>
                   <Link href="/locations" className={styles.locationCardBtn}>

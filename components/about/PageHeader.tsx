@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import styles from "./about.module.css";
 
 const STATS = [
-  { value: "26+", label: "Pickup Locations" },
+  { value: "28", label: "Pickup Locations" },
   { value: "19", label: "States Covered" },
   { value: "2-Mo", label: "Warranty Included" },
   { value: "5★", label: "Customer Rating" },

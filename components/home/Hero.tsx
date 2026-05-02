@@ -114,7 +114,7 @@ export default function Hero() {
             </div>
 
             {/* Easy Pickup */}
-            <div className="flex items-center justify-center sm:justify-start gap-3 mb-5 mt-3">
+            {/* <div className="flex items-center justify-center sm:justify-start gap-3 mb-5 mt-3">
               <div className="w-px h-8 bg-slate-400" />
               <p style={{ color: 'var(--color-hero-text)', fontFamily: "'Outfit', sans-serif", fontSize: "1rem", fontWeight: "bold", lineHeight: "1.2" }}>
                 Easy Pickup
@@ -122,12 +122,12 @@ export default function Hero() {
                   {locationCount}+ locations nationwide
                 </span>
               </p>
-            </div>
+            </div> */}
 
             {/* Trust badges — pill row on mobile, full cards on desktop */}
             <div className="mb-5">
               {/* Mobile: horizontal pill row */}
-              <div className="flex justify-center gap-2 sm:hidden flex-wrap">
+              {/* <div className="flex justify-center gap-2 sm:hidden flex-wrap">
                 {[
                   { icon: Shield, label: "2-Month Warranty", accent: 'var(--color-trust-blue)' },
                   { icon: Tag, label: "Bulk Discounts", accent: 'var(--color-brand-orange)' },
@@ -147,7 +147,7 @@ export default function Hero() {
                     {label}
                   </div>
                 ))}
-              </div>
+              </div> */}
               {/* Desktop: full cards */}
               <div className="hidden sm:flex flex-row flex-wrap gap-[10px] items-start">
                 {[
@@ -196,7 +196,7 @@ export default function Hero() {
             {/* Payment + locations */}
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-x-4 sm:gap-y-1">
               {/* Mobile: pill styled like trust badges */}
-              <div
+              {/* <div
                 className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold sm:hidden"
                 style={{
                   background: "rgba(255,255,255,0.82)",
@@ -206,7 +206,7 @@ export default function Hero() {
                 }}
               >
                 Cash · Card · Zelle · CashApp · Venmo
-              </div>
+              </div> */}
               {/* Desktop: original muted text */}
               <p className="hidden sm:block" style={{ color: 'var(--color-hero-muted)', fontSize: "0.75rem" }}>
                 Cash · Card · Zelle · CashApp · Venmo

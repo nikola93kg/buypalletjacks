@@ -4,7 +4,7 @@ import styles from "./about.module.css";
 const DIFFERENTIATORS = [
   "Full mechanical rebuild — not just a clean and repaint",
   "2-month warranty on every single unit",
-  "26 pickup locations across 19 states",
+  "28 pickup locations across 19 states",
   "Same-day pickup available at all locations",
   "Live inventory — no waitlists, no backorders",
   "Fraction of new-equipment cost",
@@ -32,7 +32,7 @@ export default function MissionSplit() {
                 Every unit is fully disassembled, inspected, repaired,
                 repainted, and sealed by experienced technicians — not just
                 cleaned and relisted. Then it&rsquo;s available same-day at one of
-                26 pickup points nationwide.
+                28 pickup points nationwide.
               </p>
               <p>
                 No middlemen. No freight quotes. No waiting. You call, confirm

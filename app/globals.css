@@ -521,8 +521,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile: shift the image container down so PJs show in the clear (non-gradient) area */
 @media (max-width: 639px) {
   .hero-bg-wrapper {
-    top: 5% !important;
-    bottom: -40% !important;
+    top: 30% !important;
+    bottom: -30% !important;
   }
 }
 

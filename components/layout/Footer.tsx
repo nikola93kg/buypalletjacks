@@ -51,7 +51,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-slate-400 mb-2">
               <MapPin size={14} className="text-blue-400 flex-shrink-0" />
-              26 locations across the USA
+              28 locations across the USA
             </div>
             <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-slate-400">
               <Phone size={14} className="text-blue-400 flex-shrink-0" />

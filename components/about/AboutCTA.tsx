@@ -12,7 +12,7 @@ export default function AboutCTA() {
               Ready to pick up today?
             </h2>
             <p className={styles.ctaDesc}>
-              26 locations, same-day pickup, 2-month warranty included on every unit.
+              28 locations, same-day pickup, 2-month warranty included on every unit.
             </p>
           </div>
           <div className={styles.ctaButtons}>
