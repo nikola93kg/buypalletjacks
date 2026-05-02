@@ -66,7 +66,7 @@ export default function FinalCTA() {
           </h2>
 
           <p className="text-[#64748B] text-lg leading-relaxed mb-8 max-w-lg mx-auto">
-            26+ pickup locations nationwide. Professionally refurbished.
+            28 pickup locations nationwide. Professionally refurbished.
             2-month warranty included on every unit.
           </p>
 

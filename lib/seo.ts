@@ -4,7 +4,7 @@ const BASE_URL = "https://www.buypalletjacks.com";
 
 export const SITE_NAME = "Buy Pallet Jacks";
 export const SITE_DESCRIPTION =
-  "Professionally refurbished pallet jacks available nationwide. 26+ locations across the USA. Call or text to schedule pickup. 2-month warranty included.";
+  "Professionally refurbished pallet jacks available nationwide. 28 locations across the USA. Call or text to schedule pickup. 2-month warranty included.";
 
 export function buildMetadata({
   title,
