@@ -46,6 +46,10 @@ yarn-error.log*
 .github/prompts/
 *.pyc
 
+# superpowers / copilot session artifacts
+docs/superpowers/
+ui-ux-pro-max/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
