@@ -80,13 +80,7 @@
   --color-hero-steel:         #64748B;
   --color-hero-muted:         #94A3B8;
 
-  /* Hero overlay colors (for text readability over background image) */
-  --color-hero-overlay-start: rgba(255, 255, 255, 0.92);
-  --color-hero-overlay-mid:   rgba(255, 255, 255, 0.88);
-  --color-hero-overlay-light: rgba(255, 255, 255, 0.60);
-  --color-hero-overlay-end:   rgba(255, 255, 255, 0.05);
-  --color-hero-mobile-start:  rgba(255, 255, 255, 0.40);
-  --color-hero-mobile-end:    rgba(255, 255, 255, 0.95);
+
 
   /* Trust Card Accents */
   --color-trust-blue:         #3B82F6;
@@ -433,13 +427,7 @@ h1, h2, h3, h4, h5, h6 {
   --color-trust-blue:         #3B82F6;
   --color-trust-green:        #10B981;
 
-  /* Hero overlay colors */
-  --color-hero-overlay-start: rgba(255, 255, 255, 0.92);
-  --color-hero-overlay-mid:   rgba(255, 255, 255, 0.88);
-  --color-hero-overlay-light: rgba(255, 255, 255, 0.60);
-  --color-hero-overlay-end:   rgba(255, 255, 255, 0.05);
-  --color-hero-mobile-start:  rgba(255, 255, 255, 0.40);
-  --color-hero-mobile-end:    rgba(255, 255, 255, 0.95);
+
 }
 
 /*
