@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Phone, Menu, X, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logoImg from "@/public/logo.webp";
+import styles from "./Header.module.css";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -34,8 +35,7 @@ export default function Header() {
               <Image
                 src={logoImg}
                 alt="Buy Pallet Jacks logo"
-                className="h-16 w-auto"
-                style={{ mixBlendMode: "multiply" }}
+                className={cn("h-16 w-auto", styles.logoBlend)}
                 priority
               />
             </Link>
@@ -49,8 +49,8 @@ export default function Header() {
                   className={cn(
                     "px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150",
                     pathname === link.href
-                      ? "text-[#1D4ED8] bg-[#DBEAFE]"
-                      : "text-[#374151] hover:text-[#1D4ED8] hover:bg-[#F1F5F9]"
+                      ? styles.navLinkActive
+                      : styles.navLinkDefault
                   )}
                 >
                   {link.label}
@@ -63,7 +63,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/locations"
-              className="flex items-center gap-1.5 text-sm font-medium text-[#64748B] hover:text-[#1D4ED8] transition-colors"
+              className={cn("flex items-center gap-1.5 text-sm font-medium transition-colors", styles.locationLink)}
             >
               <MapPin size={15} />
               28 Locations
@@ -80,7 +80,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-md text-[#374151] hover:bg-[#F1F5F9] transition-colors"
+            className={cn("md:hidden p-2 rounded-md transition-colors", styles.mobileMenuBtn)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -99,7 +99,7 @@ export default function Header() {
           className="md:hidden fixed inset-0 z-40 bg-white flex flex-col"
         >
           {/* Header row inside overlay */}
-          <div className="flex items-center justify-between px-4 h-[4.5rem] border-b border-[#E2E8F0] flex-shrink-0">
+          <div className={cn("flex items-center justify-between px-4 h-[4.5rem] border-b flex-shrink-0", styles.mobileHeaderBorder)}>
             <Link
               href="/"
               onClick={() => setOpen(false)}
@@ -109,13 +109,12 @@ export default function Header() {
               <Image
                 src={logoImg}
                 alt="Buy Pallet Jacks logo"
-                className="h-14 w-auto"
-                style={{ mixBlendMode: "multiply" }}
+                className={cn("h-14 w-auto", styles.logoBlend)}
               />
             </Link>
             <button
               onClick={() => setOpen(false)}
-              className="p-2 rounded-md text-[#374151] hover:bg-[#F1F5F9] transition-colors"
+              className={cn("p-2 rounded-md transition-colors", styles.mobileMenuBtn)}
               aria-label="Close menu"
             >
               <X size={24} />
@@ -132,8 +131,8 @@ export default function Header() {
                 className={cn(
                   "px-5 py-4 rounded-xl text-xl font-semibold transition-colors",
                   pathname === link.href
-                    ? "text-[#1D4ED8] bg-[#DBEAFE]"
-                    : "text-[#374151] hover:text-[#1D4ED8] hover:bg-[#F1F5F9]"
+                    ? styles.mobileNavLinkActive
+                    : styles.mobileNavLinkDefault
                 )}
               >
                 {link.label}

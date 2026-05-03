@@ -1,0 +1,85 @@
+/*
+  ══════════════════════════════════════════════════════════════
+  Locations Footer Section — CSS Module
+  ══════════════════════════════════════════════════════════════
+*/
+
+/* Section background */
+.section {
+  background-color: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+/* Outfit font family class */
+.outfitText {
+  font-family: var(--font-heading);
+}
+
+/* Kicker text */
+.kicker {
+  color: #3b82f6;
+}
+
+/* Heading text */
+.heading {
+  color: #0f172a;
+}
+
+/* Body text */
+.bodyText {
+  color: #475569;
+}
+
+/* Button styles */
+.ctaBtn {
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.ctaBtn:hover {
+  border-color: #94a3b8;
+  background-color: #e2e8f0;
+}
+
+/* State heading */
+.stateHeading {
+  color: #94a3b8;
+  border-color: #e2e8f0;
+}
+
+/* City link */
+.cityLink {
+  color: #1d4ed8;
+}
+
+.cityLink:hover {
+  color: #1e3a8a;
+}
+
+/* City icon */
+.cityIcon {
+  color: #93c5fd;
+}
+
+.cityLink:hover .cityIcon {
+  color: #1d4ed8;
+}
+
+/* Bottom border */
+.bottomBorder {
+  border-color: #e2e8f0;
+}
+
+/* View all link */
+.viewAllLink {
+  color: #1d4ed8;
+}
+
+.viewAllLink:hover {
+  color: #1e3a8a;
+}
+
+/* Bottom text */
+.bottomText {
+  color: #94a3b8;
+}

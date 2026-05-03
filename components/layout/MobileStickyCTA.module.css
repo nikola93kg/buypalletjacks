@@ -1,0 +1,30 @@
+/*
+  ══════════════════════════════════════════════════════════════
+  Mobile Sticky CTA — CSS Module
+  ══════════════════════════════════════════════════════════════
+*/
+
+/* Mobile CTA container */
+.mobileStickyCTA {
+  border-color: #e2e8f0;
+}
+
+/* Call button */
+.callBtn {
+  background-color: var(--color-brand-blue);
+  font-family: var(--font-heading);
+}
+
+.callBtn:active {
+  background-color: var(--color-brand-navy);
+}
+
+/* Text button */
+.textBtn {
+  background-color: var(--color-brand-orange);
+  font-family: var(--font-heading);
+}
+
+.textBtn:active {
+  background-color: var(--color-brand-orange-hover);
+}

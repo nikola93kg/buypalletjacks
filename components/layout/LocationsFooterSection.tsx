@@ -5,6 +5,8 @@ import {
   getLocationsGroupedByState,
   STATE_NAMES,
 } from "@/lib/locations";
+import { cn } from "@/lib/utils";
+import styles from "./LocationsFooterSection.module.css";
 
 export default function LocationsFooterSection() {
   const grouped = getLocationsGroupedByState();
@@ -14,7 +16,7 @@ export default function LocationsFooterSection() {
 
   return (
     <section
-      className="bg-[#F8FAFC] border-t border-[#E2E8F0]"
+      className={cn("border-t", styles.section)}
       aria-label="Pickup locations directory"
     >
       <div className="container-site py-14">
@@ -23,18 +25,16 @@ export default function LocationsFooterSection() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
           <div className="text-center sm:text-left">
             <p
-              className="text-xs font-700 uppercase tracking-[0.18em] text-[#3B82F6] mb-2"
-              style={{ fontFamily: "'Outfit', sans-serif" }}
+              className={cn("text-xs font-700 uppercase tracking-[0.18em] mb-2", styles.kicker, styles.outfitText)}
             >
               Nationwide Coverage
             </p>
             <h2
-              className="text-xl font-800 text-[#0F172A] leading-tight"
-              style={{ fontFamily: "'Outfit', sans-serif" }}
+              className={cn("text-xl font-800 leading-tight", styles.heading, styles.outfitText)}
             >
               {locations.length}+ Pickup Locations
             </h2>
-            <p className="text-[#475569] text-sm mt-1 max-w-md leading-relaxed">
+            <p className={cn("text-sm mt-1 max-w-md leading-relaxed", styles.bodyText)}>
               Professionally refurbished pallet jacks available for same-day
               pickup. Call or text to confirm stock before you show up.
             </p>
@@ -42,16 +42,14 @@ export default function LocationsFooterSection() {
           <div className="flex flex-wrap gap-2 flex-shrink-0 justify-center sm:justify-start">
             <a
               href="tel:+12622541835"
-              className="inline-flex items-center gap-1.5 text-xs font-600 text-[#0F172A] px-3.5 py-2 rounded-lg border border-[#CBD5E1] hover:border-[#94A3B8] hover:bg-[#E2E8F0] transition-all"
-              style={{ fontFamily: "'Outfit', sans-serif" }}
+              className={cn("inline-flex items-center gap-1.5 text-xs font-600 px-3.5 py-2 rounded-lg border transition-all", styles.ctaBtn, styles.outfitText)}
             >
               <Phone size={12} aria-hidden="true" />
               Call Us
             </a>
             <a
               href="sms:+12622541835"
-              className="inline-flex items-center gap-1.5 text-xs font-600 text-[#0F172A] px-3.5 py-2 rounded-lg border border-[#CBD5E1] hover:border-[#94A3B8] hover:bg-[#E2E8F0] transition-all"
-              style={{ fontFamily: "'Outfit', sans-serif" }}
+              className={cn("inline-flex items-center gap-1.5 text-xs font-600 px-3.5 py-2 rounded-lg border transition-all", styles.ctaBtn, styles.outfitText)}
             >
               <MessageSquare size={12} aria-hidden="true" />
               Text Us
@@ -66,8 +64,7 @@ export default function LocationsFooterSection() {
             return (
               <div key={stateCode}>
                 <h3
-                  className="text-[0.65rem] font-700 text-[#94A3B8] uppercase tracking-widest mb-2.5 pb-2 border-b border-[#E2E8F0]"
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
+                  className={cn("text-[0.65rem] font-700 uppercase tracking-widest mb-2.5 pb-2 border-b", styles.stateHeading, styles.outfitText)}
                 >
                   {stateName}
                 </h3>
@@ -81,11 +78,11 @@ export default function LocationsFooterSection() {
                       <li key={loc.cityState}>
                         <Link
                           href={`/locations?state=${stateCode}`}
-                          className="flex items-center gap-1.5 text-sm text-[#1D4ED8] hover:text-[#1E3A8A] transition-colors leading-snug group"
+                          className={cn("flex items-center gap-1.5 text-sm transition-colors leading-snug group", styles.cityLink)}
                         >
                           <MapPin
                             size={11}
-                            className="flex-shrink-0 text-[#93C5FD] group-hover:text-[#1D4ED8] transition-colors"
+                            className={cn("flex-shrink-0 transition-colors", styles.cityIcon)}
                             aria-hidden="true"
                           />
                           {cityFormatted}
@@ -100,16 +97,15 @@ export default function LocationsFooterSection() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center sm:items-center justify-between gap-4">
+        <div className={cn("mt-12 pt-6 border-t flex flex-col sm:flex-row items-center sm:items-center justify-between gap-4", styles.bottomBorder)}>
           <Link
             href="/locations"
-            className="inline-flex items-center gap-1.5 text-sm text-[#1D4ED8] hover:text-[#1E3A8A] font-600 transition-colors"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
+            className={cn("inline-flex items-center gap-1.5 text-sm font-600 transition-colors", styles.viewAllLink, styles.outfitText)}
           >
             <MapPin size={14} aria-hidden="true" />
             View all {locations.length} locations with full details &amp; directions
           </Link>
-          <p className="text-[#94A3B8] text-xs">
+          <p className={cn("text-xs", styles.bottomText)}>
             Altra · Crown · Same-day pickup · Delivery available
           </p>
         </div>

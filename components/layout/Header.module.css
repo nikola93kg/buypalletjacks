@@ -1,0 +1,67 @@
+/*
+  ══════════════════════════════════════════════════════════════
+  Header Component — CSS Module
+  ══════════════════════════════════════════════════════════════
+*/
+
+/* Logo blend mode */
+.logoBlend {
+  mix-blend-mode: multiply;
+}
+
+/* Desktop nav active link */
+.navLinkActive {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+}
+
+/* Desktop nav default link */
+.navLinkDefault {
+  color: #374151;
+}
+
+/* Desktop nav link hover */
+.navLinkDefault:hover {
+  color: #1d4ed8;
+  background-color: #f1f5f9;
+}
+
+/* Mobile menu button */
+.mobileMenuBtn {
+  color: #374151;
+}
+
+.mobileMenuBtn:hover {
+  background-color: #f1f5f9;
+}
+
+/* Mobile overlay border */
+.mobileHeaderBorder {
+  border-color: #e2e8f0;
+}
+
+/* Mobile nav link active */
+.mobileNavLinkActive {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+}
+
+/* Mobile nav link default */
+.mobileNavLinkDefault {
+  color: #374151;
+}
+
+/* Mobile nav link hover */
+.mobileNavLinkDefault:hover {
+  color: #1d4ed8;
+  background-color: #f1f5f9;
+}
+
+/* Location link */
+.locationLink {
+  color: #64748b;
+}
+
+.locationLink:hover {
+  color: #1d4ed8;
+}

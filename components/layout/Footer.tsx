@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Phone, MapPin } from "lucide-react";
+import { cn } from "@/lib/utils";
+import styles from "./Footer.module.css";
 
 const FOOTER_LINKS = [
   {
@@ -31,18 +33,17 @@ const FOOTER_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F172A] text-white">
+    <footer className={styles.footer}>
       
 
       {/* Main footer */}
-      <div className="container-site py-14">
+      <div className="container-site py-14 text-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2 text-center md:text-left">
             <Link
               href="/"
-              style={{ fontFamily: "'Outfit', sans-serif" }}
-              className="text-2xl font-bold text-white mb-4 inline-block"
+              className={cn("text-2xl font-bold text-white mb-4 inline-block", styles.brandName)}
             >
               Buy<span className="text-blue-400">Pallet</span>Jacks
             </Link>
@@ -65,8 +66,7 @@ export default function Footer() {
           {FOOTER_LINKS.map((col) => (
             <div key={col.heading} className="text-center md:text-left">
               <h3
-                style={{ fontFamily: "'Outfit', sans-serif" }}
-                className="text-sm font-600 text-white uppercase tracking-wider mb-4"
+                className={cn("text-sm font-600 text-white uppercase tracking-wider mb-4", styles.sectionHeading)}
               >
                 {col.heading}
               </h3>

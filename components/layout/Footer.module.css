@@ -1,0 +1,20 @@
+/*
+  ══════════════════════════════════════════════════════════════
+  Footer Component — CSS Module
+  ══════════════════════════════════════════════════════════════
+*/
+
+/* Footer background */
+.footer {
+  background-color: #0f172a;
+}
+
+/* Brand name with Outfit font */
+.brandName {
+  font-family: var(--font-heading);
+}
+
+/* Section heading with Outfit font */
+.sectionHeading {
+  font-family: var(--font-heading);
+}
