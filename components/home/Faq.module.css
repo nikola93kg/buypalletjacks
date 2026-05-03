@@ -110,7 +110,7 @@
 
 .iconContainerOpen {
   background: var(--color-brand-blue);
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 /* Answer */

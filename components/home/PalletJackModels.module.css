@@ -11,7 +11,7 @@
 
 /* Header */
 .headerContainer {
-  text-center: true;
+  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -225,7 +225,7 @@
 
 .ctaButton:hover {
   background: var(--card-accent);
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 /* Trust Note */

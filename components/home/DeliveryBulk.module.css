@@ -100,12 +100,10 @@
 }
 
 .icon {
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 /* Content */
-.cardContent {
-}
 
 .cardTitle {
   font-family: var(--font-heading);
@@ -143,7 +141,7 @@
   justify-content: center;
   gap: 0.5rem;
   background: var(--color-brand-orange);
-  color: #ffffff;
+  color: var(--color-surface);
   font-weight: 600;
   font-size: 0.875rem;
   padding: 0.625rem 1.25rem;
