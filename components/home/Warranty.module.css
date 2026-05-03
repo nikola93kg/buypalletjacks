@@ -7,8 +7,8 @@
 
 .section {
   padding: 5rem 0;
-  background: #0f172a;
-  color: #ffffff;
+  background: var(--color-text);
+  color: var(--color-surface);
   overflow: hidden;
 }
 
@@ -50,7 +50,7 @@
   font-family: var(--font-heading);
   font-size: 1.875rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-surface);
   margin-bottom: 1.25rem;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .description {
-  color: #94a3b8;
+  color: var(--color-steel);
   font-size: 1rem;
   line-height: 1.625;
   margin-bottom: 2rem;
@@ -162,14 +162,14 @@
 
 .badgeTitle {
   font-family: var(--font-heading);
-  color: #ffffff;
+  color: var(--color-surface);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25;
 }
 
 .badgeSubtitle {
-  color: #94a3b8;
+  color: var(--color-steel);
   font-size: 0.75rem;
   margin-top: 0.125rem;
 }
@@ -210,10 +210,11 @@
   line-height: 1;
   margin-bottom: 0.25rem;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: var(--stat-accent);
 }
 
 .statLabel {
-  color: #94a3b8;
+  color: var(--color-steel);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.05em;

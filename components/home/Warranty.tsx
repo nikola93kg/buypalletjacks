@@ -98,7 +98,7 @@ export default function Warranty() {
                 { value: "100%", label: "Units Tested", accent: "#22c55e" },
               ].map(({ value, label, accent }) => (
                 <div key={label} className={styles.statCard}>
-                  <p className={styles.statValue} style={{ color: accent }}>
+                  <p className={styles.statValue} style={{ "--stat-accent": accent } as React.CSSProperties}>
                     {value}
                   </p>
                   <p className={styles.statLabel}>{label}</p>
