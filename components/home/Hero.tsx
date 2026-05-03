@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Phone, MessageSquare, MapPin, ChevronRight, Shield, Truck, Tag, Info } from "lucide-react";
 import { useEffect, useRef } from "react";
 import heroImgPng from "@/public/hero2.jpg";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -22,15 +23,13 @@ export default function Hero() {
 
   return (
     <section
-      className="relative overflow-hidden"
-      style={{ backgroundColor: 'var(--color-hero-bg)' }}
+      className={`relative overflow-hidden ${styles.heroSection}`}
       aria-labelledby="hero-heading"
     >
       {/* Background image — parallax on desktop, static on mobile */}
       <div
         ref={parallaxRef}
-        className="hero-bg-wrapper absolute inset-0 pointer-events-none select-none"
-        style={{ willChange: "transform" }}
+        className={`hero-bg-wrapper absolute inset-0 pointer-events-none select-none ${styles.bgWrapper}`}
         aria-hidden="true"
       >
         <Image
@@ -46,25 +45,18 @@ export default function Hero() {
 
       {/* Mobile overlay — strong white at top fading to transparent ~55% so PJs show fully below */}
       <div
-        className="absolute inset-0 pointer-events-none sm:hidden"
-        style={{
-          background: "linear-gradient(to bottom, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.94) 30%, rgba(255,255,255,0.60) 50%, rgba(255,255,255,0.00) 60%)"
-        }}
+        className={`absolute inset-0 pointer-events-none sm:hidden ${styles.mobileOverlay}`}
         aria-hidden="true"
       />
       {/* Desktop overlay — horizontal fade left to right */}
       <div
-        className="absolute inset-0 pointer-events-none hidden sm:block"
-        style={{
-          background: "linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 34%, rgba(255,255,255,0.30) 62%, rgba(255,255,255,0.00) 100%)",
-        }}
+        className={`absolute inset-0 pointer-events-none hidden sm:block ${styles.desktopOverlay}`}
         aria-hidden="true"
       />
 
       {/* Top gradient band */}
       <div
-        className="absolute top-0 left-0 right-0 h-1 z-10"
-        style={{ background: 'linear-gradient(to right, var(--color-brand-blue), var(--color-trust-blue), var(--color-brand-orange))' }}
+        className={`absolute top-0 left-0 right-0 h-1 z-10 ${styles.topAccent}`}
         aria-hidden="true"
       />
 
@@ -76,29 +68,23 @@ export default function Hero() {
             {/* Headline */}
             <h1
               id="hero-heading"
-              className="font-900 leading-[0.93] mt-2 tracking-tight mb-4 text-center sm:text-left"
-              style={{
-                fontFamily: "'Outfit', sans-serif",
-                fontSize: "clamp(2.4rem, 7vw, 4rem)",
-                color: 'var(--color-hero-text)',
-              }}
+              className={`font-900 leading-[0.93] mt-2 tracking-tight mb-4 text-center sm:text-left ${styles.heroHeading}`}
             >
               Heavy-duty pallet jacks
               <br />
-              <span style={{ color: 'var(--color-hero-accent)' }}>Skip the new price</span>
+              <span className={styles.heroHeadingAccent}>Skip the new price</span>
               <br />
               Get to work!
             </h1>
 
             {/* Save up to */}
             <div className="flex flex-col items-center sm:items-start mb-1">
-              <p className="text-slate-600 text-base font-semibold leading-tight mb-0" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              <p className={`text-slate-600 text-base font-semibold leading-tight mb-0 ${styles.saveUpToText}`}>
                 Save up to
               </p>
               <div className="flex items-start gap-2">
                 <span
-                  className="font-900 leading-none tracking-tight"
-                  style={{ fontFamily: "'Outfit', sans-serif", fontSize: "clamp(2.8rem, 10vw, 5.5rem)", color: '#F97316' }}
+                  className={`font-900 leading-none tracking-tight ${styles.discountText}`}
                 >
                   40-60% OFF
                 </span>
@@ -146,23 +132,15 @@ export default function Hero() {
                 ].map(({ icon: Icon, title, accent }) => (
                   <div
                     key={title}
-                    className="relative flex items-center gap-3 rounded-2xl px-4 py-3 overflow-hidden backdrop-blur-sm w-[200px]"
-                    style={{
-                      border: "1px solid rgba(148,163,184,0.28)",
-                      boxShadow: "inset 0 1px 0 rgba(255,255,255,0.65), 0 10px 28px rgba(15,23,42,0.10)",
-                    }}
+                    className={`relative flex items-center gap-3 rounded-2xl px-4 py-3 overflow-hidden backdrop-blur-sm w-[200px] ${styles.trustCard}`}
+                    style={{ '--badge-accent': accent } as React.CSSProperties}
                   >
                     <span
-                      className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
-                      style={{
-                        background: `linear-gradient(135deg, ${accent}30, ${accent}12)`,
-                        border: `1px solid ${accent}45`,
-                        boxShadow: `0 8px 18px ${accent}25`,
-                      }}
+                      className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center ${styles.trustIcon}`}
                     >
-                      <Icon size={22} strokeWidth={2.4} style={{ color: accent }} aria-hidden="true" />
+                      <Icon size={22} strokeWidth={2.4} aria-hidden="true" />
                     </span>
-                    <p className="text-base md:text-lg font-semibold leading-tight" style={{ color: 'var(--color-hero-text)', fontFamily: "'Outfit', sans-serif" }}>
+                    <p className={`text-base md:text-lg font-semibold leading-tight ${styles.trustTitle}`}>
                       {title}
                     </p>
                   </div>
@@ -197,19 +175,13 @@ export default function Hero() {
                 Cash · Card · Zelle · CashApp · Venmo
               </div> */}
               {/* Desktop: original muted text */}
-              <p className="hidden sm:block" style={{ color: 'var(--color-hero-muted)', fontSize: "0.75rem" }}>
+              <p className={`hidden sm:block ${styles.paymentText}`}>
                 Cash · Card · Zelle · CashApp · Venmo
               </p>
               {/* Mobile: pill for locations */}
               <Link
                 href="/locations"
-                className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-md font-semibold sm:hidden"
-                style={{
-                  background: "rgba(255,255,255,0.82)",
-                  border: "1.5px solid var(--color-brand-blue)",
-                  color: 'var(--color-hero-link)',
-                  fontFamily: "'Outfit', sans-serif",
-                }}
+                className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-md font-semibold sm:hidden ${styles.mobileLocationPill}`}
               >
                 <MapPin size={13} />
                 View all locations
@@ -218,10 +190,7 @@ export default function Hero() {
               {/* Desktop: original link */}
               <Link
                 href="/locations"
-                className="hidden sm:flex items-center gap-2 transition-colors text-base font-bold flex-shrink-0 ml-3"
-                style={{ color: 'var(--color-hero-link)' }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-hero-text)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-hero-link)'}
+                className={`hidden sm:flex items-center gap-2 transition-colors text-base font-bold flex-shrink-0 ml-3 ${styles.desktopLocationLink}`}
               >
                 <MapPin size={16} />
                 View all locations
@@ -230,7 +199,7 @@ export default function Hero() {
             </div>
 
             {/* Mobile spacer — pushes section tall enough to see PJs below content */}
-            <div className="sm:hidden" style={{ height: "38vw" }} />
+            <div className={`sm:hidden ${styles.mobileSpacer}`} />
 
           </div>
         </div>
