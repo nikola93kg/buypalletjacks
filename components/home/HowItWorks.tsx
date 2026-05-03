@@ -42,7 +42,7 @@ export default function HowItWorks() {
               </span>
 
               {/* Orange accent bar */}
-              <div className={styles.stepAccent} />
+              <div className={styles.stepAccent} aria-hidden="true" />
 
               {/* Step label */}
               <p className={styles.stepLabel}>Step {step}</p>

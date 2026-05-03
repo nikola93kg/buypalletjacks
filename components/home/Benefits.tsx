@@ -66,7 +66,7 @@ export default function Benefits() {
           <div className={styles.specGrid}>
             {SPECS.map(({ title, desc }) => (
               <div key={title} className={styles.specItem}>
-                <div className={styles.specAccent} />
+                <div className={styles.specAccent} aria-hidden="true" />
                 <div>
                   <h3 className={styles.specTitle}>{title}</h3>
                   <p className={styles.specDesc}>{desc}</p>
