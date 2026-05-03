@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
+import {
+  buildMetadata,
+  faqPageJsonLd,
+  productListJsonLd,
+  howToJsonLd,
+} from "@/lib/seo";
 import Hero from "@/components/home/Hero";
 import PalletJackModels from "@/components/home/PalletJackModels";
 import Benefits from "@/components/home/Benefits";
@@ -22,6 +27,24 @@ export const metadata: Metadata = buildMetadata({
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqPageJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productListJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToJsonLd),
+        }}
+      />
       <Hero />
       <PalletJackModels />
       <Benefits />
