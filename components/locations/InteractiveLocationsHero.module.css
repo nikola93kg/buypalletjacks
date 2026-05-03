@@ -1,0 +1,30 @@
+/* Hero heading */
+.heading {
+  font-family: var(--font-heading);
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+/* Stats numbers */
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.statNumber.default {
+  color: #0f172a;
+}
+
+.statNumber.accent {
+  color: #f97316;
+}

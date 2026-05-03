@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { getAllStatesWithLocations, STATE_NAMES } from "@/lib/locations";
 import StateSelectFallback from "./StateSelectFallback";
 import type { ComponentProps } from "react";
+import styles from "./InteractiveLocationsHero.module.css";
 
 type UsaMapProps = ComponentProps<typeof import("./UsaMap")["default"]>;
 type LocationsPanelProps = ComponentProps<typeof import("./LocationsPanel")["default"]>;
@@ -44,11 +45,7 @@ export default function InteractiveLocationsHero() {
         {/* Header */}
         <div className="text-center mb-10">
           <span className="section-eyebrow">Locations</span>
-          <h1
-            id="locations-hero-heading"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-3xl md:text-5xl font-800 text-[#0F172A] mb-4"
-          >
+          <h1 id="locations-hero-heading" className={styles.heading}>
             Find a Pickup Location{" "}
             <span className="text-[#1D4ED8]">Near You</span>
           </h1>
@@ -60,10 +57,7 @@ export default function InteractiveLocationsHero() {
           {/* Stats strip */}
           <div className="flex items-center justify-center gap-8 flex-wrap mt-8 mb-8">
             <div className="flex flex-col items-center gap-0.5">
-              <span
-                style={{ fontFamily: "'Outfit', sans-serif" }}
-                className="text-4xl font-extrabold text-[#0F172A] leading-none"
-              >
+              <span className={`${styles.statNumber} ${styles.default}`}>
                 28
               </span>
               <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
@@ -72,10 +66,7 @@ export default function InteractiveLocationsHero() {
             </div>
             <div className="w-px h-12 bg-[#E2E8F0] flex-shrink-0" />
             <div className="flex flex-col items-center gap-0.5">
-              <span
-                style={{ fontFamily: "'Outfit', sans-serif" }}
-                className="text-4xl font-extrabold text-[#0F172A] leading-none"
-              >
+              <span className={`${styles.statNumber} ${styles.default}`}>
                 19
               </span>
               <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
@@ -84,10 +75,7 @@ export default function InteractiveLocationsHero() {
             </div>
             <div className="w-px h-12 bg-[#E2E8F0] flex-shrink-0" />
             <div className="flex flex-col items-center gap-0.5">
-              <span
-                style={{ fontFamily: "'Outfit', sans-serif" }}
-                className="text-4xl font-extrabold text-[#F97316] leading-none"
-              >
+              <span className={`${styles.statNumber} ${styles.accent}`}>
                 Free
               </span>
               <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
