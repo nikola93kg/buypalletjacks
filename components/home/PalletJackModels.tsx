@@ -4,6 +4,7 @@ import altraImg from "@/public/altra.webp";
 import crownImg from "@/public/crown.webp";
 import altraLogo from "@/public/altra-logo.png";
 import crownLogo from "@/public/crown-logo.png";
+import styles from "./PalletJackModels.module.css";
 
 const MODELS = [
   {
@@ -22,8 +23,6 @@ const MODELS = [
     accentColor: "#1D4ED8",
     accentBg: "#EFF6FF",
     accentBorder: "#BFDBFE",
-    buttonClass:
-      "border-[#1D4ED8] text-[#1D4ED8] hover:bg-[#1D4ED8] hover:text-white",
   },
   {
     brand: "Crown",
@@ -41,32 +40,29 @@ const MODELS = [
     accentColor: "#F97316",
     accentBg: "#FFF7ED",
     accentBorder: "#FED7AA",
-    buttonClass:
-      "border-[#F97316] text-[#F97316] hover:bg-[#F97316] hover:text-white",
   },
 ];
 
 export default function PalletJackModels() {
   return (
     <section
-      className="section-padding bg-white"
+      className={`section-padding ${styles.section}`}
       aria-labelledby="models-heading"
     >
       <div className="container-site">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className={styles.headerContainer}>
           <span className="section-eyebrow">Our Equipment</span>
           <h2
             id="models-heading"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-4xl md:text-5xl font-900 text-[#0F172A] mb-4"
+            className={styles.heading}
           >
             Two proven brands.{" "}
-            <span className="text-[#1D4ED8]">Both rebuilt right.</span>
+            <span className={styles.headingAccent}>Both rebuilt right.</span>
           </h2>
-          <p className="text-[#64748B] max-w-2xl mx-auto text-base leading-relaxed">
-            We carry <strong className="text-[#0F172A] font-600">Altra</strong>{" "}
-            and <strong className="text-[#0F172A] font-600">Crown</strong> — two
+          <p className={styles.description}>
+            We carry <strong className={styles.descriptionStrong}>Altra</strong>{" "}
+            and <strong className={styles.descriptionStrong}>Crown</strong> — two
             of the most reliable pallet jack brands in the industry. Every unit
             is fully disassembled, serviced, repainted, and sealed by
             experienced technicians before it reaches you.
@@ -74,74 +70,64 @@ export default function PalletJackModels() {
         </div>
 
         {/* Model cards */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className={styles.modelsGrid}>
           {MODELS.map((model) => (
             <article
               key={model.brand}
-              className="group overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_10px_30px_-18px_rgba(15,23,42,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(15,23,42,0.28)]"
+              className={styles.modelCard}
+              style={{
+                '--card-accent': model.accentColor,
+                '--card-accent-bg': model.accentBg,
+                '--card-accent-border': model.accentBorder,
+              } as React.CSSProperties}
             >
-              <div className="relative border-b border-slate-200 bg-[linear-gradient(180deg,#f8fbff_0%,#eef4fb_100%)]">
-                <div
-                  className="absolute inset-x-0 top-0 h-1.5"
-                  style={{ backgroundColor: model.accentColor }}
-                />
+              <div className={styles.imageHeader}>
+                <div className={styles.accentBar} />
 
-                <div className="absolute left-4 top-4 z-10">
-                  <div
-                    className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-600 shadow-sm"
-                    style={{
-                      backgroundColor: model.accentBg,
-                      border: `1px solid ${model.accentBorder}`,
-                      color: model.accentColor,
-                      fontFamily: "'Outfit', sans-serif",
-                    }}
-                  >
+                <div className={styles.badgeContainer}>
+                  <div className={styles.badge}>
                     <Image
                       src={model.logo}
                       alt={`${model.brand} logo`}
                       height={16}
-                      className="h-4 w-auto object-contain"
+                      className={styles.badgeLogo}
                     />
                     <span>{model.brand}</span>
                   </div>
                 </div>
 
-                <div className="relative h-80 sm:h-[27rem] overflow-hidden">
+                <div className={styles.imageContainer}>
                   <Image
                     src={model.img}
                     alt={`${model.brand} pallet jack`}
                     fill
-                    className="object-cover object-center transition-transform duration-300 group-hover:scale-[1.04]"
+                    className={styles.modelImage}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>
 
-              <div className="p-6 md:p-7">
-                <h3
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-2xl font-800 text-[#0F172A] mb-1"
-                >
+              <div className={styles.content}>
+                <h3 className={styles.modelTitle}>
                   {model.brand} Pallet Jack
                 </h3>
-                <p className="text-[#64748B] text-sm font-500 mb-4">
+                <p className={styles.tagline}>
                   {model.tagline}
                 </p>
-                <p className="text-[#475569] text-sm leading-relaxed mb-6">
+                <p className={styles.modelDescription}>
                   {model.description}
                 </p>
 
                 {/* Spec list */}
-                <ul className="space-y-2.5 mb-8">
+                <ul className={styles.specList}>
                   {model.specs.map((spec) => (
-                    <li key={spec} className="flex items-start gap-2.5">
+                    <li key={spec} className={styles.specItem}>
                       <CheckCircle2
                         size={16}
-                        className="flex-shrink-0 mt-0.5"
-                        style={{ color: model.accentColor }}
+                        className={styles.specIcon}
                         aria-hidden="true"
                       />
-                      <span className="text-[#334155] text-sm">{spec}</span>
+                      <span className={styles.specText}>{spec}</span>
                     </li>
                   ))}
                 </ul>
@@ -149,8 +135,7 @@ export default function PalletJackModels() {
                 {/* CTA */}
                 <a
                   href="tel:+12622541835"
-                  className={`w-full check-availability flex items-center justify-center gap-2 font-600 text-sm px-5 py-2.5 rounded-lg border-2 transition-colors duration-200 cursor-pointer ${model.buttonClass}`}
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
+                  className={`${styles.ctaButton} check-availability`}
                 >
                   <Phone size={14} aria-hidden="true" />
                   Check {model.brand} Availability
@@ -161,9 +146,9 @@ export default function PalletJackModels() {
         </div>
 
         {/* Trust note */}
-        <p className="text-center text-[#64748B] text-sm mt-8">
+        <p className={styles.trustNote}>
           All units inspected, repainted, sealed, and backed by our{" "}
-          <span className="text-[#0F172A] font-600">2-month warranty</span>.
+          <span className={styles.trustNoteStrong}>2-month warranty</span>.
         </p>
       </div>
     </section>

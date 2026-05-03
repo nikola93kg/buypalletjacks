@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import styles from "./Faq.module.css";
 
 const FAQS = [
   {
@@ -42,56 +43,48 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="section-padding bg-white" aria-labelledby="faq-heading">
+    <section id="faq" className={`section-padding ${styles.section}`} aria-labelledby="faq-heading">
       <div className="container-site max-w-3xl">
-        <div className="text-center mb-12">
+        <div className={styles.headerContainer}>
           <span className="section-eyebrow">FAQ</span>
           <h2
             id="faq-heading"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-3xl md:text-4xl font-800 text-[#0F172A] mb-4"
+            className={styles.heading}
           >
             Common questions
           </h2>
-          <p className="text-[#64748B] text-base">
+          <p className={styles.description}>
             Can&apos;t find what you&apos;re looking for?{" "}
-            <a href="tel:+12622541835" className="text-[#1D4ED8] hover:underline font-medium">
+            <a href="tel:+12622541835" className={styles.descriptionLink}>
               Call us directly
             </a>
             .
           </p>
         </div>
 
-        <dl className="flex flex-col gap-2">
+        <dl className={styles.faqList}>
           {FAQS.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
               <div
                 key={i}
-                className={`border rounded-xl transition-colors ${
-                  isOpen
-                    ? "border-[#1D4ED8] bg-[#F8FAFC]"
-                    : "border-[#E2E8F0] bg-white"
-                }`}
+                className={`${styles.faqItem} ${isOpen ? styles.faqItemOpen : styles.faqItemClosed}`}
               >
                 <dt>
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+                    className={styles.questionButton}
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${i}`}
                     id={`faq-question-${i}`}
                   >
                     <span
-                      style={{ fontFamily: "'Outfit', sans-serif" }}
-                      className={`text-base font-600 ${isOpen ? "text-[#1D4ED8]" : "text-[#0F172A]"}`}
+                      className={`${styles.questionText} ${isOpen ? styles.questionTextOpen : styles.questionTextClosed}`}
                     >
                       {faq.q}
                     </span>
                     <span
-                      className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-colors ${
-                        isOpen ? "bg-[#1D4ED8] text-white" : "bg-[#F1F5F9] text-[#64748B]"
-                      }`}
+                      className={`${styles.iconContainer} ${isOpen ? styles.iconContainerOpen : styles.iconContainerClosed}`}
                       aria-hidden="true"
                     >
                       {isOpen ? <Minus size={13} /> : <Plus size={13} />}
@@ -103,9 +96,9 @@ export default function Faq() {
                     id={`faq-answer-${i}`}
                     role="region"
                     aria-labelledby={`faq-question-${i}`}
-                    className="px-5 pb-5"
+                    className={styles.answer}
                   >
-                    <p className="text-[#475569] text-sm leading-relaxed">{faq.a}</p>
+                    <p className={styles.answerText}>{faq.a}</p>
                   </dd>
                 )}
               </div>

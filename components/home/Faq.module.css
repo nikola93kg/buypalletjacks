@@ -1,0 +1,125 @@
+/*
+  ══════════════════════════════════════════════════════════════
+  Faq — CSS Module
+  ══════════════════════════════════════════════════════════════
+*/
+
+/* Section */
+.section {
+  background: var(--color-surface);
+}
+
+/* Header */
+.headerContainer {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 2.25rem;
+  }
+}
+
+.description {
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.descriptionLink {
+  color: var(--color-brand-blue);
+  font-weight: 500;
+}
+
+.descriptionLink:hover {
+  text-decoration: underline;
+}
+
+/* FAQ List */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* FAQ Item */
+.faqItem {
+  border-width: 1px;
+  border-radius: 0.75rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.faqItemClosed {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+}
+
+.faqItemOpen {
+  border-color: var(--color-brand-blue);
+  background: var(--color-bg);
+}
+
+/* Question Button */
+.questionButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.questionText {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.questionTextClosed {
+  color: var(--color-text);
+}
+
+.questionTextOpen {
+  color: var(--color-brand-blue);
+}
+
+.iconContainer {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.iconContainerClosed {
+  background: #f1f5f9;
+  color: var(--color-muted);
+}
+
+.iconContainerOpen {
+  background: var(--color-brand-blue);
+  color: #ffffff;
+}
+
+/* Answer */
+.answer {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.answerText {
+  color: var(--color-hero-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
