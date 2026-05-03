@@ -85,6 +85,7 @@
   /* Trust Card Accents */
   --color-trust-blue:         #3B82F6;
   --color-trust-green:        #10B981;
+  --color-blue-400:           #60a5fa;
 
   /* Typography */
   --font-heading: var(--font-outfit), sans-serif;

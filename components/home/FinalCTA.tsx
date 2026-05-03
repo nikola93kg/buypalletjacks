@@ -76,14 +76,14 @@ export default function FinalCTA() {
           <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
             <a
               href="tel:+12622541835"
-              className={`${styles.callCta} inline-flex items-center gap-2.5 text-white font-700 text-base px-8 py-4 rounded-xl shadow-lg shadow-orange-900/30`}
+              className={`${styles.callCta} inline-flex items-center gap-2.5 text-white font-700 text-base px-8 py-4 rounded-xl`}
             >
               <Phone size={18} aria-hidden="true" />
               Call Now
             </a>
             <a
               href="sms:+12622541835"
-              className={`${styles.textCta} inline-flex items-center gap-2.5 text-white font-600 text-base px-8 py-4 rounded-xl border border-white/20 hover:border-white/50 hover:bg-white/5 transition-all`}
+              className={`${styles.textCta} inline-flex items-center gap-2.5 text-white font-600 text-base px-8 py-4 rounded-xl`}
             >
               <MessageSquare size={18} aria-hidden="true" />
               Text Us

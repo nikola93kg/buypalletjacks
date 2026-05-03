@@ -1,7 +1,7 @@
 /* FinalCTA.module.css */
 
 .section {
-  background-color: #0F172A; /* dark navy */
+  background-color: #0f172a; /* dark navy */
 }
 
 .radialGlow {
@@ -59,44 +59,52 @@
 }
 
 .headingAccent {
-  color: #60A5FA; /* blue-400, lighter than --color-trust-blue */
+  color: var(--color-blue-400); /* blue-400 accent */
 }
 
 .subtext {
-  color: #64748B; /* slate-500 */
+  color: var(--color-muted); /* slate-500 */
 }
 
 .trustPill {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.10);
-  color: #CBD5E1; /* slate-300 */
+  color: #cbd5e1; /* slate-300 */
 }
 
 .trustPillIcon {
-  color: #60A5FA;
+  color: var(--color-blue-400);
 }
 
 .callCta {
   font-family: var(--font-heading);
   background-color: var(--color-brand-orange);
   transition: background-color 0.15s;
+  box-shadow: 0 10px 15px -3px rgba(124, 45, 18, 0.3);
 }
 
 .callCta:hover {
-  background-color: #EA6F0E;
+  background-color: var(--color-brand-orange-hover);
 }
 
 .textCta {
   font-family: var(--font-heading);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.textCta:hover {
+  border-color: rgba(255, 255, 255, 0.50);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .locationLink {
-  color: #475569; /* slate-600 */
+  color: var(--color-hero-text-muted); /* slate-600 */
   transition: color 0.15s;
 }
 
 .locationLink:hover {
-  color: #93C5FD; /* blue-300 */
+  color: #93c5fd; /* blue-300 */
 }
 
 .divider {
@@ -104,11 +112,11 @@
 }
 
 .paymentsLabel {
-  color: #475569; /* slate-600 */
+  color: var(--color-hero-text-muted); /* slate-600 */
 }
 
 .paymentPill {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #64748B; /* slate-500 */
+  color: var(--color-muted); /* slate-500 */
 }
