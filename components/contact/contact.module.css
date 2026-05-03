@@ -60,7 +60,7 @@
 }
 
 .pageHeadline {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: clamp(1.875rem, 5vw, 3.25rem);
   font-weight: 900;
   color: #ffffff;
@@ -268,7 +268,7 @@
 }
 
 .cardTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 1.75rem;
   font-weight: 900;
   color: #ffffff;
@@ -383,7 +383,7 @@
 }
 
 .sideCardTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.9375rem;
   font-weight: 800;
   color: #0f172a;
@@ -480,7 +480,7 @@
 }
 
 .locationCardTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.9375rem;
   font-weight: 800;
   color: #ffffff;
@@ -565,7 +565,7 @@
 }
 
 .faqTeaserTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 1.125rem;
   font-weight: 800;
   color: #0f172a;

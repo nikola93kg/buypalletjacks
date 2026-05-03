@@ -68,7 +68,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`} suppressHydrationWarning>
-      <head />
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"

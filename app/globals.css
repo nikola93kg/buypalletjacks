@@ -118,7 +118,7 @@ html {
 body {
   background-color: #F8FAFC;
   color: #0F172A;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -126,7 +126,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.15;
 }

@@ -30,7 +30,7 @@
 .valueLabel {
   margin: 0;
   color: var(--accent);
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -48,7 +48,7 @@
 
 .statValue {
   color: var(--accent);
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: clamp(2.25rem, 5vw, 3rem);
   font-weight: 900;
   line-height: 1;
@@ -70,7 +70,7 @@
 .valueTitle {
   margin: 0 0 0.5rem;
   color: #0f172a;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 1.25rem;
   font-weight: 800;
 }
@@ -135,7 +135,7 @@
   padding: 0.75rem 1rem;
   background: #1d4ed8;
   color: #ffffff;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -147,7 +147,7 @@
   padding: 0.75rem 1rem;
   background: #f1f5f9;
   color: #94a3b8;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -206,7 +206,7 @@
   border-radius: 999px;
   background: #eff6ff;
   color: #1d4ed8;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -216,7 +216,7 @@
 .comparisonTitle {
   margin: 1rem 0 0;
   color: #0f172a;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: clamp(1.6rem, 3vw, 2rem);
   font-weight: 900;
   line-height: 1.15;

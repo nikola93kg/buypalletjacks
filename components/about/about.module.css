@@ -66,7 +66,7 @@
 }
 
 .pageHeadline {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   color: #ffffff;
@@ -156,7 +156,7 @@
 }
 
 .statNum {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 2.25rem;
   font-weight: 900;
   color: #0f172a;
@@ -179,7 +179,7 @@
 }
 
 .sectionTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 900;
   color: #0f172a;
@@ -226,7 +226,7 @@
 }
 
 .storyHeading {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: clamp(1.625rem, 3vw, 2.125rem);
   font-weight: 900;
   color: #0f172a;
@@ -314,7 +314,7 @@
 }
 
 .diffLabel {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.6875rem;
   font-weight: 700;
   color: #f97316;
@@ -413,7 +413,7 @@
 }
 
 .pillarTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-weight: 800;
   font-size: 1.0625rem;
   color: #0f172a;
@@ -470,7 +470,7 @@
   position: absolute;
   top: -0.75rem;
   right: 0.75rem;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 5rem;
   font-weight: 900;
   color: #f1f5f9;
@@ -488,7 +488,7 @@
   border-radius: 0.625rem;
   background: #0f172a;
   color: #ffffff;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.8125rem;
   font-weight: 800;
   flex-shrink: 0;
@@ -522,7 +522,7 @@
 }
 
 .stepTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 1.0625rem;
   font-weight: 800;
   color: #0f172a;
@@ -581,7 +581,7 @@
 }
 
 .serveTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 1.125rem;
   font-weight: 800;
   color: #0f172a;
@@ -675,7 +675,7 @@
 }
 
 .valueItemTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 1.0625rem;
   font-weight: 800;
   color: #ffffff;
@@ -713,7 +713,7 @@
 }
 
 .ctaTitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 800;
   color: #0f172a;
@@ -740,7 +740,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
   color: #0f172a;
