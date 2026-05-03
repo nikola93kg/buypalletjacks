@@ -111,16 +111,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Easy Pickup */}
-            {/* <div className="flex items-center justify-center sm:justify-start gap-3 mb-5 mt-3">
-              <div className="w-px h-8 bg-slate-400" />
-              <p style={{ color: 'var(--color-hero-text)', fontFamily: "'Outfit', sans-serif", fontSize: "1rem", fontWeight: "bold", lineHeight: "1.2" }}>
-                Easy Pickup
-                <span className="block" style={{ color: 'var(--color-hero-steel)', fontSize: "0.82rem", fontWeight: "normal" }}>
-                  {locationCount}+ locations nationwide
-                </span>
-              </p>
-            </div> */}
+
 
             {/* Trust badges — pill row on mobile, full cards on desktop */}
             <div className="mb-5">

@@ -21,27 +21,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm p-1">
-      {/* ── Top info track ── */}
-      {/* <div className="bg-[#F97316]">
-        <div className="container-site">
-          <div className="flex items-center justify-between h-8 gap-4">
-            <span className="flex items-center gap-1.5 text-white/90 text-xs font-medium">
-              <Clock size={12} className="text-white" aria-hidden="true" />
-              Mon–Sat&nbsp;8am–6pm EST
-            </span>
-            <a href="tel:+12622541835" className="flex items-center gap-1.5 group"
-              aria-label="Call (800) 555-5555"
-            >
-              <span className="text-white/80 text-xs hidden sm:block">Call us now:</span>
-              <span className="flex items-center gap-1.5 bg-white group-hover:bg-white/90 transition-colors text-[#F97316] text-xs font-bold px-3 py-0.5 rounded shadow-sm">
-                <Phone size={11} aria-hidden="true" />
-                (800) 555-5555
-              </span>
-            </a>
 
-          </div>
-        </div>
-      </div> */}
       <div className="container-site">
           <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           {/* Logo + Desktop nav — left-aligned together */}
