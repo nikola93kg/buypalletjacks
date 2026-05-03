@@ -1,0 +1,114 @@
+/* FinalCTA.module.css */
+
+.section {
+  background-color: #0F172A; /* dark navy */
+}
+
+.radialGlow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(29, 78, 216, 0.22) 0%, transparent 70%);
+}
+
+.diagonalTexture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 60px,
+    rgba(255, 255, 255, 0.012) 60px,
+    rgba(255, 255, 255, 0.012) 120px
+  );
+}
+
+.topAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-brand-blue), var(--color-trust-blue), var(--color-brand-orange));
+}
+
+.eyebrowLine {
+  display: block;
+  height: 1px;
+  width: 2rem;
+  background: color-mix(in srgb, var(--color-brand-orange) 60%, transparent);
+}
+
+.eyebrowText {
+  color: var(--color-brand-orange);
+  font-family: var(--font-heading);
+  letter-spacing: 0.2em;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  line-height: 1.05;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+}
+
+.headingAccent {
+  color: #60A5FA; /* blue-400, lighter than --color-trust-blue */
+}
+
+.subtext {
+  color: #64748B; /* slate-500 */
+}
+
+.trustPill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: #CBD5E1; /* slate-300 */
+}
+
+.trustPillIcon {
+  color: #60A5FA;
+}
+
+.callCta {
+  font-family: var(--font-heading);
+  background-color: var(--color-brand-orange);
+  transition: background-color 0.15s;
+}
+
+.callCta:hover {
+  background-color: #EA6F0E;
+}
+
+.textCta {
+  font-family: var(--font-heading);
+}
+
+.locationLink {
+  color: #475569; /* slate-600 */
+  transition: color 0.15s;
+}
+
+.locationLink:hover {
+  color: #93C5FD; /* blue-300 */
+}
+
+.divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.paymentsLabel {
+  color: #475569; /* slate-600 */
+}
+
+.paymentPill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #64748B; /* slate-500 */
+}
