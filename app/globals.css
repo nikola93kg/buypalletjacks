@@ -118,7 +118,7 @@ html {
 body {
   background-color: #F8FAFC;
   color: #0F172A;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -126,7 +126,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-weight: 700;
   line-height: 1.15;
 }
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   background-color: var(--color-brand-orange);
   color: #ffffff;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-weight: 600;
   font-size: 1rem;
   padding: 0.75rem 1.75rem;
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   background-color: transparent;
   color: #ffffff;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-weight: 600;
   font-size: 1rem;
   padding: 0.75rem 1.75rem;
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   background-color: #ffffff;
   color: #0F172A;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-weight: 700;
   border: 2px solid #CBD5E1;
   border-radius: 0.5rem;
@@ -257,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   background-color: transparent;
   color: #1D4ED8;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-weight: 600;
   font-size: 0.9375rem;
   padding: 0.625rem 1.5rem;
@@ -284,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit), sans-serif;
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.18em;
