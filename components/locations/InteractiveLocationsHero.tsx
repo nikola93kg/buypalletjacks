@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MapPin, Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import { getAllStatesWithLocations, STATE_NAMES } from "@/lib/locations";
 import StateSelectFallback from "./StateSelectFallback";

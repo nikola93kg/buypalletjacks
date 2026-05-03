@@ -3,12 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, MessageSquare, MapPin, ChevronRight, Shield, Truck, Tag, Info } from "lucide-react";
-import { locations } from "@/lib/locations";
 import { useEffect, useRef } from "react";
 import heroImgPng from "@/public/hero2.jpg";
 
 export default function Hero() {
-  const locationCount = locations.length;
   const parallaxRef = useRef<HTMLDivElement>(null);
 
   // Parallax — mutates DOM directly so there's no React re-render on every scroll frame

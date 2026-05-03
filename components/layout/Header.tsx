@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Phone, Menu, X, MapPin, Clock } from "lucide-react";
+import { Phone, Menu, X, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logoImg from "@/public/logo.webp";
 

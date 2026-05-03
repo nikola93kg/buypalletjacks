@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, MessageSquare, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 
 const FOOTER_LINKS = [
   {

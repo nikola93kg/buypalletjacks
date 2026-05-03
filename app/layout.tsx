@@ -3,7 +3,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import LocationsFooterSection from "@/components/layout/LocationsFooterSection";
-import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
 import BackToTopButton from "@/components/layout/BackToTopButton";
 import { SITE_NAME, SITE_DESCRIPTION, localBusinessJsonLd, organizationJsonLd } from "@/lib/seo";
 
