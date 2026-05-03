@@ -25,7 +25,7 @@
 }
 
 .header.light {
-  border-bottom-color: #e2e8f0;
+  border-bottom-color: var(--color-border);
 }
 
 .headerTop {
@@ -42,11 +42,11 @@
 }
 
 .mapIcon.dark {
-  color: #60a5fa;
+  color: var(--color-blue-400);
 }
 
 .mapIcon.light {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 .titleText {
@@ -56,11 +56,11 @@
 }
 
 .titleText.dark {
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .titleText.light {
-  color: #0f172a;
+  color: var(--color-text);
 }
 
 .clearButton {
@@ -70,19 +70,19 @@
 }
 
 .clearButton.dark {
-  color: #64748b;
+  color: var(--color-muted);
 }
 
 .clearButton.dark:hover {
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .clearButton.light {
-  color: #94a3b8;
+  color: var(--color-steel);
 }
 
 .clearButton.light:hover {
-  color: #0f172a;
+  color: var(--color-text);
 }
 
 /* Search input */
@@ -95,7 +95,7 @@
   left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #64748b;
+  color: var(--color-muted);
 }
 
 .searchInput {
@@ -112,27 +112,27 @@
 
 .searchInput:focus {
   outline: none;
-  border-color: #3b82f6;
+  border-color: var(--color-trust-blue);
 }
 
 .searchInput.dark {
   background-color: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .searchInput.dark::placeholder {
-  color: #94a3b8;
+  color: var(--color-steel);
 }
 
 .searchInput.light {
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   border-color: #cbd5e1;
-  color: #0f172a;
+  color: var(--color-text);
 }
 
 .searchInput.light::placeholder {
-  color: #94a3b8;
+  color: var(--color-steel);
 }
 
 /* Location list */
@@ -176,11 +176,11 @@
 }
 
 .emptyIcon.dark svg {
-  color: #60a5fa;
+  color: var(--color-blue-400);
 }
 
 .emptyIcon.light svg {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 .emptyText {
@@ -188,16 +188,16 @@
 }
 
 .emptyText.dark {
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .emptyText.light {
-  color: #64748b;
+  color: var(--color-muted);
 }
 
 .emptySubtext {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--color-steel);
 }
 
 .noResults {
@@ -210,11 +210,11 @@
 }
 
 .noResultsText.dark {
-  color: #94a3b8;
+  color: var(--color-steel);
 }
 
 .noResultsText.light {
-  color: #64748b;
+  color: var(--color-muted);
 }
 
 .noResultsLink {
@@ -222,11 +222,11 @@
 }
 
 .noResultsLink.dark {
-  color: #60a5fa;
+  color: var(--color-blue-400);
 }
 
 .noResultsLink.light {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 .noResultsLink:hover {
@@ -251,7 +251,7 @@
 }
 
 .footer.light {
-  border-top-color: #e2e8f0;
+  border-top-color: var(--color-border);
 }
 
 .footerLink {
@@ -265,19 +265,19 @@
 }
 
 .footerLink.dark {
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .footerLink.dark:hover {
-  color: #60a5fa;
+  color: var(--color-blue-400);
 }
 
 .footerLink.light {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 .footerLink.light:hover {
-  color: #1e3a8a;
+  color: var(--color-brand-navy);
 }
 
 /* Location card */
@@ -299,12 +299,12 @@
 }
 
 .locationCard.light {
-  background-color: #ffffff;
-  border-color: #e2e8f0;
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
 }
 
 .locationCard.light:hover {
-  background-color: #f8fafc;
+  background-color: var(--color-bg);
   border-color: #bfdbfe;
 }
 
@@ -330,11 +330,11 @@
 }
 
 .cardCity.dark {
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .cardCity.light {
-  color: #0f172a;
+  color: var(--color-text);
 }
 
 .cardFacility {
@@ -346,11 +346,11 @@
 }
 
 .cardFacility.dark {
-  color: #94a3b8;
+  color: var(--color-steel);
 }
 
 .cardFacility.light {
-  color: #64748b;
+  color: var(--color-muted);
 }
 
 .cardMapButton {
@@ -360,19 +360,19 @@
 }
 
 .cardMapButton.dark {
-  color: #94a3b8;
+  color: var(--color-steel);
 }
 
 .cardMapButton.dark:hover {
-  color: #60a5fa;
+  color: var(--color-blue-400);
 }
 
 .cardMapButton.light {
-  color: #94a3b8;
+  color: var(--color-steel);
 }
 
 .cardMapButton.light:hover {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 .cardDirections {
@@ -389,9 +389,9 @@
 }
 
 .cardDirections.dark {
-  color: #60a5fa;
+  color: var(--color-blue-400);
 }
 
 .cardDirections.light {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }

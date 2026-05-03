@@ -7,7 +7,7 @@
 
 /* ══ Page header ══════════════════════════════════════════════ */
 .pageHeader {
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-brand-navy) 60%, var(--color-brand-blue) 100%);
   padding: 3rem 0 3.5rem;
   position: relative;
   overflow: hidden;
@@ -51,7 +51,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #f97316;
+  color: var(--color-brand-orange);
   background: rgba(249, 115, 22, 0.12);
   border: 1px solid rgba(249, 115, 22, 0.3);
   border-radius: 999px;
@@ -60,10 +60,10 @@
 }
 
 .pageHeadline {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(1.875rem, 5vw, 3.25rem);
   font-weight: 900;
-  color: #ffffff;
+  color: var(--color-surface);
   line-height: 1.06;
   letter-spacing: -0.03em;
   margin: 0 0 1rem;
@@ -78,11 +78,11 @@
 }
 
 .headlineAccent {
-  color: #f97316;
+  color: var(--color-brand-orange);
 }
 
 .pageSubline {
-  color: #94a3b8;
+  color: var(--color-steel);
   font-size: 1rem;
   line-height: 1.75;
   max-width: 38rem;
@@ -138,26 +138,26 @@
 .trustPillIcon svg {
   width: 0.9rem;
   height: 0.9rem;
-  color: #f97316;
+  color: var(--color-brand-orange);
 }
 
 .trustPillText {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #e2e8f0;
+  color: var(--color-border);
   line-height: 1.2;
 }
 
 .trustPillSub {
   font-size: 0.6875rem;
-  color: #94a3b8;
+  color: var(--color-steel);
   display: block;
 }
 
 /* ══ Body section ═════════════════════════════════════════════ */
 .bodySection {
   padding: 4rem 0 5rem;
-  background: #f8fafc;
+  background: var(--color-bg);
 }
 
 /* ══ Main grid ════════════════════════════════════════════════ */
@@ -196,7 +196,7 @@
 /* Call card */
 .callCard {
   position: relative;
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-navy) 100%);
   border-radius: 1.5rem;
   padding: 1.75rem;
   display: flex;
@@ -214,7 +214,7 @@
 
 .textCard {
   position: relative;
-  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  background: linear-gradient(135deg, #ea580c 0%, var(--color-brand-orange) 100%);
   border-radius: 1.5rem;
   padding: 1.75rem;
   display: flex;
@@ -255,7 +255,7 @@
 .cardIconWrap svg {
   width: 1.375rem;
   height: 1.375rem;
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .cardEyebrow {
@@ -268,10 +268,10 @@
 }
 
 .cardTitle {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: 1.75rem;
   font-weight: 900;
-  color: #ffffff;
+  color: var(--color-surface);
   line-height: 1;
   letter-spacing: -0.025em;
   margin: 0 0 0.375rem;
@@ -305,7 +305,7 @@
 
 .callCard:hover .cardCta,
 .textCard:hover .cardCta {
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .cardCta svg {
@@ -323,7 +323,7 @@
 .orDividerLine {
   flex: 1;
   height: 1px;
-  background: #e2e8f0;
+  background: var(--color-border);
 }
 
 .orDividerLabel {
@@ -331,7 +331,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #94a3b8;
+  color: var(--color-steel);
   white-space: nowrap;
 }
 
@@ -351,8 +351,8 @@
 
 /* Sidebar cards */
 .sideCard {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 1.5rem;
   overflow: hidden;
 }
@@ -362,7 +362,7 @@
   align-items: center;
   gap: 0.875rem;
   padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .sideCardIconWrap {
@@ -379,14 +379,14 @@
 .sideCardIconWrap svg {
   width: 1rem;
   height: 1rem;
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 .sideCardTitle {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: 0.9375rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -413,7 +413,7 @@
 
 .hoursTime {
   font-weight: 700;
-  color: #0f172a;
+  color: var(--color-text);
   font-variant-numeric: tabular-nums;
 }
 
@@ -424,7 +424,7 @@
 
 .hoursNote {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--color-steel);
   padding-top: 0.875rem;
   margin-top: 0.25rem;
   border-top: 1px solid #f1f5f9;
@@ -433,7 +433,7 @@
 /* Location card — dark */
 .locationCard {
   position: relative;
-  background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
+  background: linear-gradient(160deg, var(--color-text) 0%, var(--color-brand-navy) 100%);
   border-radius: 1.5rem;
   padding: 1.75rem;
   overflow: hidden;
@@ -476,20 +476,20 @@
 .locationIconWrap svg {
   width: 1rem;
   height: 1rem;
-  color: #f97316;
+  color: var(--color-brand-orange);
 }
 
 .locationCardTitle {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: 0.9375rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-surface);
   margin: 0;
 }
 
 .locationCardDesc {
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: var(--color-steel);
   line-height: 1.65;
   margin: 0 0 1.25rem;
 }
@@ -498,8 +498,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #f97316;
-  color: #ffffff;
+  background: var(--color-brand-orange);
+  color: var(--color-surface);
   font-size: 0.875rem;
   font-weight: 700;
   padding: 0.75rem 1.375rem;
@@ -528,16 +528,16 @@
 .paymentTag {
   font-size: 0.75rem;
   font-weight: 600;
-  background: #f8fafc;
+  background: var(--color-bg);
   color: #334155;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   padding: 0.3rem 0.75rem;
 }
 
 .paymentNote {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--color-steel);
   margin-top: 1rem;
   padding-top: 0.875rem;
   border-top: 1px solid #f1f5f9;
@@ -546,8 +546,8 @@
 /* ══ FAQ teaser ═══════════════════════════════════════════════ */
 .faqTeaser {
   margin-top: 3rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 1.5rem;
   padding: 2rem 2.5rem;
   display: flex;
@@ -565,16 +565,16 @@
 }
 
 .faqTeaserTitle {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: 1.125rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--color-text);
   margin: 0 0 0.375rem;
 }
 
 .faqTeaserSub {
   font-size: 0.9375rem;
-  color: #64748b;
+  color: var(--color-muted);
   margin: 0;
 }
 
@@ -582,8 +582,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #0f172a;
-  color: #ffffff;
+  background: var(--color-text);
+  color: var(--color-surface);
   font-size: 0.9375rem;
   font-weight: 700;
   padding: 0.875rem 1.75rem;
@@ -595,7 +595,7 @@
 }
 
 .faqTeaserBtn:hover {
-  background: #1d4ed8;
+  background: var(--color-brand-blue);
   transform: translateY(-1px);
 }
 

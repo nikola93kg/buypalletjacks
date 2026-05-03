@@ -13,8 +13,8 @@ type LocationsPanelProps = ComponentProps<typeof import("./LocationsPanel")["def
 const UsaMap = dynamic<UsaMapProps>(() => import("./UsaMap"), {
   ssr: false,
   loading: () => (
-    <div className="w-full aspect-[5/3] rounded-2xl bg-[#E2E8F0] animate-pulse flex items-center justify-center">
-      <span className="text-[#64748B] text-sm">Loading map…</span>
+    <div className={`${styles.loadingContainer} animate-pulse`}>
+      <span className={styles.loadingText}>Loading map…</span>
     </div>
   ),
 });
@@ -38,7 +38,7 @@ export default function InteractiveLocationsHero() {
 
   return (
     <section
-      className="section-padding bg-[#F8FAFC]"
+      className={`section-padding ${styles.sectionBg}`}
       aria-labelledby="locations-hero-heading"
     >
       <div className="container-site">
@@ -47,9 +47,9 @@ export default function InteractiveLocationsHero() {
           <span className="section-eyebrow">Locations</span>
           <h1 id="locations-hero-heading" className={styles.heading}>
             Find a Pickup Location{" "}
-            <span className="text-[#1D4ED8]">Near You</span>
+            <span className={styles.headingAccent}>Near You</span>
           </h1>
-          <p className="text-[#64748B] text-base max-w-xl mx-auto">
+          <p className={`${styles.textMuted} text-base max-w-xl mx-auto`}>
             Click your state on the map — or use the search below to find the
             nearest pickup point.
           </p>
@@ -60,25 +60,25 @@ export default function InteractiveLocationsHero() {
               <span className={`${styles.statNumber} ${styles.default}`}>
                 28
               </span>
-              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+              <span className={styles.textLabel}>
                 Locations
               </span>
             </div>
-            <div className="w-px h-12 bg-[#E2E8F0] flex-shrink-0" />
+            <div className={styles.divider} />
             <div className="flex flex-col items-center gap-0.5">
               <span className={`${styles.statNumber} ${styles.default}`}>
                 19
               </span>
-              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+              <span className={styles.textLabel}>
                 States
               </span>
             </div>
-            <div className="w-px h-12 bg-[#E2E8F0] flex-shrink-0" />
+            <div className={styles.divider} />
             <div className="flex flex-col items-center gap-0.5">
               <span className={`${styles.statNumber} ${styles.accent}`}>
                 Free
               </span>
-              <span className="text-xs font-semibold text-[#64748B] uppercase tracking-widest">
+              <span className={styles.textLabel}>
                 Pickup
               </span>
             </div>
@@ -98,19 +98,19 @@ export default function InteractiveLocationsHero() {
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Map */}
           <div className="lg:flex-1">
-            <div className="bg-[#0A1628] rounded-2xl border border-[#1E3A8A]/40 shadow-2xl p-4 md:p-6">
+            <div className={styles.mapContainer}>
               {/* Legend */}
-              <div className="flex flex-wrap items-center gap-4 mb-4 text-xs text-[#94A3B8]">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-4 h-3 rounded-sm bg-[#1D4ED8] inline-block" aria-hidden="true" />
+              <div className={styles.legendContainer}>
+                <span className={styles.legendItem}>
+                  <span className={`${styles.legendSwatch} ${styles.legendSwatchActive}`} aria-hidden="true" />
                   Has Locations
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-4 h-3 rounded-sm bg-[#60A5FA] inline-block" aria-hidden="true" />
+                <span className={styles.legendItem}>
+                  <span className={`${styles.legendSwatch} ${styles.legendSwatchSelected}`} aria-hidden="true" />
                   Selected
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-4 h-3 rounded-sm bg-[#CBD5E1] inline-block" aria-hidden="true" />
+                <span className={styles.legendItem}>
+                  <span className={`${styles.legendSwatch} ${styles.legendSwatchInactive}`} aria-hidden="true" />
                   No Locations
                 </span>
               </div>
@@ -120,15 +120,15 @@ export default function InteractiveLocationsHero() {
                 onStateSelect={setSelectedState}
               />
               {selectedState && (
-                <p className="text-center text-sm text-[#94A3B8] mt-3">
+                <p className={styles.selectedText}>
                   Showing locations in{" "}
-                  <strong className="text-[#60A5FA]">
+                  <strong className={styles.selectedStateName}>
                     {STATE_NAMES[selectedState] || selectedState}
                   </strong>{" "}
                   —{" "}
                   <button
                     onClick={() => setSelectedState(null)}
-                    className="text-[#60A5FA] hover:text-white transition-colors font-medium"
+                    className={styles.clearButton}
                   >
                     Clear selection
                   </button>
@@ -144,7 +144,7 @@ export default function InteractiveLocationsHero() {
             aria-live="polite"
             aria-label="Location results"
           >
-            <div className="bg-[#0A1628] rounded-2xl border border-[#1E3A8A]/40 overflow-hidden h-full shadow-2xl">
+            <div className={`${styles.mapContainer} ${styles.panelContainer}`}>
               <LocationsPanel
                 selectedState={selectedState}
                 onClear={() => setSelectedState(null)}
