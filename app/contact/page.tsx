@@ -3,7 +3,6 @@ import { buildMetadata } from "@/lib/seo";
 import ContactHeader from "@/components/contact/ContactHeader";
 import ContactInfo from "@/components/contact/ContactInfo";
 import ContactForm from "@/components/contact/ContactForm";
-import styles from "@/components/contact/contact.module.css";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Buy Pallet Jacks – Call or Text for Availability",
