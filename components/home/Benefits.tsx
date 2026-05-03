@@ -1,3 +1,5 @@
+import styles from "./Benefits.module.css";
+
 const STATS = [
   { stat: "28", label: "Pickup Locations" },
   { stat: "2-Mo", label: "Warranty Included" },
@@ -35,26 +37,16 @@ export default function Benefits() {
   return (
     <section aria-labelledby="benefits-heading">
       {/* Stats band */}
-      <div className="bg-[#0F172A]">
-        <div className="container-site py-10 md:py-12">
+      <div className={styles.statsBand}>
+        <div className={`container-site ${styles.statsContainer}`}>
           <div className="grid grid-cols-3">
             {STATS.map(({ stat, label }, i) => (
               <div
                 key={label}
-                className={`text-center py-2 ${
-                  i > 0 ? "border-l border-[#1E3A8A]" : ""
-                }`}
+                className={`${styles.statItem} ${i > 0 ? styles.statItemBorder : ""}`}
               >
-                <p
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-3xl sm:text-5xl font-900 text-white leading-none mb-2"
-                >
-                  {stat}
-                </p>
-                <p style={{ color: "#fff" }} 
-                className="text-[#475569] text-[0.7rem] sm:text-xs uppercase tracking-widest leading-snug px-2">
-                  {label}
-                </p>
+                <p className={styles.statNumber}>{stat}</p>
+                <p className={styles.statLabel}>{label}</p>
               </div>
             ))}
           </div>
@@ -62,31 +54,22 @@ export default function Benefits() {
       </div>
 
       {/* Spec rows */}
-      <div className="bg-white section-padding">
+      <div className={styles.specSection}>
         <div className="container-site">
-          <div className="text-center mb-12">
+          <div className={styles.heading}>
             <span className="section-eyebrow">Why Choose Us</span>
-            <h2
-              id="benefits-heading"
-              style={{ fontFamily: "'Outfit', sans-serif" }}
-              className="text-4xl md:text-5xl font-900 text-[#0F172A]"
-            >
+            <h2 id="benefits-heading" className={styles.headingTitle}>
               Built for business.{" "}
-              <span className="text-[#1D4ED8]">Priced for value.</span>
+              <span className={styles.headingBlue}>Priced for value.</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
+          <div className={styles.specGrid}>
             {SPECS.map(({ title, desc }) => (
-              <div key={title} className="flex gap-4">
-                <div className="w-[3px] self-stretch bg-[#F97316] flex-shrink-0" />
+              <div key={title} className={styles.specItem}>
+                <div className={styles.specAccent} />
                 <div>
-                  <h3
-                    style={{ fontFamily: "'Outfit', sans-serif" }}
-                    className="text-sm font-700 text-[#0F172A] mb-2 uppercase tracking-widest"
-                  >
-                    {title}
-                  </h3>
-                  <p className="text-sm text-[#475569] leading-relaxed">{desc}</p>
+                  <h3 className={styles.specTitle}>{title}</h3>
+                  <p className={styles.specDesc}>{desc}</p>
                 </div>
               </div>
             ))}

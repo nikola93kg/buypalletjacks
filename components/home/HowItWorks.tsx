@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import styles from "./HowItWorks.module.css";
 
 const STEPS = [
   {
@@ -20,65 +21,42 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section
-      className="section-padding bg-[#F1F5F9]"
-      aria-labelledby="how-heading"
-    >
+    <section className={styles.section} aria-labelledby="how-heading">
       <div className="container-site">
-        <div className="text-center mb-14">
+        <div className={styles.heading}>
           <span className="section-eyebrow">The Process</span>
-          <h2
-            id="how-heading"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-4xl md:text-5xl font-900 text-[#0F172A]"
-          >
+          <h2 id="how-heading" className={styles.headingTitle}>
             3 steps to warehouse-ready
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 overflow-hidden border border-[#CBD5E1]">
+        <div className={styles.stepGrid}>
           {STEPS.map(({ step, title, desc }, i) => (
             <div
               key={step}
-              className={`relative overflow-hidden bg-white p-8 md:p-10 ${
-                i > 0 ? "border-t md:border-t-0 md:border-l border-[#CBD5E1]" : ""
-              }`}
+              className={`${styles.stepCard} ${i > 0 ? styles.stepCardBorder : ""}`}
             >
               {/* Giant watermark step number */}
-              <span
-                aria-hidden="true"
-                style={{ fontFamily: "'Outfit', sans-serif", color: "#EEF2F7" }}
-                className="absolute -bottom-6 -right-3 text-[8rem] font-900 leading-none select-none pointer-events-none"
-              >
+              <span aria-hidden="true" className={styles.stepWatermark}>
                 {step}
               </span>
 
               {/* Orange accent bar */}
-              <div className="w-10 h-[3px] bg-[#F97316] mb-7 relative z-10" />
+              <div className={styles.stepAccent} />
 
               {/* Step label */}
-              <p
-                style={{ fontFamily: "'Outfit', sans-serif" }}
-                className="text-[0.6875rem] font-700 uppercase tracking-[0.18em] text-[#F97316] mb-3 relative z-10"
-              >
-                Step {step}
-              </p>
+              <p className={styles.stepLabel}>Step {step}</p>
 
               {/* Title */}
-              <h3
-                style={{ fontFamily: "'Outfit', sans-serif" }}
-                className="text-2xl font-800 text-[#0F172A] mb-4 leading-tight relative z-10"
-              >
-                {title}
-              </h3>
+              <h3 className={styles.stepTitle}>{title}</h3>
 
               {/* Description */}
-              <p className="text-[#475569] text-sm leading-relaxed relative z-10">{desc}</p>
+              <p className={styles.stepDesc}>{desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className={styles.cta}>
           <a href="tel:+12622541835" className="btn-primary text-base px-8 py-3.5">
             <Phone size={17} />
             Start with a Call

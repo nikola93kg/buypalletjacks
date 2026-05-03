@@ -1,0 +1,135 @@
+/*
+  ══════════════════════════════════════════════════════════════
+  Benefits Section — CSS Module
+  Design: Stats band + feature grid with orange accents
+  ══════════════════════════════════════════════════════════════
+*/
+
+/* ══ Stats Band ═════════════════════════════════════════════ */
+.statsBand {
+  background: #0f172a;
+}
+
+.statsContainer {
+  padding: 2.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .statsContainer {
+    padding: 3rem 0;
+  }
+}
+
+.statItem {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.statItemBorder {
+  border-left: 1px solid #1e3a8a;
+}
+
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .statNumber {
+    font-size: 3rem;
+  }
+}
+
+.statLabel {
+  color: #ffffff;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.375;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .statLabel {
+    font-size: 0.75rem;
+  }
+}
+
+/* ══ Spec Section ══════════════════════════════════════════ */
+.specSection {
+  background: #ffffff;
+  padding: 5rem 0;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.headingTitle {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+@media (min-width: 768px) {
+  .headingTitle {
+    font-size: 3rem;
+  }
+}
+
+.headingBlue {
+  color: var(--color-brand-blue);
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  column-gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .specGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .specGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.specItem {
+  display: flex;
+  gap: 1rem;
+}
+
+.specAccent {
+  width: 3px;
+  align-self: stretch;
+  background: var(--color-brand-orange);
+  flex-shrink: 0;
+}
+
+.specTitle {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.specDesc {
+  font-size: 0.875rem;
+  color: var(--color-hero-text-muted);
+  line-height: 1.625;
+}
