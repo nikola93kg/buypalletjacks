@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { MapPin, Search, ExternalLink, X } from "lucide-react";
 import { locations, searchLocations, STATE_NAMES, type Location } from "@/lib/locations";
@@ -19,21 +19,15 @@ export default function LocationsPanel({
   theme = 'dark',
 }: LocationsPanelProps) {
   const [query, setQuery] = useState("");
-  const [filtered, setFiltered] = useState<Location[]>([]);
   const dk = theme === 'dark';
 
-  useEffect(() => {
-    if (selectedState) {
-      const stateLocations = locations.filter(
+  const filtered = useMemo(() => {
+    if (selectedState)
+      return locations.filter(
         (l) => l.state.toUpperCase() === selectedState.toUpperCase()
       );
-      setFiltered(stateLocations);
-      setQuery("");
-    } else if (query) {
-      setFiltered(searchLocations(query));
-    } else {
-      setFiltered([]);
-    }
+    if (query) return searchLocations(query);
+    return [];
   }, [selectedState, query]);
 
   const stateName = selectedState ? STATE_NAMES[selectedState] || selectedState : null;
