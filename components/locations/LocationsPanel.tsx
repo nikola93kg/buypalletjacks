@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, Search, ExternalLink, X } from "lucide-react";
 import { locations, searchLocations, STATE_NAMES, type Location } from "@/lib/locations";
@@ -20,6 +20,12 @@ export default function LocationsPanel({
 }: LocationsPanelProps) {
   const [query, setQuery] = useState("");
   const dk = theme === 'dark';
+
+  // Reset search query when a new state is selected from the map
+  // This is a deliberate UX pattern to clear search when navigating via map
+  useEffect(() => {
+    if (selectedState) setQuery(""); // eslint-disable-line react-hooks/set-state-in-effect
+  }, [selectedState]);
 
   const filtered = useMemo(() => {
     if (selectedState)
