@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, Search, ExternalLink, X } from "lucide-react";
-import { locations, searchLocations, STATE_NAMES, type Location } from "@/lib/locations";
+import { getLocationsByState, searchLocations, STATE_NAMES, type Location } from "@/lib/locations";
 
 interface LocationsPanelProps {
   selectedState?: string | null;
@@ -28,10 +28,7 @@ export default function LocationsPanel({
   }, [selectedState]);
 
   const filtered = useMemo(() => {
-    if (selectedState)
-      return locations.filter(
-        (l) => l.state.toUpperCase() === selectedState.toUpperCase()
-      );
+    if (selectedState) return getLocationsByState(selectedState);
     if (query) return searchLocations(query);
     return [];
   }, [selectedState, query]);
