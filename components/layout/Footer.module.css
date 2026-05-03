@@ -6,7 +6,7 @@
 
 /* Footer background */
 .footer {
-  background-color: #0f172a;
+  background-color: var(--color-text);
 }
 
 /* Brand name with Outfit font */

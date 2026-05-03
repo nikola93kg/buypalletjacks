@@ -6,7 +6,7 @@
 
 /* Mobile CTA container */
 .mobileStickyCTA {
-  border-color: #e2e8f0;
+  border-color: var(--color-border);
 }
 
 /* Call button */

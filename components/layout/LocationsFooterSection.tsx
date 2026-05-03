@@ -64,7 +64,7 @@ export default function LocationsFooterSection() {
             return (
               <div key={stateCode}>
                 <h3
-                  className={cn("text-[0.65rem] font-700 uppercase tracking-widest mb-2.5 pb-2 border-b", styles.stateHeading, styles.outfitText)}
+                  className={cn("font-700 uppercase tracking-widest mb-2.5 pb-2 border-b", styles.stateHeading, styles.outfitText)}
                 >
                   {stateName}
                 </h3>

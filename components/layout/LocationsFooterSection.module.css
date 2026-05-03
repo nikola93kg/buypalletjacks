@@ -6,8 +6,8 @@
 
 /* Section background */
 .section {
-  background-color: #f8fafc;
-  border-color: #e2e8f0;
+  background-color: var(--color-bg);
+  border-color: var(--color-border);
 }
 
 /* Outfit font family class */
@@ -17,43 +17,44 @@
 
 /* Kicker text */
 .kicker {
-  color: #3b82f6;
+  color: var(--color-trust-blue);
 }
 
 /* Heading text */
 .heading {
-  color: #0f172a;
+  color: var(--color-text);
 }
 
 /* Body text */
 .bodyText {
-  color: #475569;
+  color: var(--color-hero-text-muted);
 }
 
 /* Button styles */
 .ctaBtn {
-  color: #0f172a;
+  color: var(--color-text);
   border-color: #cbd5e1;
 }
 
 .ctaBtn:hover {
-  border-color: #94a3b8;
-  background-color: #e2e8f0;
+  border-color: var(--color-steel);
+  background-color: var(--color-border);
 }
 
 /* State heading */
 .stateHeading {
-  color: #94a3b8;
-  border-color: #e2e8f0;
+  color: var(--color-steel);
+  border-color: var(--color-border);
+  font-size: 0.65rem;
 }
 
 /* City link */
 .cityLink {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 .cityLink:hover {
-  color: #1e3a8a;
+  color: var(--color-brand-navy);
 }
 
 /* City icon */
@@ -62,24 +63,24 @@
 }
 
 .cityLink:hover .cityIcon {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 /* Bottom border */
 .bottomBorder {
-  border-color: #e2e8f0;
+  border-color: var(--color-border);
 }
 
 /* View all link */
 .viewAllLink {
-  color: #1d4ed8;
+  color: var(--color-brand-blue);
 }
 
 .viewAllLink:hover {
-  color: #1e3a8a;
+  color: var(--color-brand-navy);
 }
 
 /* Bottom text */
 .bottomText {
-  color: #94a3b8;
+  color: var(--color-steel);
 }

@@ -37,7 +37,7 @@
 
 /* Mobile overlay border */
 .mobileHeaderBorder {
-  border-color: #e2e8f0;
+  border-color: var(--color-border);
 }
 
 /* Mobile nav link active */
@@ -59,7 +59,7 @@
 
 /* Location link */
 .locationLink {
-  color: #64748b;
+  color: var(--color-muted);
 }
 
 .locationLink:hover {
