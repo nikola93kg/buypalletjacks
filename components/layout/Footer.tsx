@@ -45,7 +45,7 @@ export default function Footer() {
               href="/"
               className={cn("text-2xl font-bold text-white mb-4 inline-block", styles.brandName)}
             >
-              Buy<span className="text-blue-400">Pallet</span>Jacks
+              Buy<span style={{color: "#F97316"}}>Pallet</span>Jacks
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-5 max-w-xs mx-auto md:mx-0">
               Professionally refurbished pallet jacks sold nationwide. Every unit is painted, sealed, and backed by a full 2-month warranty.
