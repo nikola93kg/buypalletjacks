@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -91,6 +92,18 @@ export default function RootLayout({
         <Footer />
         <BackToTopButton />
         {/* <MobileStickyCTA /> */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TTV25THJJH"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TTV25THJJH');
+          `}
+        </Script>
       </body>
     </html>
   );
