@@ -202,7 +202,7 @@ function LocationCard({ loc }: { loc: Location }) {
         className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:text-brand-navy transition-colors mt-auto"
         aria-label={`View the ${loc.cityState} local page`}
       >
-        View local page
+        View {loc.cityState} page
       </Link>
     </div>
   );

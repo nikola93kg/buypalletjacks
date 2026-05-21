@@ -176,7 +176,7 @@ function LocationCard({
             className={`${styles.cardPrimaryLink} ${dk ? styles.dark : styles.light}`}
             aria-label={`View ${loc.cityState} local page`}
           >
-            View local page
+            View {loc.cityState} page
           </Link>
           <a
             href={loc.gmaps}
@@ -197,7 +197,7 @@ function LocationCard({
             className={`${styles.cardPrimaryLink} ${dk ? styles.dark : styles.light}`}
             aria-label={`View ${loc.cityState} local page`}
           >
-            View local page
+            View {loc.cityState} page
           </Link>
         </div>
       )}
