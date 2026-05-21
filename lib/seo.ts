@@ -4,6 +4,8 @@ export const BASE_URL = "https://www.buypalletjacks.com";
 export const SITE_NAME = "Buy Pallet Jacks";
 export const BUSINESS_PHONE_E164 = "+12622541835";
 export const BUSINESS_PHONE_DISPLAY = "(262) 254-1835";
+export const DEFAULT_SOCIAL_IMAGE_PATH = "/hero2.jpg";
+export const DEFAULT_SOCIAL_IMAGE_URL = `${BASE_URL}${DEFAULT_SOCIAL_IMAGE_PATH}`;
 export const SITE_DESCRIPTION =
   "Professionally refurbished pallet jacks available nationwide. 28 locations across the USA. Call or text to schedule pickup. 2-month warranty included.";
 
@@ -11,7 +13,7 @@ export function buildMetadata({
   title,
   description,
   path = "",
-  image = "/og-image.jpg",
+  image = DEFAULT_SOCIAL_IMAGE_PATH,
   keywords,
 }: {
   title: string;

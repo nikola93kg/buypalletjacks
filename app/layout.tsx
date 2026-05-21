@@ -9,6 +9,7 @@ import BackToTopButton from "@/components/layout/BackToTopButton";
 import JsonLd from "@/components/seo/JsonLd";
 import {
   BASE_URL,
+  DEFAULT_SOCIAL_IMAGE_URL,
   SITE_NAME,
   SITE_DESCRIPTION,
   localBusinessJsonLd as baseLocalBusinessJsonLd,
@@ -84,13 +85,13 @@ const organizationJsonLd = {
     "@type": "ImageObject",
     url: `${BASE_URL}/logo.webp`,
   },
-  image: `${BASE_URL}/og-image.jpg`,
+  image: DEFAULT_SOCIAL_IMAGE_URL,
 };
 
 const localBusinessJsonLd = {
   ...baseLocalBusinessJsonLd,
   "@id": `${BASE_URL}/#local-business`,
-  image: `${BASE_URL}/og-image.jpg`,
+  image: DEFAULT_SOCIAL_IMAGE_URL,
   parentOrganization: {
     "@id": `${BASE_URL}/#organization`,
   },

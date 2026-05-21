@@ -6,6 +6,7 @@ import ts from "typescript";
 const dataPath = new URL("../data/locations.json", import.meta.url);
 const locationsPath = new URL("../lib/locations.ts", import.meta.url);
 const locationPagesPath = new URL("../lib/location-pages.ts", import.meta.url);
+const seoPath = new URL("../lib/seo.ts", import.meta.url);
 const sitemapPath = new URL("../app/sitemap.ts", import.meta.url);
 const locationLandingPagePath = new URL(
   "../components/locations/LocationLandingPage.tsx",
@@ -61,10 +62,15 @@ async function loadLocationPagesModule() {
 test("sitemap includes every location landing page", async () => {
   const { module: locationPages, moduleUrl: locationPagesModuleUrl } =
     await loadLocationPagesModule();
+  const { moduleUrl: seoModuleUrl } = await importTsModule(seoPath);
   const { module: sitemapModule } = await importTsModule(sitemapPath, [
     [
       /import\s*\{\s*getLocationPages\s*\}\s*from\s*"@\/lib\/location-pages";/,
       `import { getLocationPages } from "${locationPagesModuleUrl}";`,
+    ],
+    [
+      /import\s*\{\s*BASE_URL\s*\}\s*from\s*"@\/lib\/seo";/,
+      `import { BASE_URL } from "${seoModuleUrl}";`,
     ],
   ]);
   const entries = sitemapModule.default();
