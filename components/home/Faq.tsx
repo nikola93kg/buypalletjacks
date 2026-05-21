@@ -10,10 +10,6 @@ export const HOME_FAQS = [
     q: "Do you offer bulk or multi-unit discounts?",
     a: "Yes. Pricing improves with quantity. Text us for a multi-unit quote.",
   },
-];
-
-const FAQS = [
-  ...HOME_FAQS,
   {
     q: "What brands do you carry?",
     a: "We carry two proven brands — Crown and Altra. Both are trusted names in material handling, fully rebuilt to perform like new.",
@@ -61,43 +57,41 @@ export default function Faq() {
           </p>
         </div>
 
-        <dl className={styles.faqList}>
-          {FAQS.map((faq, i) => {
+        <div className={styles.faqList}>
+          {HOME_FAQS.map((faq, i) => {
             return (
               <details
                 key={faq.q}
                 className={styles.faqItem}
                 open={i === 0}
               >
-                <dt>
-                  <summary
-                    className={styles.questionButton}
-                    aria-controls={`faq-answer-${i}`}
-                    id={`faq-question-${i}`}
-                  >
-                    <span className={styles.questionText}>{faq.q}</span>
-                    <span className={styles.iconToggle} aria-hidden="true">
-                      <span className={`${styles.iconContainer} ${styles.iconContainerClosed}`}>
-                        <Plus size={13} />
-                      </span>
-                      <span className={`${styles.iconContainer} ${styles.iconContainerOpen}`}>
-                        <Minus size={13} />
-                      </span>
+                <summary
+                  className={styles.questionButton}
+                  aria-controls={`faq-answer-${i}`}
+                  id={`faq-question-${i}`}
+                >
+                  <span className={styles.questionText}>{faq.q}</span>
+                  <span className={styles.iconToggle} aria-hidden="true">
+                    <span className={`${styles.iconContainer} ${styles.iconContainerClosed}`}>
+                      <Plus size={13} />
                     </span>
-                  </summary>
-                </dt>
-                <dd
+                    <span className={`${styles.iconContainer} ${styles.iconContainerOpen}`}>
+                      <Minus size={13} />
+                    </span>
+                  </span>
+                </summary>
+                <div
                   id={`faq-answer-${i}`}
                   role="region"
                   aria-labelledby={`faq-question-${i}`}
                   className={styles.answer}
                 >
                   <p className={styles.answerText}>{faq.a}</p>
-                </dd>
+                </div>
               </details>
             );
           })}
-        </dl>
+        </div>
       </div>
     </section>
   );
