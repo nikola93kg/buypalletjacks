@@ -55,7 +55,8 @@ export async function submitContactForm(
     });
 
     return { success: true };
-  } catch {
+  } catch (err) {
+    console.error("[contact form] sendMail error:", err);
     return {
       error: "Failed to send your message. Please call or text us instead.",
     };
