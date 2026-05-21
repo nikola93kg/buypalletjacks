@@ -203,7 +203,9 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
                 keep loading plans on schedule.
               </p>
               <p className="mt-4 text-base leading-7 text-steel">
-                {pickupReference} {page.pickupTip}
+                {pickupReference} Save the facility name, unit reference, and
+                map link before you leave so your driver can check in quickly
+                and keep the {page.city} pickup on schedule.
               </p>
               <p className="mt-4 text-base leading-7 text-steel">
                 Whether you are replacing a worn-out pallet jack or adding a
