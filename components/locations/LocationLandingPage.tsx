@@ -43,6 +43,9 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
     ? `Unit ${page.unitNumber}`
     : "Unit details provided when you call or text";
   const facilityLabel = page.facility ?? "Local pickup location";
+  const pickupReference = hasUnitNumber(page.unitNumber)
+    ? `Ask for ${unitLabel} when you arrive at ${facilityLabel} so the pickup handoff stays quick.`
+    : `Call or text before arrival so we can share the exact pickup reference for ${facilityLabel}.`;
 
   return (
     <>
@@ -189,22 +192,24 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
         <div className="container-site max-w-6xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
             <div className="rounded-[2rem] border border-border bg-white p-7 shadow-sm md:p-9">
-              <span className="section-eyebrow">Local Demand</span>
+              <span className="section-eyebrow">Pickup Planning</span>
               <h2 className="mt-4 text-3xl font-800 text-graphite">
-                Why buyers in {page.city} use this page
+                How {page.city}-area pickup works
               </h2>
               <p className="mt-5 text-base leading-7 text-steel">
-                {page.marketFocus}
+                This {page.city}, {page.stateCode} page gives buyers a real
+                pickup stop at {facilityLabel} instead of a generic market
+                mention, which helps crews map the stop, confirm access, and
+                keep loading plans on schedule.
               </p>
               <p className="mt-4 text-base leading-7 text-steel">
-                {page.serviceArea}
+                {pickupReference} {page.pickupTip}
               </p>
               <p className="mt-4 text-base leading-7 text-steel">
-                Whether you are replacing a worn-out pallet jack or adding one
-                more unit for shipping and receiving, this page gives you a real
-                {page.facility ? ` ${facilityLabel}` : " pickup location"} in{" "}
-                {page.city}, {page.stateCode} with local context, facility
-                details, and a direct next step for pickup.
+                Whether you are replacing a worn-out pallet jack or adding a
+                backup unit for shipping and receiving, this page lets you
+                compare this {page.city} pickup option with the wider locations
+                hub before you drive.
               </p>
             </div>
 

@@ -1,9 +1,16 @@
 import type { MetadataRoute } from "next";
+import { getLocationPages } from "@/lib/location-pages";
 
 const BASE_URL = "https://www.buypalletjacks.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const locationEntries = getLocationPages().map((page) => ({
+    url: `${BASE_URL}/locations/${page.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
 
   return [
     {
@@ -30,5 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...locationEntries,
   ];
 }
