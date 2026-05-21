@@ -57,6 +57,21 @@
   color: var(--color-hero-accent);
 }
 
+.heroLead {
+  max-width: 40rem;
+  margin: 0 0 1.5rem;
+  color: var(--color-hero-muted);
+  font-size: clamp(1rem, 2.2vw, 1.125rem);
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .heroLead {
+    text-align: left;
+  }
+}
+
 /* ══ Save up to section ══════════════════════════════════════ */
 .saveUpToText {
   font-family: var(--font-heading);

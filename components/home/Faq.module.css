@@ -57,12 +57,12 @@
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.faqItemClosed {
+.faqItem:not([open]) {
   border-color: var(--color-border);
   background: var(--color-surface);
 }
 
-.faqItemOpen {
+.faqItem[open] {
   border-color: var(--color-brand-blue);
   background: var(--color-bg);
 }
@@ -76,24 +76,35 @@
   gap: 1rem;
   padding: 1rem 1.25rem;
   text-align: left;
+  list-style: none;
+  cursor: pointer;
+}
+
+.questionButton::-webkit-details-marker {
+  display: none;
 }
 
 .questionText {
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 600;
-}
-
-.questionTextClosed {
   color: var(--color-text);
 }
 
-.questionTextOpen {
+.faqItem[open] .questionText {
   color: var(--color-brand-blue);
 }
 
-.iconContainer {
+.iconToggle {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
+}
+
+.iconContainer {
+  position: absolute;
+  inset: 0;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 9999px;
@@ -111,6 +122,15 @@
 .iconContainerOpen {
   background: var(--color-brand-blue);
   color: var(--color-surface);
+  opacity: 0;
+}
+
+.faqItem[open] .iconContainerClosed {
+  opacity: 0;
+}
+
+.faqItem[open] .iconContainerOpen {
+  opacity: 1;
 }
 
 /* Answer */
