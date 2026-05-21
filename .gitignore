@@ -49,6 +49,7 @@ yarn-error.log*
 # superpowers / copilot session artifacts
 docs/superpowers/
 ui-ux-pro-max/
+.worktrees/
 
 # typescript
 *.tsbuildinfo
