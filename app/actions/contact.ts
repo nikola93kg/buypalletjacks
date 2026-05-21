@@ -1,8 +1,16 @@
 "use server";
 
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  host: "smtp-relay.brevo.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.BREVO_SMTP_USER,
+    pass: process.env.BREVO_SMTP_KEY,
+  },
+});
 
 export type ContactFormState = {
   success?: boolean;
@@ -31,9 +39,9 @@ export async function submitContactForm(
   }
 
   try {
-    await resend.emails.send({
-      from: "Buy Pallet Jacks <onboarding@resend.dev>",
-      to: "markovic755@gmail.com",
+    await transporter.sendMail({
+      from: '"Buy Pallet Jacks" <noreply@buypalletjacks.com>',
+      to: ["goran@coolfridgeguys.com", "markovic755@gmail.com"],
       replyTo: email,
       subject: `New inquiry from ${name}`,
       text: [
