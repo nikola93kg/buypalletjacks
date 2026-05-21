@@ -174,6 +174,7 @@ function LocationCard({
           <Link
             href={getLocationHref(loc)}
             className={`${styles.cardPrimaryLink} ${dk ? styles.dark : styles.light}`}
+            aria-label={`View ${loc.cityState} local page`}
           >
             View local page
           </Link>
@@ -182,6 +183,7 @@ function LocationCard({
             target="_blank"
             rel="noopener noreferrer"
             className={`${styles.cardDirections} ${dk ? styles.dark : styles.light}`}
+            aria-label={`Get directions to ${loc.cityState}`}
           >
             <MapPin size={10} />
             Get Directions
@@ -189,12 +191,15 @@ function LocationCard({
         </div>
       )}
       {compact && (
-        <Link
-          href={getLocationHref(loc)}
-          className={`${styles.cardPrimaryLink} ${dk ? styles.dark : styles.light}`}
-        >
-          View local page
-        </Link>
+        <div className={styles.cardActions}>
+          <Link
+            href={getLocationHref(loc)}
+            className={`${styles.cardPrimaryLink} ${dk ? styles.dark : styles.light}`}
+            aria-label={`View ${loc.cityState} local page`}
+          >
+            View local page
+          </Link>
+        </div>
       )}
     </div>
   );
