@@ -70,15 +70,12 @@ export default function Hero() {
               id="hero-heading"
               className={`font-900 leading-[0.93] mt-2 tracking-tight mb-4 text-center sm:text-left ${styles.heroHeading}`}
             >
-              Refurbished pallet jacks
+              Heavy-duty pallet jacks
               <br />
-              <span className={styles.heroHeadingAccent}>ready for pickup nationwide</span>
+              <span className={styles.heroHeadingAccent}>Skip the new price</span>
+              <br />
+              Get to work!
             </h1>
-
-            <p className={styles.heroLead}>
-              Buy professionally refurbished pallet jacks with a 2-month warranty, fast pickup across
-              28 locations, and direct call/text ordering.
-            </p>
 
             {/* Save up to */}
             <div className="flex flex-col items-center sm:items-start mb-1">
