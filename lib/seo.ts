@@ -12,16 +12,19 @@ export function buildMetadata({
   description,
   path = "",
   image = "/og-image.jpg",
+  keywords,
 }: {
   title: string;
   description: string;
   path?: string;
   image?: string;
+  keywords?: string[];
 }): Metadata {
   const url = `${BASE_URL}${path}`;
   return {
     title: `${title} | ${SITE_NAME}`,
     description,
+    keywords,
     metadataBase: new URL(BASE_URL),
     alternates: { canonical: url },
     openGraph: {
