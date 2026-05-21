@@ -5,9 +5,9 @@ import ContactInfo from "@/components/contact/ContactInfo";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Buy Pallet Jacks – Call or Text for Availability",
+  title: "Contact Buy Pallet Jacks – Call or Text for Pickup and Bulk Availability",
   description:
-    "Get in touch with Buy Pallet Jacks. Call or text to check inventory at your nearest location. We respond fast — usually within minutes during business hours.",
+    "Call or text Buy Pallet Jacks to check nearby pickup inventory, ask about bulk pricing, and get fast answers on refurbished pallet jacks.",
   path: "/contact",
 });
 

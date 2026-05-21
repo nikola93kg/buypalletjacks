@@ -12,6 +12,7 @@ import styles from "./Header.module.css";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/locations", label: "Locations" },
+  { href: "/bulk-pallet-jacks", label: "Bulk Orders" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

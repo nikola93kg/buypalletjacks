@@ -131,8 +131,7 @@ export default function ContactInfo({ children }: { children?: ReactNode }) {
                   <h2 className={styles.locationCardTitle}>Find a Location</h2>
                 </div>
                 <p className={styles.locationCardDesc}>
-                  28 pickup locations across 19 states. Use the interactive map to find
-                  the one nearest you and get directions.
+                  28 pickup locations across 19 states. Use the locations page to find the nearest market or jump straight to your city page.
                 </p>
                 <Link href="/locations" className={styles.locationCardBtn}>
                   <MapPin aria-hidden="true" />
@@ -166,13 +165,13 @@ export default function ContactInfo({ children }: { children?: ReactNode }) {
         {/* FAQ teaser */}
         <div className={styles.faqTeaser}>
           <div>
-            <p className={styles.faqTeaserTitle}>Have a question not answered here?</p>
+            <p className={styles.faqTeaserTitle}>Ordering for a warehouse or multiple sites?</p>
             <p className={styles.faqTeaserSub}>
-              Warranty, bulk pricing, delivery options, and more — all in our FAQ.
+              Learn about bulk pricing, quantity availability, and how to reach us for a fast quote.
             </p>
           </div>
-          <Link href="/#faq" className={styles.faqTeaserBtn}>
-            View FAQ
+          <Link href="/bulk-pallet-jacks" className={styles.faqTeaserBtn}>
+            Bulk order information
             <ChevronRight />
           </Link>
         </div>
