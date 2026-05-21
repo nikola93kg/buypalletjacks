@@ -64,3 +64,12 @@ export const STATE_NAMES: Record<string, string> = {
   VT: "Vermont", VA: "Virginia", WA: "Washington", WV: "West Virginia",
   WI: "Wisconsin", WY: "Wyoming", DC: "Washington D.C.",
 };
+
+
+export function getCityFromCityState(cityState: string): string {
+  return cityState.split(",")[0]?.trim() ?? cityState.trim();
+}
+
+export function getStateName(stateCode: string): string {
+  return STATE_NAMES[stateCode.toUpperCase()] ?? stateCode.toUpperCase();
+}

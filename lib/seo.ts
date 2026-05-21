@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
-const BASE_URL = "https://www.buypalletjacks.com";
-
+export const BASE_URL = "https://www.buypalletjacks.com";
 export const SITE_NAME = "Buy Pallet Jacks";
+export const BUSINESS_PHONE_E164 = "+12622541835";
+export const BUSINESS_PHONE_DISPLAY = "(262) 254-1835";
 export const SITE_DESCRIPTION =
   "Professionally refurbished pallet jacks available nationwide. 28 locations across the USA. Call or text to schedule pickup. 2-month warranty included.";
 
@@ -41,16 +42,66 @@ export function buildMetadata({
   };
 }
 
+export function buildBreadcrumbJsonLd(
+  items: Array<{ name: string; path: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${BASE_URL}${item.path}`,
+    })),
+  };
+}
+
+export function buildPageFaqJsonLd(
+  faqs: Array<{ q: string; a: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+}
+
+export function buildOfferCatalogJsonLd(name: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    name,
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name,
+          description,
+        },
+      },
+    ],
+  };
+}
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE_NAME,
   url: BASE_URL,
   description: SITE_DESCRIPTION,
-  telephone: "+1-262-254-1835",
+  telephone: BUSINESS_PHONE_E164,
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+1-262-254-1835",
+    telephone: BUSINESS_PHONE_E164,
     contactType: "sales",
     availableLanguage: "English",
   },
@@ -64,7 +115,7 @@ export const localBusinessJsonLd = {
   name: SITE_NAME,
   url: BASE_URL,
   description: SITE_DESCRIPTION,
-  telephone: "+1-262-254-1835",
+  telephone: BUSINESS_PHONE_E164,
   priceRange: "$$",
   areaServed: {
     "@type": "Country",
@@ -72,24 +123,13 @@ export const localBusinessJsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+1-262-254-1835",
+    telephone: BUSINESS_PHONE_E164,
     contactType: "sales",
   },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Refurbished Pallet Jacks",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Professionally Refurbished Pallet Jack",
-          description:
-            "Painted, sealed, and professionally refurbished pallet jack with 2-month warranty.",
-        },
-      },
-    ],
-  },
+  hasOfferCatalog: buildOfferCatalogJsonLd(
+    "Refurbished Pallet Jacks",
+    "Painted, sealed, and professionally refurbished pallet jack with 2-month warranty."
+  ),
 };
 
 export const faqPageJsonLd = {
