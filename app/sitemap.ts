@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getLocationPages } from "@/lib/location-pages";
-
-const BASE_URL = "https://www.buypalletjacks.com";
+import { BASE_URL } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -36,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/bulk-pallet-jacks`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     ...locationEntries,
   ];

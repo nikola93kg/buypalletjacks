@@ -12,7 +12,7 @@ import styles from "./Header.module.css";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/locations", label: "Locations" },
-  { href: "/bulk-pallet-jacks", label: "Bulk Orders" },
+  { href: "/bulk-pallet-jacks", label: "Bulk Pallet Jacks" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -143,6 +143,10 @@ export default function Header() {
 
           {/* Bottom CTA */}
           <div className="px-6 pb-8 flex flex-col gap-3 flex-shrink-0">
+            <Link href="/locations" onClick={() => setOpen(false)} className="btn-outline justify-center py-4 text-lg">
+              <MapPin size={18} />
+              28 Locations
+            </Link>
             <a href="tel:+12622541835" className="btn-primary justify-center py-4 text-lg">
               <Phone size={18} />
               (262) 254-1835
