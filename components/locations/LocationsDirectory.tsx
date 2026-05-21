@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { MapPin, Search, Navigation, ExternalLink, X } from "lucide-react";
+import Link from "next/link";
+import { MapPin, Search, X } from "lucide-react";
+import { getLocationHref } from "@/lib/location-pages";
 import {
   getLocationsGroupedByState,
   searchLocations,
@@ -195,19 +197,13 @@ function LocationCard({ loc }: { loc: Location }) {
         </div>
       </div>
 
-      {loc.gmaps && (
-        <a
-          href={loc.gmaps}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:text-brand-navy transition-colors mt-auto cursor-pointer group/link"
-          aria-label={`Get directions to ${loc.cityState}`}
-        >
-          <Navigation className="w-3.5 h-3.5" />
-          Get Directions
-          <ExternalLink className="w-3 h-3 opacity-50 group-hover/link:opacity-100 transition-opacity" />
-        </a>
-      )}
+      <Link
+        href={getLocationHref(loc)}
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:text-brand-navy transition-colors mt-auto"
+        aria-label={`View the ${loc.cityState} local page`}
+      >
+        View local page
+      </Link>
     </div>
   );
 }

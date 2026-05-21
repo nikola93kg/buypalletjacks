@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, Search, ExternalLink, X } from "lucide-react";
+import { getLocationHref } from "@/lib/location-pages";
 import { getLocationsByState, searchLocations, STATE_NAMES, type Location } from "@/lib/locations";
 import styles from "./LocationsPanel.module.css";
 
@@ -167,26 +168,33 @@ function LocationCard({
             </p>
           )}
         </div>
-        <a
-          href={loc.gmaps}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${styles.cardMapButton} ${dk ? styles.dark : styles.light}`}
-          aria-label={`Open ${loc.cityState} on Google Maps`}
-        >
-          <ExternalLink size={18} />
-        </a>
       </div>
       {!compact && (
-        <a
-          href={loc.gmaps}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${styles.cardDirections} ${dk ? styles.dark : styles.light}`}
+        <div className={styles.cardActions}>
+          <Link
+            href={getLocationHref(loc)}
+            className={`${styles.cardPrimaryLink} ${dk ? styles.dark : styles.light}`}
+          >
+            View local page
+          </Link>
+          <a
+            href={loc.gmaps}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.cardDirections} ${dk ? styles.dark : styles.light}`}
+          >
+            <MapPin size={10} />
+            Get Directions
+          </a>
+        </div>
+      )}
+      {compact && (
+        <Link
+          href={getLocationHref(loc)}
+          className={`${styles.cardPrimaryLink} ${dk ? styles.dark : styles.light}`}
         >
-          <MapPin size={10} />
-          Get Directions
-        </a>
+          View local page
+        </Link>
       )}
     </div>
   );

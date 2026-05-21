@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildBreadcrumbJsonLd, buildMetadata } from "@/lib/seo";
 import InteractiveLocationsHero from "@/components/locations/InteractiveLocationsHero";
 import LocationsDirectory from "@/components/locations/LocationsDirectory";
 
@@ -13,6 +14,13 @@ export const metadata: Metadata = buildMetadata({
 export default function LocationsPage() {
   return (
     <>
+      <JsonLd
+        id="locations-breadcrumb-jsonld"
+        data={buildBreadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Locations", path: "/locations" },
+        ])}
+      />
       {/* Interactive map hero */}
       <InteractiveLocationsHero />
 
