@@ -65,9 +65,15 @@ export const STATE_NAMES: Record<string, string> = {
   WI: "Wisconsin", WY: "Wyoming", DC: "Washington D.C.",
 };
 
+function toTitleCase(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
 
 export function getCityFromCityState(cityState: string): string {
-  return cityState.split(",")[0]?.trim() ?? cityState.trim();
+  const city = cityState.split(",")[0]?.trim() ?? cityState.trim();
+  return toTitleCase(city);
 }
 
 export function getStateName(stateCode: string): string {
