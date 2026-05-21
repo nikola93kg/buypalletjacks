@@ -64,3 +64,18 @@ export const STATE_NAMES: Record<string, string> = {
   VT: "Vermont", VA: "Virginia", WA: "Washington", WV: "West Virginia",
   WI: "Wisconsin", WY: "Wyoming", DC: "Washington D.C.",
 };
+
+function toTitleCase(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
+export function getCityFromCityState(cityState: string): string {
+  const city = cityState.split(",")[0]?.trim() ?? cityState.trim();
+  return toTitleCase(city);
+}
+
+export function getStateName(stateCode: string): string {
+  return STATE_NAMES[stateCode.toUpperCase()] ?? stateCode.toUpperCase();
+}

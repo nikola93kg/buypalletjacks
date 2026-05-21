@@ -139,17 +139,18 @@ export default async function GoogleReviews() {
 
         {/* ── Header — centered, matching all other sections ── */}
         <div className="text-center mb-12">
-          <span className="section-eyebrow">Customer Reviews</span>
+          <span className="section-eyebrow">Buyer Proof</span>
           <h2
             id="reviews-heading"
             style={{ fontFamily: "'Outfit', sans-serif" }}
             className="text-4xl md:text-5xl font-900 text-[#0F172A] mb-4"
           >
-            What our customers{" "}
-            <span className="text-[#1D4ED8]">are saying</span>
+            Trusted by pallet jack buyers
+            <span className="text-[#1D4ED8]"> across the USA</span>
           </h2>
           <p className="text-[#64748B] max-w-xl mx-auto text-base mb-8">
-            Verified reviews from real customers on Google.
+            Verified Google reviews from real customers who bought refurbished pallet jacks from Buy
+            Pallet Jacks.
           </p>
 
           {/* Aggregate badge — centered below subtitle */}

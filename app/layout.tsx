@@ -6,7 +6,15 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import LocationsFooterSection from "@/components/layout/LocationsFooterSection";
 import BackToTopButton from "@/components/layout/BackToTopButton";
-import { SITE_NAME, SITE_DESCRIPTION, localBusinessJsonLd, organizationJsonLd } from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  BASE_URL,
+  DEFAULT_SOCIAL_IMAGE_URL,
+  SITE_NAME,
+  SITE_DESCRIPTION,
+  localBusinessJsonLd as baseLocalBusinessJsonLd,
+  organizationJsonLd as baseOrganizationJsonLd,
+} from "@/lib/seo";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -28,7 +36,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  metadataBase: new URL("https://www.buypalletjacks.com"),
+  metadataBase: new URL(BASE_URL),
   keywords: [
     "pallet jacks for sale",
     "refurbished pallet jacks",
@@ -70,6 +78,25 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
+const organizationJsonLd = {
+  ...baseOrganizationJsonLd,
+  "@id": `${BASE_URL}/#organization`,
+  logo: {
+    "@type": "ImageObject",
+    url: `${BASE_URL}/logo.webp`,
+  },
+  image: DEFAULT_SOCIAL_IMAGE_URL,
+};
+
+const localBusinessJsonLd = {
+  ...baseLocalBusinessJsonLd,
+  "@id": `${BASE_URL}/#local-business`,
+  image: DEFAULT_SOCIAL_IMAGE_URL,
+  parentOrganization: {
+    "@id": `${BASE_URL}/#organization`,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -86,14 +113,8 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-        />
+        <JsonLd id="organization-jsonld" data={organizationJsonLd} />
+        <JsonLd id="local-business-jsonld" data={localBusinessJsonLd} />
         <Header />
         <main id="main-content">{children}</main>
         <LocationsFooterSection />

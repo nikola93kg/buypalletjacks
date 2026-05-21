@@ -1,13 +1,14 @@
-"use client";
-
-import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import styles from "./Faq.module.css";
 
-const FAQS = [
+export const HOME_FAQS = [
   {
     q: "Are these new or used pallet jacks?",
-    a: "They are professionally refurbished. Every unit has been fully disassembled, inspected, repaired where needed, repainted, and sealed. The result is a pallet jack that works like new without the new price.",
+    a: "They are professionally refurbished. Every unit has been fully disassembled, inspected, repaired where needed, repainted, and sealed.",
+  },
+  {
+    q: "Do you offer bulk or multi-unit discounts?",
+    a: "Yes. Pricing improves with quantity. Text us for a multi-unit quote.",
   },
   {
     q: "What brands do you carry?",
@@ -26,10 +27,6 @@ const FAQS = [
     a: "We accept Cash, Credit Card, Zelle, and CashApp. Payment is made at pickup. Receipts are available upon request.",
   },
   {
-    q: "Do you offer bulk or multi-unit discounts?",
-    a: "Yes. Pricing improves with quantity. The exact discount depends on the brand, model, and number of units. Text us for a multi-unit quote.",
-  },
-  {
     q: "How do I find my nearest location?",
     a: "The quickest way is to call or text us — we'll point you to the closest available inventory right away. You can also use the interactive map on our locations page: select your state to browse all nearby pickup points with addresses and Google Maps directions.",
   },
@@ -40,8 +37,6 @@ const FAQS = [
 ];
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   return (
     <section id="faq" className={`section-padding ${styles.section}`} aria-labelledby="faq-heading">
       <div className="container-site max-w-3xl">
@@ -62,49 +57,41 @@ export default function Faq() {
           </p>
         </div>
 
-        <dl className={styles.faqList}>
-          {FAQS.map((faq, i) => {
-            const isOpen = openIndex === i;
+        <div className={styles.faqList}>
+          {HOME_FAQS.map((faq, i) => {
             return (
-              <div
-                key={i}
-                className={`${styles.faqItem} ${isOpen ? styles.faqItemOpen : styles.faqItemClosed}`}
+              <details
+                key={faq.q}
+                className={styles.faqItem}
+                open={i === 0}
               >
-                <dt>
-                  <button
-                    onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className={styles.questionButton}
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-answer-${i}`}
-                    id={`faq-question-${i}`}
-                  >
-                    <span
-                      className={`${styles.questionText} ${isOpen ? styles.questionTextOpen : styles.questionTextClosed}`}
-                    >
-                      {faq.q}
+                <summary
+                  className={styles.questionButton}
+                  aria-controls={`faq-answer-${i}`}
+                  id={`faq-question-${i}`}
+                >
+                  <span className={styles.questionText}>{faq.q}</span>
+                  <span className={styles.iconToggle} aria-hidden="true">
+                    <span className={`${styles.iconContainer} ${styles.iconContainerClosed}`}>
+                      <Plus size={13} />
                     </span>
-                    <span
-                      className={`${styles.iconContainer} ${isOpen ? styles.iconContainerOpen : styles.iconContainerClosed}`}
-                      aria-hidden="true"
-                    >
-                      {isOpen ? <Minus size={13} /> : <Plus size={13} />}
+                    <span className={`${styles.iconContainer} ${styles.iconContainerOpen}`}>
+                      <Minus size={13} />
                     </span>
-                  </button>
-                </dt>
-                {isOpen && (
-                  <dd
-                    id={`faq-answer-${i}`}
-                    role="region"
-                    aria-labelledby={`faq-question-${i}`}
-                    className={styles.answer}
-                  >
-                    <p className={styles.answerText}>{faq.a}</p>
-                  </dd>
-                )}
-              </div>
+                  </span>
+                </summary>
+                <div
+                  id={`faq-answer-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${i}`}
+                  className={styles.answer}
+                >
+                  <p className={styles.answerText}>{faq.a}</p>
+                </div>
+              </details>
             );
           })}
-        </dl>
+        </div>
       </div>
     </section>
   );

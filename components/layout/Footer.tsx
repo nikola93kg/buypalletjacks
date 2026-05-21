@@ -14,10 +14,10 @@ const FOOTER_LINKS = [
   {
     heading: "Services",
     links: [
-      { href: "/locations", label: "Find a Location" },
+      { href: "/locations", label: "Locations" },
+      { href: "/bulk-pallet-jacks", label: "Bulk Pallet Jacks" },
       { href: "/#warranty", label: "2-Month Warranty" },
       { href: "/#delivery", label: "Delivery Available" },
-      { href: "/#bulk", label: "Bulk Discounts" },
     ],
   },
   {

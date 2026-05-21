@@ -46,12 +46,13 @@ export default function InteractiveLocationsHero() {
         <div className="text-center mb-10">
           <span className="section-eyebrow">Locations</span>
           <h1 id="locations-hero-heading" className={styles.heading}>
-            Find a Pickup Location{" "}
-            <span className={styles.headingAccent}>Near You</span>
+            Find a pallet jack pickup location
+            <span className={styles.headingAccent}> near you</span>
           </h1>
-          <p className={`${styles.textMuted} text-base max-w-xl mx-auto`}>
-            Click your state on the map — or use the search below to find the
-            nearest pickup point.
+          <p className={`${styles.textMuted} text-base max-w-2xl mx-auto`}>
+            Browse all 28 pickup markets, search by city or state, and open a
+            dedicated local page for warranty, directions, and call-first
+            ordering.
           </p>
 
           {/* Stats strip */}
