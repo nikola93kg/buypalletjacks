@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle2, MapPin, MessageSquare, Phone, Warehouse } from "lucide-react";
 import {
-  BASE_URL,
   BUSINESS_PHONE_DISPLAY,
   BUSINESS_PHONE_E164,
   buildBreadcrumbJsonLd,
   buildMetadata,
-  buildOfferCatalogJsonLd,
 } from "@/lib/seo";
 import JsonLd from "@/components/seo/JsonLd";
 
@@ -33,19 +31,6 @@ export default function BulkPalletJacksPage() {
           { name: "Home", path: "/" },
           { name: "Bulk Pallet Jacks", path: "/bulk-pallet-jacks" },
         ])}
-      />
-      <JsonLd
-        id="bulk-offers-jsonld"
-        data={{
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          url: `${BASE_URL}/bulk-pallet-jacks`,
-          name: "Bulk Pallet Jack Orders",
-          hasOfferCatalog: buildOfferCatalogJsonLd(
-            "Bulk Refurbished Pallet Jacks",
-            "Multi-unit refurbished pallet jack orders for warehouses, repeat commercial buyers, and fleet replacement needs.",
-          ),
-        }}
       />
 
       <section className="section-padding bg-white">
