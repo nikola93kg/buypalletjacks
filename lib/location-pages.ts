@@ -313,10 +313,10 @@ export function buildLocationTitle(page: LocationPage) {
 export function buildLocationDescription(page: LocationPage) {
   const facilityReference = buildFacilityReference(page);
   const facilityDetail = facilityReference
-    ? ` Pickup available at ${facilityReference}.`
+    ? ` Pickup at ${facilityReference}.`
     : "";
 
-  return `Buy refurbished pallet jacks in ${page.city}, ${page.stateCode}.${facilityDetail} ${page.marketFocus} Call or text Buy Pallet Jacks for current availability and a 2-month warranty.`;
+  return `Buy refurbished pallet jacks in ${page.city}, ${page.stateCode}.${facilityDetail} Call or text Buy Pallet Jacks for availability and a 2-month warranty.`;
 }
 
 export function getLocationHref(location: Location) {

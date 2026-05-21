@@ -24,7 +24,7 @@ export function buildMetadata({
 }): Metadata {
   const url = `${BASE_URL}${path}`;
   return {
-    title: `${title} | ${SITE_NAME}`,
+    title,
     description,
     keywords,
     metadataBase: new URL(BASE_URL),
