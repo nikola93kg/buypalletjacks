@@ -1,12 +1,11 @@
 "use client";
 
-import { useActionState, useEffect, useRef } from "react";
-import { useFormStatus } from "react-dom";
+import { useActionState, useEffect, useRef, useTransition } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { submitContactForm, type ContactFormState } from "@/app/actions/contact";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
+function SubmitButton({ pending }: { pending: boolean }) {
   return (
     <button
       type="submit"
@@ -33,12 +32,27 @@ const initialState: ContactFormState = {};
 export default function ContactForm({ className }: { className?: string }) {
   const [state, action] = useActionState(submitContactForm, initialState);
   const formRef = useRef<HTMLFormElement>(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
     if (state.success) {
       formRef.current?.reset();
     }
   }, [state.success]);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!executeRecaptcha) return;
+
+    const token = await executeRecaptcha("contact_form");
+    const formData = new FormData(e.currentTarget);
+    formData.append("recaptcha_token", token);
+
+    startTransition(() => {
+      action(formData);
+    });
+  }
 
   return (
     <div className={`bg-white border border-border rounded-2xl p-6 flex flex-col${className ? ` ${className}` : ""}`}>
@@ -58,7 +72,7 @@ export default function ContactForm({ className }: { className?: string }) {
           </div>
         </div>
       ) : (
-        <form ref={formRef} action={action} className="space-y-4" noValidate>
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4" noValidate>
           {state.error && (
             <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
               <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
@@ -138,7 +152,7 @@ export default function ContactForm({ className }: { className?: string }) {
             />
           </div>
 
-          <SubmitButton />
+          <SubmitButton pending={isPending} />
         </form>
       )}
     </div>

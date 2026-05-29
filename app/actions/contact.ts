@@ -25,6 +25,7 @@ export async function submitContactForm(
   const email = (formData.get("email") as string | null)?.trim() ?? "";
   const phone = (formData.get("phone") as string | null)?.trim() ?? "";
   const message = (formData.get("message") as string | null)?.trim() ?? "";
+  const recaptchaToken = (formData.get("recaptcha_token") as string | null)?.trim() ?? "";
 
   if (!name || !email || !message) {
     return { error: "Please fill in all required fields." };
@@ -36,6 +37,33 @@ export async function submitContactForm(
 
   if (message.length > 2000) {
     return { error: "Message must be under 2000 characters." };
+  }
+
+  // Verify reCAPTCHA v3 token
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secretKey || !recaptchaToken) {
+    return { error: "reCAPTCHA verification failed. Please try again." };
+  }
+
+  try {
+    const verifyRes = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          secret: secretKey,
+          response: recaptchaToken,
+        }),
+      }
+    );
+    const verifyData = await verifyRes.json() as { success: boolean; score?: number };
+
+    if (!verifyData.success || (verifyData.score !== undefined && verifyData.score < 0.5)) {
+      return { error: "reCAPTCHA verification failed. Please try again." };
+    }
+  } catch {
+    return { error: "reCAPTCHA verification failed. Please try again." };
   }
 
   try {

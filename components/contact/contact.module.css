@@ -167,10 +167,22 @@
   align-items: start;
 }
 
+/* ══ Form wrapper (stretches form to match sidebar height) ════ */
+.formWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formWrapper > * {
+  flex: 1;
+}
+
 @media (min-width: 1024px) {
   .mainGrid {
     grid-template-columns: 1fr 360px;
     gap: 2.5rem;
+    align-items: stretch;
   }
 }
 

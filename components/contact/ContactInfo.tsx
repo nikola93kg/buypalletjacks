@@ -91,7 +91,9 @@ export default function ContactInfo({ children }: { children?: ReactNode }) {
             </div>
 
             {/* Contact form (passed as children) */}
-            {children}
+            <div className={styles.formWrapper}>
+              {children}
+            </div>
           </div>
 
           {/* Right sidebar */}
