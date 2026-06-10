@@ -20,6 +20,20 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Need multiple pallet jacks? Call or text Buy Pallet Jacks for warehouse orders, repeat buying, and bulk pricing on professionally refurbished units.",
   path: "/bulk-pallet-jacks",
+  keywords: [
+    "warehouse equipment",
+    "warehouse supply company",
+    "industrial equipment supplier",
+    "material handling supplier",
+    "logistics equipment",
+    "warehouse equipment supplier",
+    "distribution equipment",
+    "warehouse tools",
+    "loading dock equipment",
+    "bulk pallet jacks",
+    "commercial pallet jack",
+    "industrial pallet jack",
+  ],
 });
 
 export default function BulkPalletJacksPage() {

@@ -9,6 +9,23 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Find a Buy Pallet Jacks pickup location near you. We have 28 locations across the USA — select your state on the interactive map to see available inventory.",
   path: "/locations",
+  keywords: [
+    "pallet jack near me",
+    "pallet jack Dallas",
+    "pallet jack Houston",
+    "pallet jack Austin",
+    "pallet jack San Antonio",
+    "refurbished pallet jack Dallas",
+    "warehouse equipment Dallas",
+    "pallet jack supplier",
+    "pallet jack supplier Texas",
+    "pallet jack Grand Prairie",
+    "pallet jack Irving",
+    "pallet jack Mesquite",
+    "pallet jack in stock",
+    "same day pallet jack",
+    "pallet jack available now",
+  ],
 });
 
 export default function LocationsPage() {

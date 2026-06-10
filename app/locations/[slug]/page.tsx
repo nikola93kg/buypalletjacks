@@ -43,6 +43,11 @@ export async function generateMetadata({
       `refurbished pallet jacks ${page.city}`,
       `${page.city} ${page.stateCode} pallet jack pickup`,
       `${page.stateName} pallet jacks`,
+      `pallet jack in stock ${page.city}`,
+      `same day pallet jack ${page.city}`,
+      `warehouse equipment ${page.city}`,
+      `pallet jack supplier ${page.city}`,
+      `pallet jack available now ${page.city}`,
     ],
   });
 }

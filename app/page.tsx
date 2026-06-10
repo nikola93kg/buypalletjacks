@@ -24,6 +24,18 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Shop professionally refurbished pallet jacks with a 2-month warranty. 28 pickup locations across the USA — same-day availability, bulk discounts, and delivery options.",
   path: "/",
+  keywords: [
+    "pallet jacks for sale",
+    "refurbished pallet jacks",
+    "used pallet jacks for sale",
+    "commercial pallet jack",
+    "industrial pallet jack",
+    "warehouse pallet jack",
+    "same day pallet jack",
+    "affordable pallet jack",
+    "pallet jack in stock",
+    "ready for delivery",
+  ],
 });
 
 export default function HomePage() {
