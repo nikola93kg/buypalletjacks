@@ -20,14 +20,17 @@ import Faq, { HOME_FAQS } from "@/components/home/Faq";
 import FinalCTA from "@/components/home/FinalCTA";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Buy Refurbished Pallet Jacks – 28 Pickup Locations Nationwide",
+  title: "Pallet Jacks for Sale – Refurbished & Used Options Nationwide",
   description:
-    "Shop professionally refurbished pallet jacks with a 2-month warranty. 28 pickup locations across the USA — same-day availability, bulk discounts, and delivery options.",
+    "Shop professionally refurbished and used pallet jacks for sale with a 2-month warranty. 28 pickup locations across the USA, same-day availability, bulk discounts, and delivery options.",
   path: "/",
   keywords: [
+    "pallet jack for sale",
     "pallet jacks for sale",
     "refurbished pallet jacks",
+    "used pallet jack for sale",
     "used pallet jacks for sale",
+    "pallet jacks for sale near me",
     "commercial pallet jack",
     "industrial pallet jack",
     "warehouse pallet jack",

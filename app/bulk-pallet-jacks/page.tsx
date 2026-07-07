@@ -16,11 +16,14 @@ const BULK_BUYER_REASONS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Bulk Pallet Jack Orders for Warehouses and Commercial Buyers",
+  title: "Bulk Pallet Jacks for Sale - Warehouse & Commercial Orders",
   description:
-    "Need multiple pallet jacks? Call or text Buy Pallet Jacks for warehouse orders, repeat buying, and bulk pricing on professionally refurbished units.",
+    "Need multiple pallet jacks for sale? Call or text Buy Pallet Jacks for warehouse orders, repeat buying, and bulk pricing on professionally refurbished used units.",
   path: "/bulk-pallet-jacks",
   keywords: [
+    "bulk pallet jacks for sale",
+    "pallet jacks for sale",
+    "used pallet jack for sale",
     "warehouse equipment",
     "warehouse supply company",
     "industrial equipment supplier",
@@ -51,11 +54,13 @@ export default function BulkPalletJacksPage() {
         <div className="container-site max-w-5xl">
           <span className="section-eyebrow">Commercial Buying</span>
           <h1 className="text-4xl font-900 text-graphite md:text-5xl">
-            Bulk pallet jacks for warehouses and commercial buyers
+            Bulk pallet jacks for sale: warehouse and commercial orders
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-steel">
-            Buy multiple refurbished pallet jacks for warehouse use, repeat orders, or fleet replacement.
-            We help you confirm nearby pickup availability, compare options, and move quickly on quantity pricing.
+            Buy multiple refurbished and used pallet jacks for warehouse use,
+            repeat orders, or fleet replacement. We help you confirm nearby
+            pickup availability, compare options, and move quickly on quantity
+            pricing.
           </p>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">

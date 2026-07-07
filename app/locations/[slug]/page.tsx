@@ -39,6 +39,10 @@ export async function generateMetadata({
     description: buildLocationDescription(page),
     path: getLocationHref(page),
     keywords: [
+      `pallet jacks for sale ${page.city}`,
+      `pallet jack for sale ${page.city}`,
+      `used pallet jack for sale ${page.city}`,
+      `pallet jacks for sale near me ${page.city}`,
       `${page.city} pallet jacks`,
       `refurbished pallet jacks ${page.city}`,
       `${page.city} ${page.stateCode} pallet jack pickup`,

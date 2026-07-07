@@ -65,7 +65,9 @@ export default function PalletJackModels() {
             and <strong className={styles.descriptionStrong}>Crown</strong> — two
             of the most reliable pallet jack brands in the industry. Every unit
             is fully disassembled, serviced, repainted, and sealed by
-            experienced technicians before it reaches you.
+            experienced technicians before it reaches you. If you need a used
+            pallet jack for sale, these are rebuilt for daily warehouse work
+            instead of sold as-is.
           </p>
         </div>
 

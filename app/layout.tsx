@@ -38,10 +38,13 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   metadataBase: new URL(BASE_URL),
   keywords: [
+    "pallet jack for sale",
     "pallet jacks for sale",
     "refurbished pallet jacks",
+    "used pallet jack for sale",
     "used pallet jacks for sale",
     "pallet jack near me",
+    "pallet jacks for sale near me",
     "buy pallet jack",
     "commercial pallet jack",
     "industrial pallet jack",

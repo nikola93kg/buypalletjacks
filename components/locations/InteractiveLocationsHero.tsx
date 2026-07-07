@@ -46,13 +46,13 @@ export default function InteractiveLocationsHero() {
         <div className="text-center mb-10">
           <span className="section-eyebrow">Locations</span>
           <h1 id="locations-hero-heading" className={styles.heading}>
-            Find a pallet jack pickup location
+            Find pallet jacks for sale
             <span className={styles.headingAccent}> near you</span>
           </h1>
           <p className={`${styles.textMuted} text-base max-w-2xl mx-auto`}>
-            Browse all 28 pickup markets, search by city or state, and open a
-            dedicated local page for warranty, directions, and call-first
-            ordering.
+            Searching for pallet jacks for sale near me? Browse all 28 pickup
+            markets, search by city or state, and open a dedicated local page
+            for warranty, directions, and call-first ordering.
           </p>
 
           {/* Stats strip */}

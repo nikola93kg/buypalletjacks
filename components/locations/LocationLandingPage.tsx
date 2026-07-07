@@ -67,13 +67,18 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
             <div>
               <span className="section-eyebrow">Local Pickup Page</span>
               <h1 className="mt-4 text-4xl font-900 text-graphite md:text-5xl">
-                Refurbished pallet jacks in {page.city}, {page.stateCode}
+                Pallet jacks for sale in {page.city}, {page.stateCode}
               </h1>
               <p className="mt-5 max-w-3xl text-lg leading-8 text-steel">
                 {page.marketFocus}
               </p>
               <p className="mt-4 max-w-3xl text-base leading-7 text-steel">
                 {page.serviceArea}
+              </p>
+              <p className="mt-4 max-w-3xl text-base leading-7 text-steel">
+                If you are searching for a used pallet jack for sale or pallet
+                jacks for sale near me, this local page helps you confirm the
+                closest pickup option before you drive.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -160,8 +165,8 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
               </h2>
               <ul className="mt-6 space-y-4 text-sm leading-6 text-slate-200">
                 <li>
-                  Professionally refurbished pallet jacks with a full 2-month
-                  warranty and ready-to-work 5,500 lb capacity.
+                  Professionally refurbished used pallet jacks for sale with a
+                  full 2-month warranty and ready-to-work 5,500 lb capacity.
                 </li>
                 <li>
                   {page.pickupTip}

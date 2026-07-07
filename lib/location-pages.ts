@@ -307,7 +307,7 @@ export function getLocationPageBySlug(slug: string) {
 }
 
 export function buildLocationTitle(page: LocationPage) {
-  return `Refurbished pallet jacks in ${page.city}, ${page.stateCode}`;
+  return `Pallet jacks for sale in ${page.city}, ${page.stateCode}`;
 }
 
 export function buildLocationDescription(page: LocationPage) {
@@ -316,7 +316,7 @@ export function buildLocationDescription(page: LocationPage) {
     ? ` Pickup at ${facilityReference}.`
     : "";
 
-  return `Buy refurbished pallet jacks in ${page.city}, ${page.stateCode}.${facilityDetail} Call or text Buy Pallet Jacks for availability and a 2-month warranty.`;
+  return `Find a used pallet jack for sale in ${page.city}, ${page.stateCode}.${facilityDetail} Call/text Buy Pallet Jacks for pickup and 2-month warranty.`;
 }
 
 export function getLocationHref(location: Location) {

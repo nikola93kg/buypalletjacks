@@ -77,6 +77,11 @@ export default function Hero() {
               Get to work!
             </h1>
 
+            <p className={styles.heroLead} style={{ color: "var(--color-brand-blue)" }}>
+              Shop refurbished and used pallet jacks for sale with 28 pickup
+              locations, same-day availability, and a 2-month warranty.
+            </p>
+
             {/* Save up to */}
             <div className="flex flex-col items-center sm:items-start mb-1">
               <p className={`text-slate-600 text-base font-semibold leading-tight mb-0 ${styles.saveUpToText}`}>

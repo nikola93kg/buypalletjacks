@@ -3,8 +3,12 @@ import styles from "./Faq.module.css";
 
 export const HOME_FAQS = [
   {
-    q: "Are these new or used pallet jacks?",
-    a: "They are professionally refurbished. Every unit has been fully disassembled, inspected, repaired where needed, repainted, and sealed.",
+    q: "Are these new, refurbished, or used pallet jacks for sale?",
+    a: "They are professionally refurbished used pallet jacks for sale. Every unit has been fully disassembled, inspected, repaired where needed, repainted, and sealed.",
+  },
+  {
+    q: "Do you have pallet jacks for sale near me?",
+    a: "Most buyers can use one of our 28 pickup locations across 19 states. Call or text us with your city and we will point you to the nearest available pallet jack pickup option.",
   },
   {
     q: "Do you offer bulk or multi-unit discounts?",

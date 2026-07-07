@@ -5,12 +5,15 @@ import InteractiveLocationsHero from "@/components/locations/InteractiveLocation
 import LocationsDirectory from "@/components/locations/LocationsDirectory";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Pallet Jack Pickup Locations – 28 Cities Nationwide",
+  title: "Pallet Jacks for Sale Near Me – 28 Pickup Locations",
   description:
-    "Find a Buy Pallet Jacks pickup location near you. We have 28 locations across the USA — select your state on the interactive map to see available inventory.",
+    "Find pallet jacks for sale near me with 28 Buy Pallet Jacks pickup locations across the USA. Select your state to see local refurbished and used pallet jack availability.",
   path: "/locations",
   keywords: [
+    "pallet jacks for sale near me",
+    "pallet jack for sale near me",
     "pallet jack near me",
+    "used pallet jack for sale near me",
     "pallet jack Dallas",
     "pallet jack Houston",
     "pallet jack Austin",
