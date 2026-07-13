@@ -4,7 +4,7 @@ import styles from "@/components/contact/contact.module.css";
 const TRUST_ITEMS = [
   { icon: Zap, label: "Responds within minutes", sub: "During business hours" },
   { icon: ShieldCheck, label: "No deposit to reserve", sub: "Pay at pickup only" },
-  { icon: MapPin, label: "28 locations · 19 states", sub: "Same-day pickup available" },
+  { icon: MapPin, label: "29 locations · 19 states", sub: "Same-day pickup available" },
 ];
 
 export default function ContactHeader() {

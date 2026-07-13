@@ -22,7 +22,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 export const metadata: Metadata = buildMetadata({
   title: "Pallet Jacks for Sale – Refurbished & Used Options Nationwide",
   description:
-    "Shop professionally refurbished and used pallet jacks for sale with a 2-month warranty. 28 pickup locations across the USA, same-day availability, bulk discounts, and delivery options.",
+    "Shop professionally refurbished and used pallet jacks for sale with a 2-month warranty. 29 pickup locations across the USA, same-day availability, bulk discounts, and delivery options.",
   path: "/",
   keywords: [
     "pallet jack for sale",

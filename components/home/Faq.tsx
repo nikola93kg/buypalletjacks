@@ -8,7 +8,7 @@ export const HOME_FAQS = [
   },
   {
     q: "Do you have pallet jacks for sale near me?",
-    a: "Most buyers can use one of our 28 pickup locations across 19 states. Call or text us with your city and we will point you to the nearest available pallet jack pickup option.",
+    a: "Most buyers can use one of our 29 pickup locations across 19 states. Call or text us with your city and we will point you to the nearest available pallet jack pickup option.",
   },
   {
     q: "Do you offer bulk or multi-unit discounts?",

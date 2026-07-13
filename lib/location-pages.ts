@@ -118,6 +118,14 @@ const LOCATION_PAGE_CONTENT: Record<string, LocationPageContent> = {
     pickupTip:
       "If you are coordinating around port traffic or long cross-town drives, reach out first so we can verify stock and save you time.",
   },
+  "north-houston-tx": {
+    marketFocus:
+      "North Houston buyers often need pallet jacks for warehouse receiving, contractor supply, service yards, and commercial storage operations north of the city.",
+    serviceArea:
+      "This page serves North Houston, Spring, Aldine, Greenspoint, and nearby I-45 corridor teams looking for a convenient pickup option.",
+    pickupTip:
+      "Call or text before you head to Ella Boulevard so we can confirm stock, share the current pickup reference, and keep your stop efficient.",
+  },
   "indianapolis-in": {
     marketFocus:
       "Indianapolis demand is shaped by central distribution, transportation hubs, and warehouse teams replacing hard-used pallet jacks in active facilities.",

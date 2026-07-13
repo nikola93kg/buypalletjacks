@@ -84,6 +84,13 @@
     "gmaps": "https://www.google.com/maps/place/iStorage/@29.7874749,-95.2056585,17z/data=!3m1!4b1!4m6!3m5!1s0x8640a4991d648729:0x8a60c3cdcc1e66b2!8m2!3d29.7874749!4d-95.2030836!16s%2Fg%2F11btn18bk4?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
+    "cityState": "NORTH HOUSTON, TX",
+    "state": "TX",
+    "facility": "PUBLIC STORAGE",
+    "unitNumber": "-",
+    "gmaps": "https://maps.app.goo.gl/gCNBPX2tbfYZRXDK8"
+  },
+  {
     "cityState": "INDIANAPOLIS, IN",
     "state": "IN",
     "facility": "PUBLIC STORAGE",

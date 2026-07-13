@@ -50,7 +50,7 @@ export default function InteractiveLocationsHero() {
             <span className={styles.headingAccent}> near you</span>
           </h1>
           <p className={`${styles.textMuted} text-base max-w-2xl mx-auto`}>
-            Searching for pallet jacks for sale near me? Browse all 28 pickup
+            Searching for pallet jacks for sale near me? Browse all 29 pickup
             markets, search by city or state, and open a dedicated local page
             for warranty, directions, and call-first ordering.
           </p>
@@ -59,7 +59,7 @@ export default function InteractiveLocationsHero() {
           <div className="flex items-center justify-center gap-8 flex-wrap mt-8 mb-8">
             <div className="flex flex-col items-center gap-0.5">
               <span className={`${styles.statNumber} ${styles.default}`}>
-                28
+                29
               </span>
               <span className={styles.textLabel}>
                 Locations

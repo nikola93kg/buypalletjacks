@@ -123,7 +123,7 @@ export default function LocationsPanel({
       {filtered.length > 0 && (
         <div className={`${styles.footer} ${dk ? styles.dark : styles.light}`}>
           <Link href="/locations" className={`${styles.footerLink} ${dk ? styles.dark : styles.light}`}>
-            View all 28 locations
+            View all 29 locations
             <ExternalLink size={11} />
           </Link>
         </div>
@@ -133,7 +133,7 @@ export default function LocationsPanel({
       {!compact && filtered.length === 0 && (
         <div className={`${styles.footer} ${dk ? styles.dark : styles.light}`}>
           <Link href="/locations" className={`${styles.footerLink} ${dk ? styles.dark : styles.light}`}>
-            View all 28 locations
+            View all 29 locations
             <ExternalLink size={11} />
           </Link>
         </div>

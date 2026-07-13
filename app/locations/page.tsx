@@ -5,9 +5,9 @@ import InteractiveLocationsHero from "@/components/locations/InteractiveLocation
 import LocationsDirectory from "@/components/locations/LocationsDirectory";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Pallet Jacks for Sale Near Me – 28 Pickup Locations",
+  title: "Pallet Jacks for Sale Near Me – 29 Pickup Locations",
   description:
-    "Find pallet jacks for sale near me with 28 Buy Pallet Jacks pickup locations across the USA. Select your state to see local refurbished and used pallet jack availability.",
+    "Find pallet jacks for sale near me with 29 Buy Pallet Jacks pickup locations across the USA. Select your state to see local refurbished and used pallet jack availability.",
   path: "/locations",
   keywords: [
     "pallet jacks for sale near me",

@@ -133,7 +133,7 @@ export default function ContactInfo({ children }: { children?: ReactNode }) {
                   <h2 className={styles.locationCardTitle}>Find a Location</h2>
                 </div>
                 <p className={styles.locationCardDesc}>
-                  28 pickup locations across 19 states. Use the locations page to find the nearest market or jump straight to your city page.
+                  29 pickup locations across 19 states. Use the locations page to find the nearest market or jump straight to your city page.
                 </p>
                 <Link href="/locations" className={styles.locationCardBtn}>
                   <MapPin aria-hidden="true" />
