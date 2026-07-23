@@ -94,14 +94,6 @@ const LOCATION_PAGE_CONTENT: Record<string, LocationPageContent> = {
     pickupTip:
       "If you are covering both sides of the metroplex, reach out first so we can help you pick the most convenient DFW-area location.",
   },
-  "detroit-mi": {
-    marketFocus:
-      "Detroit-area demand usually comes from automotive suppliers, warehouse teams, and industrial buyers who need reliable floor equipment without downtime.",
-    serviceArea:
-      "This page is geared toward Detroit, Dearborn, Livonia, Romulus, and southeast Michigan operations that need a straightforward pickup process.",
-    pickupTip:
-      "Call or text before pickup if your team wants current availability, photos, or help matching the right unit to daily warehouse use.",
-  },
   "hillside-nj": {
     marketFocus:
       "Hillside demand comes from dense warehouse and trucking activity serving Newark, Elizabeth, and northern New Jersey commercial corridors.",

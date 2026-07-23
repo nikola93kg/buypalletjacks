@@ -78,7 +78,7 @@ export default function Hero() {
             </h1>
 
             <p className={styles.heroLead} style={{ color: "var(--color-brand-blue)" }}>
-              Shop refurbished and used pallet jacks for sale with 29 pickup
+              Shop refurbished and used pallet jacks for sale with 28 pickup
               locations, same-day availability, and a 2-month warranty.
             </p>
 
