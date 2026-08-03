@@ -81,7 +81,10 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   verification: {
-    google: "googlea4af0fa047fb1716",
+    google: [
+      "googlea4af0fa047fb1716",
+      "Wr8sbbWM5ZUEt3v842zTekhQTM_aUKV9174GdtTpqcU",
+    ],
   },
   icons: {
     icon: [
