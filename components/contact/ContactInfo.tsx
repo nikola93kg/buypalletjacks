@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import styles from "@/components/contact/contact.module.css";
 import { ReactNode } from "react";
+import { LOCATION_COUNT, STATE_COUNT } from "@/lib/locations";
 
 const HOURS = [
   { day: "Monday – Friday", hours: "7:00 AM – 6:00 PM", open: true },
@@ -133,7 +134,9 @@ export default function ContactInfo({ children }: { children?: ReactNode }) {
                   <h2 className={styles.locationCardTitle}>Find a Location</h2>
                 </div>
                 <p className={styles.locationCardDesc}>
-                  28 pickup locations across 18 states. Use the locations page to find the nearest market or jump straight to your city page.
+                  {LOCATION_COUNT} pickup locations across {STATE_COUNT} states.
+                  Use the locations page to find the nearest market or jump
+                  straight to your city page.
                 </p>
                 <Link href="/locations" className={styles.locationCardBtn}>
                   <MapPin aria-hidden="true" />

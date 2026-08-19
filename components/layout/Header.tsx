@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Phone, Menu, X, MapPin } from "lucide-react";
+import { LOCATION_COUNT } from "@/lib/locations";
 import { cn } from "@/lib/utils";
 import logoImg from "@/public/logo.webp";
 import styles from "./Header.module.css";
@@ -67,7 +68,7 @@ export default function Header() {
               className={cn("flex items-center gap-1.5 text-sm font-medium transition-colors", styles.locationLink)}
             >
               <MapPin size={15} />
-              28 Locations
+              {LOCATION_COUNT} Locations
             </Link>
             <a
               href="tel:+12622541835"
@@ -145,7 +146,7 @@ export default function Header() {
           <div className="px-6 pb-8 flex flex-col gap-3 flex-shrink-0">
             <Link href="/locations" onClick={() => setOpen(false)} className="btn-outline justify-center py-4 text-lg">
               <MapPin size={18} />
-              28 Locations
+              {LOCATION_COUNT} Locations
             </Link>
             <a href="tel:+12622541835" className="btn-primary justify-center py-4 text-lg">
               <Phone size={18} />

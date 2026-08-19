@@ -1,9 +1,10 @@
 import { Fragment } from "react";
+import { LOCATION_COUNT, STATE_COUNT } from "@/lib/locations";
 import styles from "./about.module.css";
 
 const STATS = [
-  { value: "28", label: "Pickup Locations" },
-  { value: "19", label: "States Covered" },
+  { value: `${LOCATION_COUNT}`, label: "Pickup Locations" },
+  { value: `${STATE_COUNT}`, label: "States Covered" },
   { value: "2-Mo", label: "Warranty Included" },
   { value: "5★", label: "Customer Rating" },
 ];

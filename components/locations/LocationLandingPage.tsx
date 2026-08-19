@@ -43,9 +43,15 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
     ? `Unit ${page.unitNumber}`
     : "Unit details provided when you call or text";
   const facilityLabel = page.facility ?? "Local pickup location";
+  const facilityLocationLabel = page.address
+    ? `${facilityLabel} (${page.address})`
+    : facilityLabel;
+  const pickupPlanningItems = page.address
+    ? "facility name, address, unit reference, and map link"
+    : "facility name, unit reference, and map link";
   const pickupReference = hasUnitNumber(page.unitNumber)
-    ? `Ask for ${unitLabel} when you arrive at ${facilityLabel} so the pickup handoff stays quick.`
-    : `Call or text before arrival so we can share the exact pickup reference for ${facilityLabel}.`;
+    ? `Ask for ${unitLabel} when you arrive at ${facilityLocationLabel} so the pickup handoff stays quick.`
+    : `Call or text before arrival so we can share the exact pickup reference for ${facilityLocationLabel}.`;
 
   return (
     <>
@@ -129,6 +135,16 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
                       {facilityLabel}
                     </p>
                   </div>
+                  {page.address && (
+                    <div>
+                      <p className="text-xs font-700 uppercase tracking-[0.18em] text-steel">
+                        Address
+                      </p>
+                      <p className="mt-2 text-base font-600 leading-6 text-graphite">
+                        {page.address}
+                      </p>
+                    </div>
+                  )}
                   <div>
                     <p className="text-xs font-700 uppercase tracking-[0.18em] text-steel">
                       Unit / Pickup Reference
@@ -203,14 +219,14 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
               </h2>
               <p className="mt-5 text-base leading-7 text-steel">
                 This {page.city}, {page.stateCode} page gives buyers a real
-                pickup stop at {facilityLabel} instead of a generic market
+                pickup stop at {facilityLocationLabel} instead of a generic market
                 mention, which helps crews map the stop, confirm access, and
                 keep loading plans on schedule.
               </p>
               <p className="mt-4 text-base leading-7 text-steel">
-                {pickupReference} Save the facility name, unit reference, and
-                map link before you leave so your driver can check in quickly
-                and keep the {page.city} pickup on schedule.
+                {pickupReference} Save the {pickupPlanningItems} before you
+                leave so your driver can check in quickly and keep the{" "}
+                {page.city} pickup on schedule.
               </p>
               <p className="mt-4 text-base leading-7 text-steel">
                 Whether you are replacing a worn-out pallet jack or adding a

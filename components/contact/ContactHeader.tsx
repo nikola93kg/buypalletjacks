@@ -1,10 +1,15 @@
 import { Zap, ShieldCheck, MapPin } from "lucide-react";
+import { LOCATION_COUNT, STATE_COUNT } from "@/lib/locations";
 import styles from "@/components/contact/contact.module.css";
 
 const TRUST_ITEMS = [
   { icon: Zap, label: "Responds within minutes", sub: "During business hours" },
   { icon: ShieldCheck, label: "No deposit to reserve", sub: "Pay at pickup only" },
-  { icon: MapPin, label: "28 locations · 18 states", sub: "Same-day pickup available" },
+  {
+    icon: MapPin,
+    label: `${LOCATION_COUNT} locations · ${STATE_COUNT} states`,
+    sub: "Same-day pickup available",
+  },
 ];
 
 export default function ContactHeader() {

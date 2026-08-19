@@ -18,11 +18,11 @@ import GalleryPreview from "@/components/home/GalleryPreview";
 import GoogleReviews from "@/components/home/GoogleReviews";
 import Faq, { HOME_FAQS } from "@/components/home/Faq";
 import FinalCTA from "@/components/home/FinalCTA";
+import { LOCATION_COUNT } from "@/lib/locations";
 
 export const metadata: Metadata = buildMetadata({
   title: "Pallet Jacks for Sale – Refurbished & Used Options Nationwide",
-  description:
-    "Shop professionally refurbished and used pallet jacks for sale with a 2-month warranty. 28 pickup locations across the USA, same-day availability, bulk discounts, and delivery options.",
+  description: `Shop professionally refurbished and used pallet jacks for sale with a 2-month warranty. ${LOCATION_COUNT} pickup locations across the USA, same-day availability, bulk discounts, and delivery options.`,
   path: "/",
   keywords: [
     "pallet jack for sale",

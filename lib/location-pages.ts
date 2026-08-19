@@ -46,6 +46,14 @@ const LOCATION_PAGE_CONTENT: Record<string, LocationPageContent> = {
     pickupTip:
       "If you are coordinating around service calls or delivery appointments, text us first and we will help you line up the smoothest pickup timing.",
   },
+  "birmingham-al": {
+    marketFocus:
+      "Birmingham demand often comes from warehouse users, contractors, repair shops, and distribution teams moving freight across the east side of the metro.",
+    serviceArea:
+      "This pickup point serves Birmingham, Center Point, Trussville, Irondale, and buyers working around Parkway East, I-59, and the eastern Birmingham corridor.",
+    pickupTip:
+      "Text before you head to the Public Storage facility on Parkway East so we can confirm stock, share the unit reference, and keep your pickup quick.",
+  },
   "canton-ma": {
     marketFocus:
       "Canton demand typically comes from warehouse teams supporting Greater Boston, south shore operations, and commercial buyers replacing worn floor equipment.",

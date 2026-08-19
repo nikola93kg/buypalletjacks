@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone } from "lucide-react";
+import { LOCATION_COUNT } from "@/lib/locations";
 import styles from "./about.module.css";
 
 export default function AboutCTA() {
@@ -12,7 +13,7 @@ export default function AboutCTA() {
               Ready to pick up today?
             </h2>
             <p className={styles.ctaDesc}>
-              28 locations, same-day pickup, 2-month warranty included on every unit.
+              {LOCATION_COUNT} locations, same-day pickup, 2-month warranty included on every unit.
             </p>
           </div>
           <div className={styles.ctaButtons}>

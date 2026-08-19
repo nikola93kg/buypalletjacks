@@ -4,11 +4,16 @@ export type Location = {
   cityState: string;
   state: string;
   facility?: string;
+  address?: string;
   unitNumber?: string;
   gmaps: string;
 };
 
 export const locations: Location[] = locationsData as Location[];
+export const LOCATION_COUNT = locations.length;
+export const STATE_COUNT = new Set(
+  locations.map((loc) => loc.state.toUpperCase())
+).size;
 
 export function getLocationsByState(stateCode: string): Location[] {
   return locations.filter(
@@ -40,7 +45,8 @@ export function searchLocations(query: string): Location[] {
     (loc) =>
       loc.cityState.toLowerCase().includes(q) ||
       loc.state.toLowerCase().includes(q) ||
-      (loc.facility && loc.facility.toLowerCase().includes(q))
+      (loc.facility && loc.facility.toLowerCase().includes(q)) ||
+      (loc.address && loc.address.toLowerCase().includes(q))
   );
 }
 

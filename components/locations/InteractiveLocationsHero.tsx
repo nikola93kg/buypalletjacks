@@ -2,7 +2,12 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { getAllStatesWithLocations, STATE_NAMES } from "@/lib/locations";
+import {
+  getAllStatesWithLocations,
+  LOCATION_COUNT,
+  STATE_COUNT,
+  STATE_NAMES,
+} from "@/lib/locations";
 import StateSelectFallback from "./StateSelectFallback";
 import type { ComponentProps } from "react";
 import styles from "./InteractiveLocationsHero.module.css";
@@ -50,16 +55,17 @@ export default function InteractiveLocationsHero() {
             <span className={styles.headingAccent}> near you</span>
           </h1>
           <p className={`${styles.textMuted} text-base max-w-2xl mx-auto`}>
-            Searching for pallet jacks for sale near me? Browse all 28 pickup
-            markets, search by city or state, and open a dedicated local page
-            for warranty, directions, and call-first ordering.
+            Searching for pallet jacks for sale near me? Browse all{" "}
+            {LOCATION_COUNT} pickup markets, search by city or state, and open
+            a dedicated local page for warranty, directions, and call-first
+            ordering.
           </p>
 
           {/* Stats strip */}
           <div className="flex items-center justify-center gap-8 flex-wrap mt-8 mb-8">
             <div className="flex flex-col items-center gap-0.5">
               <span className={`${styles.statNumber} ${styles.default}`}>
-                28
+                {LOCATION_COUNT}
               </span>
               <span className={styles.textLabel}>
                 Locations
@@ -68,7 +74,7 @@ export default function InteractiveLocationsHero() {
             <div className={styles.divider} />
             <div className="flex flex-col items-center gap-0.5">
               <span className={`${styles.statNumber} ${styles.default}`}>
-                18
+                {STATE_COUNT}
               </span>
               <span className={styles.textLabel}>
                 States

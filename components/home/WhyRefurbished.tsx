@@ -6,6 +6,7 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
+import { LOCATION_COUNT } from "@/lib/locations";
 import styles from "./WhyRefurbished.module.css";
 
 type ReasonTheme = "blue" | "orange" | "green";
@@ -38,7 +39,7 @@ const REASONS: Reason[] = [
     stat: "Same Day",
     label: "Fast pickup · Weekends too",
     title: "Pick Up — No Backorders",
-    desc: "New equipment can take weeks to arrive. Our inventory is on-hand at 28 locations across the USA. Call, confirm, and pick up the same day — weekends included.",
+    desc: `New equipment can take weeks to arrive. Our inventory is on-hand at ${LOCATION_COUNT} locations across the USA. Call, confirm, and pick up the same day — weekends included.`,
     theme: "orange",
     icon: Clock3,
   },
@@ -58,7 +59,7 @@ const COMPARISON: ComparisonRow[] = [
   { feature: "Delivery", us: "Available for extra fee", them: "Usually freight-based" },
   { feature: "Condition", us: "Rebuilt & sealed", them: "Factory new" },
   { feature: "Warranty", us: "2-month included", them: "Manufacturer warranty" },
-  { feature: "Pickup options", us: "28 locations nationwide", them: "Dealer or freight only" },
+  { feature: "Pickup options", us: `${LOCATION_COUNT} locations nationwide`, them: "Dealer or freight only" },
 ];
 
 function ValueCard({ reason }: { reason: Reason }) {

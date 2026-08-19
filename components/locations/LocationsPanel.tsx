@@ -4,7 +4,13 @@ import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, Search, ExternalLink, X } from "lucide-react";
 import { getLocationHref } from "@/lib/location-pages";
-import { getLocationsByState, searchLocations, STATE_NAMES, type Location } from "@/lib/locations";
+import {
+  getLocationsByState,
+  LOCATION_COUNT,
+  searchLocations,
+  STATE_NAMES,
+  type Location,
+} from "@/lib/locations";
 import styles from "./LocationsPanel.module.css";
 
 interface LocationsPanelProps {
@@ -123,7 +129,7 @@ export default function LocationsPanel({
       {filtered.length > 0 && (
         <div className={`${styles.footer} ${dk ? styles.dark : styles.light}`}>
           <Link href="/locations" className={`${styles.footerLink} ${dk ? styles.dark : styles.light}`}>
-            View all 28 locations
+            View all {LOCATION_COUNT} locations
             <ExternalLink size={11} />
           </Link>
         </div>
@@ -133,7 +139,7 @@ export default function LocationsPanel({
       {!compact && filtered.length === 0 && (
         <div className={`${styles.footer} ${dk ? styles.dark : styles.light}`}>
           <Link href="/locations" className={`${styles.footerLink} ${dk ? styles.dark : styles.light}`}>
-            View all 28 locations
+            View all {LOCATION_COUNT} locations
             <ExternalLink size={11} />
           </Link>
         </div>
@@ -165,6 +171,11 @@ function LocationCard({
               {loc.unitNumber && loc.unitNumber !== "-" && loc.unitNumber !== ""
                 ? ` · Unit ${loc.unitNumber}`
                 : ""}
+            </p>
+          )}
+          {loc.address && (
+            <p className={`${styles.cardFacility} ${dk ? styles.dark : styles.light}`}>
+              {loc.address}
             </p>
           )}
         </div>

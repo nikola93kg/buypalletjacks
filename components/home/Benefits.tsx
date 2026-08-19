@@ -1,7 +1,8 @@
+import { LOCATION_COUNT } from "@/lib/locations";
 import styles from "./Benefits.module.css";
 
 const STATS = [
-  { stat: "28", label: "Pickup Locations" },
+  { stat: `${LOCATION_COUNT}`, label: "Pickup Locations" },
   { stat: "2-Mo", label: "Warranty Included" },
   { stat: "40–60%", label: "Below Retail Price" },
 ];
@@ -16,7 +17,7 @@ const SPECS = [
     desc: "All pallet jacks come with a full 2-month mechanical warranty. Extended coverage available. Receipts provided on request.",
   },
   {
-    title: "28 Pickup Locations",
+    title: `${LOCATION_COUNT} Pickup Locations`,
     desc: "Self-storage facilities in major metro areas. Find your nearest spot, confirm availability, and pick up same day.",
   },
   {

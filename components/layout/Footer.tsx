@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, MapPin } from "lucide-react";
+import { LOCATION_COUNT } from "@/lib/locations";
 import { cn } from "@/lib/utils";
 import styles from "./Footer.module.css";
 
@@ -52,7 +53,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-slate-400 mb-2">
               <MapPin size={14} className="text-blue-400 flex-shrink-0" />
-              28 locations across the USA
+              {LOCATION_COUNT} locations across the USA
             </div>
             <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-slate-400">
               <Phone size={14} className="text-blue-400 flex-shrink-0" />

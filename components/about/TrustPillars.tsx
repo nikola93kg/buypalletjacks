@@ -1,4 +1,5 @@
 import { BadgeCheck, Wrench, Truck, Clock, type LucideIcon } from "lucide-react";
+import { LOCATION_COUNT } from "@/lib/locations";
 import styles from "./about.module.css";
 
 type Pillar = {
@@ -29,16 +30,14 @@ const PILLARS: Pillar[] = [
   {
     icon: Truck,
     title: "Same-Day Pickup — Weekends Too",
-    description:
-      "Pick up the same day from one of 28 locations nationwide — including weekends. No freight delays, no surprise shipping costs.",
+    description: `Pick up the same day from one of ${LOCATION_COUNT} locations nationwide — including weekends. No freight delays, no surprise shipping costs.`,
     accentBg: "#DCFCE7",
     accentColor: "#16A34A",
   },
   {
     icon: Clock,
     title: "In-Stock & Ready",
-    description:
-      "Live inventory across all 28 locations. What you see is what's physically on the floor — ready to go today.",
+    description: `Live inventory across all ${LOCATION_COUNT} locations. What you see is what's physically on the floor — ready to go today.`,
     accentBg: "#E0E7FF",
     accentColor: "#1E3A8A",
   },

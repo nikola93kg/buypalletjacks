@@ -1,5 +1,6 @@
 import { Phone, MessageSquare, MapPin, Shield, Truck, Tag } from "lucide-react";
 import Link from "next/link";
+import { LOCATION_COUNT } from "@/lib/locations";
 import styles from "./FinalCTA.module.css";
 
 const TRUST_PILLS = [
@@ -55,8 +56,8 @@ export default function FinalCTA() {
           </h2>
 
           <p className={`${styles.subtext} text-lg leading-relaxed mb-8 max-w-lg mx-auto`}>
-            28 pickup locations nationwide. Professionally refurbished.
-            2-month warranty included on every unit.
+            {LOCATION_COUNT} pickup locations nationwide. Professionally
+            refurbished. 2-month warranty included on every unit.
           </p>
 
           {/* Trust pills */}

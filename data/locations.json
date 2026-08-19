@@ -21,6 +21,14 @@
     "gmaps": "https://www.google.com/maps/place/Public+Storage/@41.6463428,-72.7344899,17z/data=!3m1!4b1!4m6!3m5!1s0x89e7b33f9c7dc0dd:0xac28f5135a95d772!8m2!3d41.6463428!4d-72.731915!16s%2Fg%2F1tzlz_ff?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
+    "cityState": "BIRMINGHAM, AL",
+    "state": "AL",
+    "facility": "PUBLIC STORAGE",
+    "address": "9856 Parkway E, Birmingham, AL 35215",
+    "unitNumber": "J038",
+    "gmaps": "https://www.google.com/maps/search/Public+Storage+9856+Parkway+E+Birmingham+AL+35215"
+  },
+  {
     "cityState": "CANTON, MA",
     "state": "MA",
     "facility": "STORAGE SHEDD",

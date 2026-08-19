@@ -6,7 +6,9 @@ import { MapPin, Search, X } from "lucide-react";
 import { getLocationHref } from "@/lib/location-pages";
 import {
   getLocationsGroupedByState,
+  LOCATION_COUNT,
   searchLocations,
+  STATE_COUNT,
   STATE_NAMES,
   type Location,
 } from "@/lib/locations";
@@ -53,8 +55,9 @@ export default function LocationsDirectory() {
             All Pickup Locations
           </h2>
           <p className="text-steel text-lg max-w-2xl mx-auto">
-            28 locations across 18 states. Search by city, state, or facility — or
-            filter by state to jump straight to your area.
+            {LOCATION_COUNT} locations across {STATE_COUNT} states. Search by
+            city, state, or facility — or filter by state to jump straight to
+            your area.
           </p>
         </div>
 
@@ -192,6 +195,11 @@ function LocationCard({ loc }: { loc: Location }) {
                 loc.unitNumber !== "-" &&
                 loc.unitNumber !== "" &&
                 ` · ${loc.unitNumber}`}
+            </p>
+          )}
+          {loc.address && (
+            <p className="text-xs text-steel mt-1 leading-snug">
+              {loc.address}
             </p>
           )}
         </div>

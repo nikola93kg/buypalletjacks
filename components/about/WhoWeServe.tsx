@@ -1,4 +1,5 @@
 import { Store, Package, DollarSign, type LucideIcon } from "lucide-react";
+import { LOCATION_COUNT } from "@/lib/locations";
 import styles from "./about.module.css";
 
 type ServeCard = {
@@ -14,8 +15,7 @@ const SERVE_CARDS: ServeCard[] = [
   {
     icon: Store,
     title: "Small & Mid-Size Warehouses",
-    description:
-      "You need equipment now, not in three weeks. Our on-hand inventory at 28 locations means zero lead time. Same-day pickup, every day.",
+    description: `You need equipment now, not in three weeks. Our on-hand inventory at ${LOCATION_COUNT} locations means zero lead time. Same-day pickup, every day.`,
     tags: ["Same-day pickup", "No freight wait", "Live inventory"],
     accentBg: "#DBEAFE",
     accentColor: "#1D4ED8",

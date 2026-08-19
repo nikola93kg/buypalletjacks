@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, MessageSquare, MapPin, ChevronRight, Shield, Truck, Tag, Info } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { LOCATION_COUNT } from "@/lib/locations";
 import heroImgPng from "@/public/hero2.jpg";
 import styles from "./Hero.module.css";
 
@@ -78,8 +79,9 @@ export default function Hero() {
             </h1>
 
             <p className={styles.heroLead} style={{ color: "var(--color-brand-blue)" }}>
-              Shop refurbished and used pallet jacks for sale with 28 pickup
-              locations, same-day availability, and a 2-month warranty.
+              Shop refurbished and used pallet jacks for sale with{" "}
+              {LOCATION_COUNT} pickup locations, same-day availability, and a
+              2-month warranty.
             </p>
 
             {/* Save up to */}
