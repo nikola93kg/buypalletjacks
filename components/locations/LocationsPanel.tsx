@@ -97,7 +97,7 @@ export default function LocationsPanel({
               Click a highlighted state on the map to see nearby pickup locations.
             </p>
             <p className={styles.emptySubtext}>
-              Or use the search box above to find a city.
+              Or use the search box above to find a city or state.
             </p>
           </div>
         )}

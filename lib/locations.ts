@@ -42,11 +42,18 @@ export function searchLocations(query: string): Location[] {
   const q = query.toLowerCase().trim();
   if (!q) return locations;
   return locations.filter(
-    (loc) =>
-      loc.cityState.toLowerCase().includes(q) ||
-      loc.state.toLowerCase().includes(q) ||
-      (loc.facility && loc.facility.toLowerCase().includes(q)) ||
-      (loc.address && loc.address.toLowerCase().includes(q))
+    (loc) => {
+      const stateCode = loc.state.toUpperCase();
+      const stateName = STATE_NAMES[stateCode] ?? "";
+
+      return (
+        loc.cityState.toLowerCase().includes(q) ||
+        loc.state.toLowerCase().includes(q) ||
+        stateName.toLowerCase().includes(q) ||
+        (loc.facility && loc.facility.toLowerCase().includes(q)) ||
+        (loc.address && loc.address.toLowerCase().includes(q))
+      );
+    }
   );
 }
 
