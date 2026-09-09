@@ -178,6 +178,11 @@ function LocationCard({
               {loc.address}
             </p>
           )}
+          {loc.offer && (
+            <p className={`${styles.cardFacility} ${dk ? styles.dark : styles.light}`}>
+              {loc.offer.brand} only · {loc.offer.price}
+            </p>
+          )}
         </div>
       </div>
       {!compact && (

@@ -169,6 +169,33 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
                   </div>
                 </div>
               </div>
+
+              {page.offer && (
+                <div className="mt-6 border-l-4 border-brand-orange bg-orange-50 p-6">
+                  <p className="text-xs font-700 uppercase tracking-[0.18em] text-brand-orange">
+                    Available at this location
+                  </p>
+                  <div className="mt-3 flex flex-wrap items-baseline justify-between gap-3">
+                    <h2 className="text-2xl font-800 text-graphite">
+                      {page.offer.brand} pallet jack
+                    </h2>
+                    <p className="text-2xl font-800 text-brand-blue">
+                      {page.offer.price}
+                    </p>
+                  </div>
+                  <p className="mt-3 text-base leading-7 text-graphite">
+                    {page.offer.condition} and comes with a {page.offer.warranty}.
+                  </p>
+                  <p className="mt-2 text-base font-700 leading-7 text-graphite">
+                    {page.offer.note}
+                  </p>
+                  <div className="mt-4 border-t border-orange-200 pt-4 text-sm leading-6 text-steel">
+                    <p className="font-700 text-graphite">Pickup hours</p>
+                    <p>{page.offer.hours.weekdays}</p>
+                    <p>{page.offer.hours.weekends}</p>
+                  </div>
+                </div>
+              )}
             </div>
 
             <aside className="rounded-[2rem] bg-[#0F172A] p-7 text-white shadow-[0_20px_60px_rgba(15,23,42,0.24)]">
@@ -184,6 +211,12 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
                   Professionally refurbished used pallet jacks for sale with a
                   full 2-month warranty and ready-to-work 5,500 lb capacity.
                 </li>
+                {page.offer && (
+                  <li>
+                    This location carries {page.offer.brand} pallet jacks only,
+                    priced at {page.offer.price}.
+                  </li>
+                )}
                 <li>
                   {page.pickupTip}
                 </li>

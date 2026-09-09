@@ -202,5 +202,24 @@
     "facility": "PUBLIC STORAGE",
     "unitNumber": "C067",
     "gmaps": "https://www.google.com/maps/place/Public+Storage/@40.1702816,-74.6887392,17z/data=!3m1!4b1!4m6!3m5!1s0x89c15c0687afac59:0xd7c2632c5b86e975!8m2!3d40.1702775!4d-74.6861643!16s%2Fg%2F1tp1zqlv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "cityState": "OKLAHOMA CITY, OK",
+    "state": "OK",
+    "facility": "PUBLIC STORAGE",
+    "address": "3015 N Service Rd, Moore, OK 73160",
+    "unitNumber": "09101",
+    "gmaps": "https://www.google.com/maps/search/?api=1&query=Public+Storage+3015+N+Service+Rd+Moore+OK+73160",
+    "offer": {
+      "brand": "Crown",
+      "price": "$275",
+      "condition": "Refurbished",
+      "warranty": "2-month warranty",
+      "note": "Only Crown pallet jacks are sold at this location.",
+      "hours": {
+        "weekdays": "Monday - Friday: 7:00 AM - 5:00 PM",
+        "weekends": "Saturday - Sunday: 8:00 AM - 3:00 PM"
+      }
+    }
   }
 ]

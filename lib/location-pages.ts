@@ -254,6 +254,14 @@ const LOCATION_PAGE_CONTENT: Record<string, LocationPageContent> = {
     pickupTip:
       "Reach out before pickup if you want the exact route, live availability, or help deciding whether this is the best nearby market for your trip.",
   },
+  "oklahoma-city-ok": {
+    marketFocus:
+      "Oklahoma City buyers can pick up a refurbished Crown pallet jack from a convenient satellite location in Moore.",
+    serviceArea:
+      "This pickup point serves Oklahoma City, Moore, Norman, and nearby warehouse, contractor, and small-business operations along the I-35 corridor.",
+    pickupTip:
+      "Only Crown pallet jacks are sold at this location. Call or text before you drive so we can confirm availability and the pickup details.",
+  },
 };
 
 export function slugifyLocation(cityState: string) {

@@ -1,5 +1,17 @@
 import locationsData from "@/data/locations.json";
 
+export type LocationOffer = {
+  brand: string;
+  price: string;
+  condition: string;
+  warranty: string;
+  note: string;
+  hours: {
+    weekdays: string;
+    weekends: string;
+  };
+};
+
 export type Location = {
   cityState: string;
   state: string;
@@ -7,6 +19,7 @@ export type Location = {
   address?: string;
   unitNumber?: string;
   gmaps: string;
+  offer?: LocationOffer;
 };
 
 export const locations: Location[] = locationsData as Location[];

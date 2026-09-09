@@ -202,6 +202,11 @@ function LocationCard({ loc }: { loc: Location }) {
               {loc.address}
             </p>
           )}
+          {loc.offer && (
+            <p className="text-xs font-semibold text-brand-orange mt-2 leading-snug">
+              {loc.offer.brand} only · {loc.offer.price}
+            </p>
+          )}
         </div>
       </div>
 
