@@ -6,6 +6,7 @@ import { MapPin, Search, ExternalLink, X } from "lucide-react";
 import { getLocationHref } from "@/lib/location-pages";
 import {
   getLocationsByState,
+  getLocationOffers,
   LOCATION_COUNT,
   searchLocations,
   STATE_NAMES,
@@ -178,9 +179,11 @@ function LocationCard({
               {loc.address}
             </p>
           )}
-          {loc.offer && (
+          {getLocationOffers(loc).length > 0 && (
             <p className={`${styles.cardFacility} ${dk ? styles.dark : styles.light}`}>
-              {loc.offer.brand} only · {loc.offer.price}
+              {getLocationOffers(loc)
+                .map((offer) => `${offer.color ? `${offer.color} ${offer.brand}` : offer.brand} · ${offer.price}`)
+                .join(" / ")}
             </p>
           )}
         </div>

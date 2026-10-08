@@ -221,5 +221,39 @@
         "weekends": "Saturday - Sunday: 8:00 AM - 3:00 PM"
       }
     }
+  },
+  {
+    "cityState": "KNOXVILLE, TN",
+    "state": "TN",
+    "facility": "STORAGE RENTALS OF AMERICA",
+    "address": "3980 Papermill Dr NW, Knoxville, TN 37909",
+    "unitNumber": "B008",
+    "gmaps": "https://www.google.com/maps/search/?api=1&query=Storage+Rentals+of+America+3980+Papermill+Dr+NW+Knoxville+TN+37909",
+    "hours": {
+      "weekdays": "Monday - Friday: 8:00 AM - 6:00 PM",
+      "weekends": "Saturday - Sunday: 9:00 AM - 4:00 PM"
+    },
+    "offers": [
+      {
+        "brand": "Altra",
+        "color": "Blue",
+        "price": "$235",
+        "condition": "Refurbished",
+        "warranty": "2-month warranty"
+      },
+      {
+        "brand": "Crown",
+        "color": "Grey",
+        "price": "$275",
+        "condition": "Refurbished",
+        "warranty": "2-month warranty"
+      }
+    ],
+    "accessInstructions": [
+      "At the front gate, press *98867448# to access the facility.",
+      "Go to unit B008, the eighth unit on the right after you pass the gate.",
+      "Call (262) 254-1835 when you arrive at the unit for the access code."
+    ],
+    "paymentMethods": ["Zelle", "CashApp", "Card", "Cash"]
   }
 ]

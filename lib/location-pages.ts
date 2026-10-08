@@ -262,6 +262,14 @@ const LOCATION_PAGE_CONTENT: Record<string, LocationPageContent> = {
     pickupTip:
       "Only Crown pallet jacks are sold at this location. Call or text before you drive so we can confirm availability and the pickup details.",
   },
+  "knoxville-tn": {
+    marketFocus:
+      "Knoxville buyers can pick up refurbished Altra and Crown pallet jacks from a convenient satellite location at Storage Rentals of America.",
+    serviceArea:
+      "This pickup point serves Knoxville, West Knoxville, and nearby warehouse, contractor, and small-business operations that need dependable equipment without a long wait.",
+    pickupTip:
+      "Call before you leave to confirm the unit you want, then call again when you arrive so we can provide the access code for unit B008.",
+  },
 };
 
 export function slugifyLocation(cityState: string) {

@@ -51,18 +51,29 @@ async function loadLocationPagesModule() {
     ],
   ]);
 
-  return importTsModule(locationPagesPath, [
+  const locationPagesModule = await importTsModule(locationPagesPath, [
     [
       /import\s*\{\s*getCityFromCityState,\s*getStateName,\s*locations,\s*type Location,\s*\}\s*from\s*"@\/lib\/locations";/,
       `import { getCityFromCityState, getStateName, locations } from "${locationsModuleUrl}";`,
     ],
   ]);
+
+  return { ...locationPagesModule, locationsModuleUrl };
 }
 
 test("sitemap includes every location landing page", async () => {
-  const { module: locationPages, moduleUrl: locationPagesModuleUrl } =
+  const {
+    module: locationPages,
+    moduleUrl: locationPagesModuleUrl,
+    locationsModuleUrl,
+  } =
     await loadLocationPagesModule();
-  const { moduleUrl: seoModuleUrl } = await importTsModule(seoPath);
+  const { moduleUrl: seoModuleUrl } = await importTsModule(seoPath, [
+    [
+      /import\s*\{\s*LOCATION_COUNT\s*\}\s*from\s*"@\/lib\/locations";/,
+      `import { LOCATION_COUNT } from "${locationsModuleUrl}";`,
+    ],
+  ]);
   const { module: sitemapModule } = await importTsModule(sitemapPath, [
     [
       /import\s*\{\s*getLocationPages\s*\}\s*from\s*"@\/lib\/location-pages";/,
@@ -79,7 +90,7 @@ test("sitemap includes every location landing page", async () => {
     .getLocationPages()
     .map((page) => `https://www.buypalletjacks.com/locations/${page.slug}`);
 
-  assert.equal(locationUrls.length, 29);
+  assert.equal(locationUrls.length, 31);
 
   for (const url of locationUrls) {
     assert.ok(entryUrls.has(url), `Missing sitemap entry for ${url}`);

@@ -5,11 +5,14 @@ export type LocationOffer = {
   price: string;
   condition: string;
   warranty: string;
-  note: string;
-  hours: {
-    weekdays: string;
-    weekends: string;
-  };
+  color?: string;
+  note?: string;
+  hours?: LocationHours;
+};
+
+export type LocationHours = {
+  weekdays: string;
+  weekends: string;
 };
 
 export type Location = {
@@ -20,6 +23,10 @@ export type Location = {
   unitNumber?: string;
   gmaps: string;
   offer?: LocationOffer;
+  offers?: LocationOffer[];
+  hours?: LocationHours;
+  accessInstructions?: string[];
+  paymentMethods?: string[];
 };
 
 export const locations: Location[] = locationsData as Location[];
@@ -68,6 +75,10 @@ export function searchLocations(query: string): Location[] {
       );
     }
   );
+}
+
+export function getLocationOffers(location: Location): LocationOffer[] {
+  return location.offers ?? (location.offer ? [location.offer] : []);
 }
 
 /** Normalize SVG state IDs like "US-TX" or "TX" to just "TX" */

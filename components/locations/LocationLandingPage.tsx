@@ -39,6 +39,9 @@ function hasUnitNumber(unitNumber?: string) {
 }
 
 export default function LocationLandingPage({ page }: { page: LocationPage }) {
+  const offers = page.offers ?? (page.offer ? [page.offer] : []);
+  const locationHours = page.hours ?? offers[0]?.hours;
+  const hasMultipleOffers = offers.length > 1;
   const unitLabel = hasUnitNumber(page.unitNumber)
     ? `Unit ${page.unitNumber}`
     : "Unit details provided when you call or text";
@@ -170,30 +173,75 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
                 </div>
               </div>
 
-              {page.offer && (
+              {offers.length > 0 && (
                 <div className="mt-6 border-l-4 border-brand-orange bg-orange-50 p-6">
                   <p className="text-xs font-700 uppercase tracking-[0.18em] text-brand-orange">
                     Available at this location
                   </p>
-                  <div className="mt-3 flex flex-wrap items-baseline justify-between gap-3">
-                    <h2 className="text-2xl font-800 text-graphite">
-                      {page.offer.brand} pallet jack
-                    </h2>
-                    <p className="text-2xl font-800 text-brand-blue">
-                      {page.offer.price}
-                    </p>
+                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    {offers.map((offer) => (
+                      <div
+                        key={`${offer.brand}-${offer.price}`}
+                        className="rounded-xl border border-orange-200 bg-white/70 p-4"
+                      >
+                        <div className="flex flex-wrap items-baseline justify-between gap-2">
+                          <h2 className="text-xl font-800 text-graphite">
+                            {offer.color ? `${offer.color} (${offer.brand})` : `${offer.brand} pallet jack`}
+                          </h2>
+                          <p className="text-2xl font-800 text-brand-blue">
+                            {offer.price}
+                          </p>
+                        </div>
+                        <p className="mt-2 text-sm leading-6 text-graphite">
+                          {offer.condition} with a {offer.warranty}.
+                        </p>
+                        {offer.note && (
+                          <p className="mt-2 text-sm font-700 leading-6 text-graphite">
+                            {offer.note}
+                          </p>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                  <p className="mt-3 text-base leading-7 text-graphite">
-                    {page.offer.condition} and comes with a {page.offer.warranty}.
-                  </p>
-                  <p className="mt-2 text-base font-700 leading-7 text-graphite">
-                    {page.offer.note}
-                  </p>
-                  <div className="mt-4 border-t border-orange-200 pt-4 text-sm leading-6 text-steel">
-                    <p className="font-700 text-graphite">Pickup hours</p>
-                    <p>{page.offer.hours.weekdays}</p>
-                    <p>{page.offer.hours.weekends}</p>
-                  </div>
+                  {locationHours && (
+                    <div className="mt-4 border-t border-orange-200 pt-4 text-sm leading-6 text-steel">
+                      <p className="font-700 text-graphite">Pickup hours</p>
+                      <p>{locationHours.weekdays}</p>
+                      <p>{locationHours.weekends}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {(page.accessInstructions || page.paymentMethods) && (
+                <div className="mt-6 rounded-[1.5rem] border border-border bg-white p-6 shadow-sm">
+                  {page.accessInstructions && (
+                    <div>
+                      <p className="text-xs font-700 uppercase tracking-[0.18em] text-brand-blue">
+                        Arrival instructions
+                      </p>
+                      <ol className="mt-3 space-y-2 text-sm leading-6 text-graphite">
+                        {page.accessInstructions.map((instruction, index) => (
+                          <li key={instruction} className="flex gap-3">
+                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-800 text-brand-blue">
+                              {index + 1}
+                            </span>
+                            <span>{instruction}</span>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  )}
+                  {page.paymentMethods && (
+                    <div className="mt-5 border-t border-border pt-5">
+                      <p className="text-xs font-700 uppercase tracking-[0.18em] text-brand-blue">
+                        Payment accepted
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-graphite">
+                        {page.paymentMethods.join(" · ")}
+                      </p>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -211,10 +259,13 @@ export default function LocationLandingPage({ page }: { page: LocationPage }) {
                   Professionally refurbished used pallet jacks for sale with a
                   full 2-month warranty and ready-to-work 5,500 lb capacity.
                 </li>
-                {page.offer && (
+                {offers.length > 0 && (
                   <li>
-                    This location carries {page.offer.brand} pallet jacks only,
-                    priced at {page.offer.price}.
+                    {hasMultipleOffers
+                      ? `This location carries ${offers
+                          .map((offer) => `${offer.color ? `${offer.color} ${offer.brand}` : offer.brand} at ${offer.price}`)
+                          .join(" and ")}.`
+                      : `This location carries ${offers[0].brand} pallet jacks priced at ${offers[0].price}.`}
                   </li>
                 )}
                 <li>

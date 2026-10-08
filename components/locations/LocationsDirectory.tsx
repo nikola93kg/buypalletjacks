@@ -10,6 +10,7 @@ import {
   searchLocations,
   STATE_COUNT,
   STATE_NAMES,
+  getLocationOffers,
   type Location,
 } from "@/lib/locations";
 
@@ -202,9 +203,11 @@ function LocationCard({ loc }: { loc: Location }) {
               {loc.address}
             </p>
           )}
-          {loc.offer && (
+          {getLocationOffers(loc).length > 0 && (
             <p className="text-xs font-semibold text-brand-orange mt-2 leading-snug">
-              {loc.offer.brand} only · {loc.offer.price}
+              {getLocationOffers(loc)
+                .map((offer) => `${offer.color ? `${offer.color} ${offer.brand}` : offer.brand} · ${offer.price}`)
+                .join(" / ")}
             </p>
           )}
         </div>
