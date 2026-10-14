@@ -270,6 +270,14 @@ const LOCATION_PAGE_CONTENT: Record<string, LocationPageContent> = {
     pickupTip:
       "Call before you leave to confirm the unit you want, then call again when you arrive so we can provide the access code for unit B008.",
   },
+  "memphis-tn": {
+    marketFocus:
+      "Memphis buyers can pick up a refurbished Grey Crown pallet jack from a convenient satellite location at Public Storage.",
+    serviceArea:
+      "This pickup point serves Memphis, Bartlett, Cordova, and nearby warehouse, contractor, and small-business operations that need dependable equipment nearby.",
+    pickupTip:
+      "Call before you leave to confirm availability, then call again when you arrive so we can provide the access code for unit 031.",
+  },
 };
 
 export function slugifyLocation(cityState: string) {

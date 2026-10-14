@@ -90,7 +90,7 @@ test("sitemap includes every location landing page", async () => {
     .getLocationPages()
     .map((page) => `https://www.buypalletjacks.com/locations/${page.slug}`);
 
-  assert.equal(locationUrls.length, 31);
+  assert.equal(locationUrls.length, 32);
 
   for (const url of locationUrls) {
     assert.ok(entryUrls.has(url), `Missing sitemap entry for ${url}`);

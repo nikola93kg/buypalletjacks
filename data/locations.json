@@ -255,5 +255,32 @@
       "Call (262) 254-1835 when you arrive at the unit for the access code."
     ],
     "paymentMethods": ["Zelle", "CashApp", "Card", "Cash"]
+  },
+  {
+    "cityState": "MEMPHIS, TN",
+    "state": "TN",
+    "facility": "PUBLIC STORAGE",
+    "address": "5900 Stage Rd, Memphis, TN 38134",
+    "unitNumber": "031",
+    "gmaps": "https://www.google.com/maps/search/?api=1&query=Public+Storage+5900+Stage+Rd+Memphis+TN+38134",
+    "hours": {
+      "weekdays": "Monday - Friday: 7:00 AM - 5:00 PM",
+      "weekends": "Saturday - Sunday: 8:00 AM - 3:00 PM"
+    },
+    "offers": [
+      {
+        "brand": "Crown",
+        "color": "Grey",
+        "price": "$275",
+        "condition": "Refurbished",
+        "warranty": "2-month warranty"
+      }
+    ],
+    "accessInstructions": [
+      "At the Public Storage front gate, press *723970# to access the facility.",
+      "Take the first left, then the second right. Go approximately halfway down building B on the left to unit 031.",
+      "Call (262) 254-1835 when you arrive at the unit for the access code."
+    ],
+    "paymentMethods": ["Zelle", "CashApp", "Card", "Cash"]
   }
 ]
