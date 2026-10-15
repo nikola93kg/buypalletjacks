@@ -3,53 +3,44 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, MessageSquare, MapPin, ChevronRight, Shield, Truck, Tag, Info } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { LOCATION_COUNT } from "@/lib/locations";
-import heroImgPng from "@/public/hero2.jpg";
+import newHeroImg from "@/public/new-hero.png";
+import altraCutout from "@/public/altra-hero-cutout.png";
+import crownCutout from "@/public/crown-hero-cutout.png";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
-  const parallaxRef = useRef<HTMLDivElement>(null);
-
-  // Parallax — mutates DOM directly so there's no React re-render on every scroll frame
-  useEffect(() => {
-    const onScroll = () => {
-      if (parallaxRef.current) {
-        parallaxRef.current.style.transform = `translateY(${window.scrollY * 0.35}px)`;
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const sectionRef = useRef<HTMLElement>(null);
 
   return (
     <section
+      ref={sectionRef}
       className={`relative overflow-hidden ${styles.heroSection}`}
       aria-labelledby="hero-heading"
     >
-      {/* Background image — parallax on desktop, static on mobile */}
+      {/* ── Background: Photographic warehouse with Depth-of-Field Blur (Option 1) ── */}
       <div
-        ref={parallaxRef}
         className={`hero-bg-wrapper absolute inset-0 pointer-events-none select-none ${styles.bgWrapper}`}
         aria-hidden="true"
       >
         <Image
-          src={heroImgPng}
-          alt=""
+          src={newHeroImg}
+          alt="Modern warehouse distribution center"
           fill
           priority
           quality={90}
-          className="hero-bg-img"
+          className={`object-cover object-center ${styles.bgDofBlur}`}
           sizes="100vw"
         />
       </div>
 
-      {/* Mobile overlay — strong white at top fading to transparent ~55% so PJs show fully below */}
+      {/* Mobile overlay */}
       <div
         className={`absolute inset-0 pointer-events-none sm:hidden ${styles.mobileOverlay}`}
         aria-hidden="true"
       />
-      {/* Desktop overlay — horizontal fade left to right */}
+      {/* Desktop overlay — soft horizontal fade for text legibility */}
       <div
         className={`absolute inset-0 pointer-events-none hidden sm:block ${styles.desktopOverlay}`}
         aria-hidden="true"
@@ -61,10 +52,48 @@ export default function Hero() {
         aria-hidden="true"
       />
 
+      {/* ── ANIMATED PALLET JACK STAGE (Altra & Crown) ── */}
+      <div
+        className={`absolute inset-0 pointer-events-none select-none overflow-hidden ${styles.productStage}`}
+        aria-hidden="true"
+      >
+        <div className={styles.stageInner}>
+          {/* Altra Pallet Jack (Midground / Stagger 1 — center-right) */}
+          <div className={styles.altraWrapper}>
+            <div className={styles.altraInner}>
+              <div className={`${styles.shadowBase} ${styles.shadowAltra}`} />
+              <Image
+                src={altraCutout}
+                alt="Altra heavy-duty pallet jack"
+                priority
+                quality={95}
+                className={`${styles.palletJackImg} ${styles.altraImg}`}
+                sizes="(max-width: 640px) 44vw, (max-width: 1024px) 28vw, 420px"
+              />
+            </div>
+          </div>
+
+          {/* Crown Pallet Jack (Foreground / Stagger 2 — far-right) */}
+          <div className={styles.crownWrapper}>
+            <div className={styles.crownInner}>
+              <div className={`${styles.shadowBase} ${styles.shadowCrown}`} />
+              <Image
+                src={crownCutout}
+                alt="Crown precision pallet jack"
+                priority
+                quality={95}
+                className={`${styles.palletJackImg} ${styles.crownImg}`}
+                sizes="(max-width: 640px) 46vw, (max-width: 1024px) 32vw, 480px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ── CONTENT ── */}
-      <div className="container-site relative">
-        <div className="grid gap-10 xl:gap-16 items-start py-10 sm:py-14 md:py-18 lg:py-22">
-          <div className="hero-left-column">
+      <div className="container-site relative z-10">
+        <div className="grid gap-6 sm:gap-10 xl:gap-16 items-start pt-6 pb-4 sm:py-14 md:py-18 lg:py-22">
+          <div className="hero-left-column max-w-2xl">
 
             {/* Headline */}
             <h1
@@ -108,8 +137,8 @@ export default function Hero() {
 
             {/* Trust badges — full cards on desktop */}
             <div className="mb-5">
-              {/* Desktop: full cards */}
-              <div className="hidden sm:flex flex-row flex-wrap gap-[10px] items-start">
+              {/* Desktop / Tablet: full cards */}
+              <div className="hidden sm:flex flex-row flex-wrap gap-[10px] items-start max-w-[430px] lg:max-w-none">
                 {[
                   { icon: Shield, title: "2-Month Warranty", accent: 'var(--color-trust-blue)' },
                   { icon: Tag, title: "Multi-Unit Discounts", accent: 'var(--color-brand-orange)' },
