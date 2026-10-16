@@ -61,7 +61,54 @@ export default function Hero() {
           {/* Altra Pallet Jack (Midground / Stagger 1 — center-right) */}
           <div className={styles.altraWrapper}>
             <div className={styles.altraInner}>
-              <div className={`${styles.shadowBase} ${styles.shadowAltra}`} />
+              <svg
+                className={styles.groundShadow}
+                viewBox="0 0 1122 1402"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <defs>
+                  <filter id="altraContactBlur" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="2.5" />
+                  </filter>
+                  <filter id="altraAmbientBlur" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="9" />
+                  </filter>
+                  <filter id="altraCastBlur" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="16" />
+                  </filter>
+                </defs>
+
+                {/* 1. Directional Cast Shadow — soft warehouse sunlight from left door */}
+                <g filter="url(#altraCastBlur)" opacity="0.38">
+                  <path
+                    d="M 180 990 L 405 875 L 480 955 L 1025 1242 L 1030 1270 L 685 1390 L 655 1365 L 320 1025 Z"
+                    fill="#1e293b"
+                  />
+                  <ellipse cx="215" cy="1008" rx="68" ry="24" fill="#1e293b" />
+                  <ellipse cx="685" cy="1375" rx="88" ry="25" fill="#1e293b" />
+                  <ellipse cx="1020" cy="1252" rx="78" ry="23" fill="#1e293b" />
+                </g>
+
+                {/* 2. Ambient Undercarriage Occlusion */}
+                <g filter="url(#altraAmbientBlur)" opacity="0.55">
+                  <path
+                    d="M 160 985 L 365 865 L 440 945 L 970 1230 L 975 1252 L 640 1365 L 620 1345 L 290 1015 Z"
+                    fill="#0f172a"
+                  />
+                  <ellipse cx="190" cy="998" rx="64" ry="18" fill="#0f172a" />
+                  <ellipse cx="645" cy="1360" rx="80" ry="19" fill="#0f172a" />
+                  <ellipse cx="975" cy="1239" rx="72" ry="17" fill="#0f172a" />
+                </g>
+
+                {/* 3. Physical Wheel Contact Patches (steer wheel + load rollers) */}
+                <g filter="url(#altraContactBlur)" opacity="0.94">
+                  <ellipse cx="185" cy="995" rx="48" ry="12" fill="#020617" />
+                  <ellipse cx="640" cy="1358" rx="62" ry="13" fill="#020617" />
+                  <ellipse cx="970" cy="1237" rx="56" ry="12" fill="#020617" />
+                </g>
+              </svg>
               <Image
                 src={altraCutout}
                 alt="Altra heavy-duty pallet jack"
@@ -76,7 +123,54 @@ export default function Hero() {
           {/* Crown Pallet Jack (Foreground / Stagger 2 — far-right) */}
           <div className={styles.crownWrapper}>
             <div className={styles.crownInner}>
-              <div className={`${styles.shadowBase} ${styles.shadowCrown}`} />
+              <svg
+                className={styles.groundShadow}
+                viewBox="0 0 1122 1402"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <defs>
+                  <filter id="crownContactBlur" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="2.5" />
+                  </filter>
+                  <filter id="crownAmbientBlur" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="9" />
+                  </filter>
+                  <filter id="crownCastBlur" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="16" />
+                  </filter>
+                </defs>
+
+                {/* 1. Directional Cast Shadow — soft warehouse sunlight from left door */}
+                <g filter="url(#crownCastBlur)" opacity="0.42">
+                  <path
+                    d="M 155 985 L 420 880 L 500 960 L 1100 1262 L 1105 1290 L 745 1420 L 710 1395 L 320 1025 Z"
+                    fill="#1e293b"
+                  />
+                  <ellipse cx="195" cy="1005" rx="72" ry="24" fill="#1e293b" />
+                  <ellipse cx="745" cy="1405" rx="92" ry="26" fill="#1e293b" />
+                  <ellipse cx="1095" cy="1272" rx="84" ry="24" fill="#1e293b" />
+                </g>
+
+                {/* 2. Ambient Undercarriage Occlusion */}
+                <g filter="url(#crownAmbientBlur)" opacity="0.62">
+                  <path
+                    d="M 140 980 L 380 870 L 460 950 L 1045 1250 L 1050 1272 L 695 1395 L 675 1375 L 290 1010 Z"
+                    fill="#0f172a"
+                  />
+                  <ellipse cx="160" cy="992" rx="62" ry="18" fill="#0f172a" />
+                  <ellipse cx="700" cy="1390" rx="84" ry="20" fill="#0f172a" />
+                  <ellipse cx="1050" cy="1258" rx="76" ry="18" fill="#0f172a" />
+                </g>
+
+                {/* 3. Physical Wheel Contact Patches (steer wheel + load rollers) */}
+                <g filter="url(#crownContactBlur)" opacity="0.95">
+                  <ellipse cx="155" cy="990" rx="46" ry="12" fill="#020617" />
+                  <ellipse cx="695" cy="1388" rx="66" ry="13" fill="#020617" />
+                  <ellipse cx="1045" cy="1256" rx="58" ry="12" fill="#020617" />
+                </g>
+              </svg>
               <Image
                 src={crownCutout}
                 alt="Crown precision pallet jack"
