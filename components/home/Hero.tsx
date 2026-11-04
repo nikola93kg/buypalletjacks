@@ -32,31 +32,31 @@ const HERO_SLIDES: HeroSlide[] = [
     src: "/hero-images/hero1.webp",
     alt: "Lineup of refurbished Crown and Altra heavy-duty pallet jacks ready for pickup",
     desktopPos: "62% 72%",
-    mobilePos: "55% 82%",
+    mobilePos: "65% 42%",
   },
   {
     src: "/hero-images/hero2.webp",
     alt: "Refurbished Altra and Crown pallet jacks staged with delivery truck",
     desktopPos: "60% 65%",
-    mobilePos: "52% 75%",
+    mobilePos: "62% 42%",
   },
   {
     src: "/hero-images/hero3.webp",
     alt: "Row of refurbished blue Altra and white Crown pallet jacks",
     desktopPos: "65% 62%",
-    mobilePos: "60% 72%",
+    mobilePos: "46% 45%",
   },
   {
     src: "/hero-images/hero4.webp",
     alt: "Indoor warehouse inventory of blue Altra and white Crown pallet jacks",
     desktopPos: "65% 68%",
-    mobilePos: "60% 76%",
+    mobilePos: "68% 45%",
   },
   {
     src: "/hero-images/hero5.webp",
     alt: "Refurbished Altra and Crown pallet jacks staged outside storage bay",
     desktopPos: "64% 68%",
-    mobilePos: "58% 76%",
+    mobilePos: "72% 38%",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function Hero() {
 
       {/* ── CONTENT ── */}
       <div className="container-site relative z-10">
-        <div className="grid gap-6 sm:gap-10 xl:gap-16 items-start pt-6 pb-4 sm:py-14 md:py-18 lg:py-22">
+        <div className="grid gap-4 sm:gap-10 xl:gap-16 items-start pt-4 pb-2 sm:py-14 md:py-18 lg:py-22">
           <div className="hero-left-column max-w-2xl">
             {/* Headline */}
             <h1
@@ -149,7 +149,10 @@ export default function Hero() {
               Get to work!
             </h1>
 
-            <p className={styles.heroLead} style={{ color: "var(--color-brand-blue)" }}>
+            <p
+              className={`hidden sm:block ${styles.heroLead}`}
+              style={{ color: "var(--color-brand-blue)" }}
+            >
               Shop refurbished and used pallet jacks for sale with{" "}
               {LOCATION_COUNT} pickup locations, same-day availability, and a
               2-month warranty.
@@ -158,7 +161,7 @@ export default function Hero() {
             {/* Save up to */}
             <div className="flex flex-col items-center sm:items-start mb-1">
               <p
-                className={`text-slate-600 text-base font-semibold leading-tight mb-0 ${styles.saveUpToText}`}
+                className={`text-slate-600 font-semibold leading-tight mb-0.5 ${styles.saveUpToText}`}
               >
                 Save up to
               </p>
@@ -265,9 +268,6 @@ export default function Hero() {
                 <ChevronRight size={16} />
               </Link>
             </div>
-
-            {/* Mobile spacer — pushes section tall enough to see the transitioning photos below content */}
-            <div className={`sm:hidden ${styles.mobileSpacer}`} />
           </div>
         </div>
       </div>
