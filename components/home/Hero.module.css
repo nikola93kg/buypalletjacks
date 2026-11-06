@@ -15,8 +15,8 @@
 
 @media (max-width: 639px) {
   .heroSection {
+    min-height: calc(100vh - 4rem);
     min-height: calc(100svh - 4rem);
-    min-height: calc(100dvh - 4rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -78,6 +78,14 @@
 
 .slideActive .slideImage {
   transform: scale(1);
+}
+
+@media (max-width: 639px) {
+  .slideImage,
+  .slideActive .slideImage {
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 @media (min-width: 640px) {
