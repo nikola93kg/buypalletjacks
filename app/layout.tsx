@@ -122,6 +122,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`} suppressHydrationWarning>
+      <head>
+        <link rel="alternate" type="text/markdown" title="LLMs.txt" href="/llms.txt" />
+      </head>
       <body suppressHydrationWarning>
         {isProduction && (
           <noscript>
