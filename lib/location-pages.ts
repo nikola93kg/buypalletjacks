@@ -246,14 +246,6 @@ const LOCATION_PAGE_CONTENT: Record<string, LocationPageContent> = {
     pickupTip:
       "Before pickup, send us a text if you want photos, directions, or help timing the stop around work on either side of the metro.",
   },
-  "trenton-nj": {
-    marketFocus:
-      "Trenton demand comes from warehouse, contractor, and commercial buyers covering central New Jersey and parts of eastern Pennsylvania.",
-    serviceArea:
-      "This page is designed for Trenton, Hamilton, Ewing, Princeton-area, and nearby buyers who need a rebuilt pallet jack without waiting on new inventory.",
-    pickupTip:
-      "Reach out before pickup if you want the exact route, live availability, or help deciding whether this is the best nearby market for your trip.",
-  },
   "oklahoma-city-ok": {
     marketFocus:
       "Oklahoma City buyers can pick up a refurbished Crown pallet jack from a convenient satellite location in Moore.",
@@ -269,6 +261,14 @@ const LOCATION_PAGE_CONTENT: Record<string, LocationPageContent> = {
       "This pickup point serves Knoxville, West Knoxville, and nearby warehouse, contractor, and small-business operations that need dependable equipment without a long wait.",
     pickupTip:
       "Call before you leave to confirm the unit you want, then call again when you arrive so we can provide the access code for unit B008.",
+  },
+  "plano-tx": {
+    marketFocus:
+      "Plano buyers can pick up refurbished Blue Altra and Grey Crown pallet jacks from a satellite location at Public Storage on West 15th Street.",
+    serviceArea:
+      "This pickup point serves Plano and nearby warehouse, contractor, and small-business operations that need dependable equipment nearby.",
+    pickupTip:
+      "Call (262) 254-1835 before you leave to check out the pallet jacks, then call again when you arrive at unit H-01 for the unit access code.",
   },
   "memphis-tn": {
     marketFocus:

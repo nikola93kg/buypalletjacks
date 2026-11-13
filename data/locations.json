@@ -197,13 +197,6 @@
     "gmaps": "https://www.google.com/maps/place/TriLink+Storage+-+Hazelwood/@38.7727883,-90.3400211,17z/data=!4m6!3m5!1s0x87df37bc7763b80b:0xdee7e7b711260340!8m2!3d38.7739134!4d-90.338916!16s%2Fg%2F11kjds2_3j?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
-    "cityState": "TRENTON, NJ",
-    "state": "NJ",
-    "facility": "PUBLIC STORAGE",
-    "unitNumber": "C067",
-    "gmaps": "https://www.google.com/maps/place/Public+Storage/@40.1702816,-74.6887392,17z/data=!3m1!4b1!4m6!3m5!1s0x89c15c0687afac59:0xd7c2632c5b86e975!8m2!3d40.1702775!4d-74.6861643!16s%2Fg%2F1tp1zqlv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
-  },
-  {
     "cityState": "OKLAHOMA CITY, OK",
     "state": "OK",
     "facility": "PUBLIC STORAGE",
@@ -280,6 +273,40 @@
       "At the Public Storage front gate, press *723970# to access the facility.",
       "Take the first left, then the second right. Go approximately halfway down building B on the left to unit 031.",
       "Call (262) 254-1835 when you arrive at the unit for the access code."
+    ],
+    "paymentMethods": ["Zelle", "CashApp", "Card", "Cash"]
+  },
+  {
+    "cityState": "PLANO, TX",
+    "state": "TX",
+    "facility": "PUBLIC STORAGE",
+    "address": "1919 W 15th St, Plano, TX 75075",
+    "unitNumber": "H-01",
+    "gmaps": "https://www.google.com/maps/search/?api=1&query=Public+Storage+1919+W+15th+St+Plano+TX+75075",
+    "hours": {
+      "weekdays": "Week days 7am – 5pm",
+      "weekends": "Sunday - Saturday 8am-3pm"
+    },
+    "offers": [
+      {
+        "brand": "Altra",
+        "color": "Blue",
+        "price": "$200",
+        "condition": "Refurbished",
+        "warranty": "2-month warranty"
+      },
+      {
+        "brand": "Crown",
+        "color": "Grey",
+        "price": "$250",
+        "condition": "Refurbished",
+        "warranty": "2-month warranty"
+      }
+    ],
+    "accessInstructions": [
+      "At the Public Storage front gate, press *8749557# to access the facility.",
+      "Go straight and take the fourth right turn. Unit H-01 is at the beginning of the building.",
+      "Call (262) 254-1835 when you arrive at unit H-01 for the code to get into the unit."
     ],
     "paymentMethods": ["Zelle", "CashApp", "Card", "Cash"]
   }
